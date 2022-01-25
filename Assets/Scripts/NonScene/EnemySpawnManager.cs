@@ -9,6 +9,7 @@ public class EnemySpawnManager : MonoBehaviourPunCallbacks
     private class StoredInfo
     {
         public Transform playerTransform;
+        public float a;
 
     }
 
