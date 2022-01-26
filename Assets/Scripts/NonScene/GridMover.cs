@@ -14,9 +14,9 @@ public class GridMover : MonoBehaviourPunCallbacks
     [SerializeField] private float _checkCollisionSphereDiameter = 1.5f;
 
     private List<StoredInfo> _storedInfos;
-    private float _checkRepeatSeconds;
     private float _chunkLength;
     private int _nodeWidth;
+    private bool _isScanning = false;
 
     private class StoredInfo
     {
@@ -49,30 +49,33 @@ public class GridMover : MonoBehaviourPunCallbacks
         }
     }
 
-    // Start is called before the first frame update
     private void Awake()
     {
         if (!PhotonNetwork.IsMasterClient && !PhotonNetwork.OfflineMode)
         {
-            Debug.Log("Isn't master client");
             enabled = false;
             return;
         }
         _storedInfos = new List<StoredInfo>();
+        ChunkGenerator.OnChangesEnd.AddListener(MoveGrids);
     }
     void Start()
     {
-        _checkRepeatSeconds = _chunkGenerator.ÑheckRepeatSeconds;
         _chunkLength = _chunkGenerator.ÑhunkLength;
         _nodeWidth = Mathf.RoundToInt(_chunkLength / _nodeSize) * _chunkGenerator.CheckMatrixSize;
-        StartCoroutine(MoveGridRoutine());
+        StartCoroutine(SetUpRoutine());
     }
-    private IEnumerator ScanGraphsRoutine(LayerGridGraph graph)
+    private IEnumerator ScanGraphsRoutine()
     {
-        foreach (var progress in AstarPath.active.ScanAsync(graph))
+        if (_isScanning) yield return null;
+
+        _isScanning = true;
+
+        foreach (var progress in AstarPath.active.ScanAsync())
         {
             yield return null;
         }
+        _isScanning = false;
     }
     private Vector3 ConvertPlayerPosition(Vector3 position)
     {
@@ -80,22 +83,19 @@ public class GridMover : MonoBehaviourPunCallbacks
         float z = Mathf.RoundToInt(position.z / _chunkLength) * _chunkLength;
         return new Vector3(x, 0, z);
     }
-
-    private IEnumerator MoveGridRoutine()
+    private void MoveGrids()
+    {
+        foreach (StoredInfo info in _storedInfos)
+        {
+            Vector3 position = ConvertPlayerPosition(info.playerTransform.position);
+            info.UpdatePosition(position);
+        }
+        StartCoroutine(ScanGraphsRoutine());
+    }
+    private IEnumerator SetUpRoutine()
     {
         yield return StartCoroutine(FindPlayersRoutine());
-        yield return StartCoroutine(SpawnGridsRoutine());
-
-        while (true)
-        {
-            foreach (StoredInfo info in _storedInfos)
-            {
-                Vector3 position = ConvertPlayerPosition(info.playerTransform.position);
-                info.UpdatePosition(position);
-                StartCoroutine(ScanGraphsRoutine(info.graph));
-            }
-            yield return new WaitForSeconds(_checkRepeatSeconds);
-        }
+        SpawnGrids();
     }
     private IEnumerator FindPlayersRoutine()
     {
@@ -113,13 +113,12 @@ public class GridMover : MonoBehaviourPunCallbacks
             yield return null;
         }
     }
-    private IEnumerator SpawnGridsRoutine()
+    private void SpawnGrids()
     {
         foreach(StoredInfo info in _storedInfos)
         {
             info.CreateGraph(_nodeWidth, _nodeSize, _checkCollisionSphereDiameter);
         }
-        foreach (Progress progress in AstarPath.active.ScanAsync()) yield return null;
     }
     public override void OnPlayerLeftRoom(Player otherPlayer)
     {

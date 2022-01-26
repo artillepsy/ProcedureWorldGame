@@ -713,8 +713,8 @@ MonoBehaviour:
   _environement: {fileID: 258665429}
   _chunkLength: 100
   _checkStepsToEnableChunk: 1
-  _checkStepsToDisableChunk: 2
-  _checkRepeatSeconds: 3
+  _checkStepsToDisableChunk: 3
+  _checkRepeatSeconds: 1
   _prefabsInfo:
   - _prefab: {fileID: 4891557337233782732, guid: 9be1f2f435d0dd84bb36976aa7c1952f, type: 3}
     _id: 1
@@ -796,7 +796,7 @@ MonoBehaviour:
   unwalkableNodeDebugSize: 0.3
   logPathResults: 3
   maxNearestNodeDistance: 100
-  scanOnStartup: 1
+  scanOnStartup: 0
   fullGetNearestSearch: 0
   prioritizeGraphs: 0
   prioritizeGraphsLimit: 1
@@ -1471,11 +1471,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 614587136650430876, guid: a0f63ceda12b16e4a9acc8b47c969512, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.88108635
+      value: 0.8197397
       objectReference: {fileID: 0}
     - target: {fileID: 614587136650430876, guid: a0f63ceda12b16e4a9acc8b47c969512, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.4729555
+      value: 0.57273626
       objectReference: {fileID: 0}
     - target: {fileID: 614587136650430876, guid: a0f63ceda12b16e4a9acc8b47c969512, type: 3}
       propertyPath: m_LocalRotation.y
@@ -1487,7 +1487,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 614587136650430876, guid: a0f63ceda12b16e4a9acc8b47c969512, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 56.453
+      value: 69.883
       objectReference: {fileID: 0}
     - target: {fileID: 614587136650430876, guid: a0f63ceda12b16e4a9acc8b47c969512, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
@@ -1499,7 +1499,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 614587136650430877, guid: a0f63ceda12b16e4a9acc8b47c969512, type: 3}
       propertyPath: _smoothTime
-      value: 0.4
+      value: 0.25
       objectReference: {fileID: 0}
     - target: {fileID: 614587136650430877, guid: a0f63ceda12b16e4a9acc8b47c969512, type: 3}
       propertyPath: _offsetPoint
@@ -1569,7 +1569,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6438710793675432660, guid: d29ba159952dfa148aae1a2e0e729c57, type: 3}
       propertyPath: _speed
-      value: 7
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 6438710793675432660, guid: d29ba159952dfa148aae1a2e0e729c57, type: 3}
+      propertyPath: _distanceToNextWaypoint
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7189404967244447156, guid: d29ba159952dfa148aae1a2e0e729c57, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d29ba159952dfa148aae1a2e0e729c57, type: 3}

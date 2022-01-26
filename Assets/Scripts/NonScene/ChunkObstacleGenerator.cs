@@ -78,13 +78,18 @@ public class ChunkObstacleGenerator : ObjectGenerator<PrefabInfo>
     private void OnEnable()
     {
         PhotonNetwork.NetworkingClient.EventReceived += OnEvent;
-        if (beforeStart) beforeStart = false; 
-        else GetAllObstaclesFromPool();
+        if (beforeStart) beforeStart = false;
+        else
+        {
+            GetAllObstaclesFromPool();
+            if(PhotonNetwork.IsMasterClient) ChunkGenerator.AddChange();
+        }
     }
     private void OnDisable() 
     {
         PhotonNetwork.NetworkingClient.EventReceived -= OnEvent;
-        AddAllObstaclesToPool(); 
+        AddAllObstaclesToPool();
+        if (PhotonNetwork.IsMasterClient) ChunkGenerator.AddChange();
     }
 
     private void Awake()
@@ -174,6 +179,7 @@ public class ChunkObstacleGenerator : ObjectGenerator<PrefabInfo>
             yield return StartCoroutine(SpawnObstaclesRoutine(new int[] { id }, new Vector3[] { position }, new Quaternion[] { rotation }));
             yield return null;
         }
+        ChunkGenerator.AddChange();
         RaiseEventSpawnObstacles(ids, positions, rotations);
        
     }
