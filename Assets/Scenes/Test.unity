@@ -363,10 +363,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa08e34bbdac8cf49a22d35320b29efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _noiseScale: 0.01
+  scale: 0.01
   chunkLength: 100
   enableDimension: 3
-  disableDimension: 5
+  disableDimension: 7
   checkRateInSeconds: 1
 --- !u!1 &258665428
 GameObject:
@@ -975,7 +975,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a2e5c5dc297298a48bc8645f06c44403, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  OfflineMode: 1
+  OfflineMode: 0
 --- !u!114 &1089720231
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1138,7 +1138,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9be1d16f1f74ee2498a58b8190e64322, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  chunkPlacer: {fileID: 216514070}
+  chunkGrid: {fileID: 216514070}
   nodeSize: 3
   collisionSphereDiameter: 1.5
 --- !u!1 &1309361939

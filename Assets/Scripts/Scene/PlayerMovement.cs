@@ -1,4 +1,6 @@
 using Photon.Pun;
+using System;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviourPun
@@ -25,6 +27,11 @@ public class PlayerMovement : MonoBehaviourPun
 
         CustomEventHandler.OnInputPermissionChanged.AddListener(status => _inputEnapled = status);
         CommandHandler.OnPlayerSpeedChanged.AddListener(newSpeed => _speed = newSpeed);
+    }
+
+    internal IEnumerable<PlayerMovement> ToList()
+    {
+        throw new NotImplementedException();
     }
 
     private void Start()
