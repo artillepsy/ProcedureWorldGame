@@ -311,7 +311,7 @@ GameObject:
   - component: {fileID: 216514069}
   - component: {fileID: 216514070}
   m_Layer: 0
-  m_Name: Terrain
+  m_Name: Surface
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -365,8 +365,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _noiseScale: 0.01
   chunkLength: 100
-  enableRadius: 1
-  disableRadius: 3
+  enableDimension: 3
+  disableDimension: 5
   checkRateInSeconds: 1
 --- !u!1 &258665428
 GameObject:
