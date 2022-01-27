@@ -11,10 +11,10 @@ public class JoinRoomButton : MonoBehaviour
         get { return _buttonText.text; }
         set { _buttonText.text = value; }
     }
-    private LobbyCanvasManager _lobbyCanvasManager;
+    private MainMenuGUI _lobbyCanvasManager;
     private void Start()
     {
-        _lobbyCanvasManager = FindObjectOfType<LobbyCanvasManager>();
+        _lobbyCanvasManager = FindObjectOfType<MainMenuGUI>();
     }
     public void OnClickJoinRoom()
     {

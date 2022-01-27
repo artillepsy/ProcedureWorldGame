@@ -3,18 +3,18 @@ using UnityEngine;
 
 public class EnemyMovementTest : MonoBehaviour
 {
-    private AIMovement _aiMovement;
+    private AIMovementTest _aiMovement;
     private Camera _camera;
     private Plane _plane;
     private bool _inputEnabled = true;
 
     void Awake()
     {
-        _aiMovement = GetComponent<AIMovement>();
+        _aiMovement = GetComponent<AIMovementTest>();
         _camera = Camera.main;
         _plane = new Plane(Vector3.up, 0);
 
-        CustomEventManager.OnInputPermissionChanged.AddListener(status => _inputEnabled = status);
+        CustomEventHandler.OnInputPermissionChanged.AddListener(status => _inputEnabled = status);
     }
     void Update()
     {

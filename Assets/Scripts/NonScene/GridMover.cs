@@ -7,7 +7,7 @@ using Photon.Realtime;
 
 public class GridMover : MonoBehaviourPunCallbacks
 {
-    [SerializeField] private ChunkGenerator _chunkGenerator;
+    [SerializeField] private ChunkPlacer.ChunkPlacer _chunkPlacer;
 
     [Header("Grid Settings")]
     [SerializeField] private float _nodeSize = 1;
@@ -15,7 +15,7 @@ public class GridMover : MonoBehaviourPunCallbacks
 
     private List<StoredInfo> _storedInfos;
     private float _chunkLength;
-    private int _nodeWidth;
+    private int _width;
     private bool _isScanning = false;
 
     private class StoredInfo
@@ -57,12 +57,12 @@ public class GridMover : MonoBehaviourPunCallbacks
             return;
         }
         _storedInfos = new List<StoredInfo>();
-        ChunkGenerator.OnChangesEnd.AddListener(MoveGrids);
+        ChunkPlacer.Arrangement.OnFullArranged.AddListener(MoveGrids);
     }
     void Start()
     {
-        _chunkLength = _chunkGenerator.ÑhunkLength;
-        _nodeWidth = Mathf.RoundToInt(_chunkLength / _nodeSize) * _chunkGenerator.CheckMatrixSize;
+        _chunkLength = _chunkPlacer.ÑhunkLength;
+        _width = Mathf.RoundToInt(_chunkLength / _nodeSize) * _chunkPlacer.MatrixSize;
         StartCoroutine(SetUpRoutine());
     }
     private IEnumerator ScanGraphsRoutine()
@@ -117,7 +117,7 @@ public class GridMover : MonoBehaviourPunCallbacks
     {
         foreach(StoredInfo info in _storedInfos)
         {
-            info.CreateGraph(_nodeWidth, _nodeSize, _checkCollisionSphereDiameter);
+            info.CreateGraph(_width, _nodeSize, _checkCollisionSphereDiameter);
         }
     }
     public override void OnPlayerLeftRoom(Player otherPlayer)

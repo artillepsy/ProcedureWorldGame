@@ -23,8 +23,8 @@ public class PlayerMovement : MonoBehaviourPun
         _rigidBody = GetComponent<Rigidbody>();
         _rayCastPlane = new Plane(Vector3.up, 0);
 
-        CustomEventManager.OnInputPermissionChanged.AddListener(status => _inputEnapled = status);
-        CommandManager.OnPlayerSpeedChanged.AddListener(newSpeed => _speed = newSpeed);
+        CustomEventHandler.OnInputPermissionChanged.AddListener(status => _inputEnapled = status);
+        CommandHandler.OnPlayerSpeedChanged.AddListener(newSpeed => _speed = newSpeed);
     }
 
     private void Start()
