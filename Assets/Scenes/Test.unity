@@ -298,7 +298,76 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 752649dfeabeca9458b1011a9d67aab3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _size: 50
+  size: 50
+--- !u!1 &216514067
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 216514068}
+  - component: {fileID: 216514070}
+  - component: {fileID: 216514069}
+  m_Layer: 0
+  m_Name: Terrain
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &216514068
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 216514067}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1089720225}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &216514069
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 216514067}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2844e38911d2394469e3eda8c67428b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  environement: {fileID: 258665429}
+  prefabsInfo:
+  - _prefab: {fileID: 4891557337233782732, guid: 9be1f2f435d0dd84bb36976aa7c1952f, type: 3}
+    _id: 1
+    _probability: 1
+    _minPerlinValue: 0
+    _maxPerlinValue: 1
+--- !u!114 &216514070
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 216514067}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ab058d3f39a2974f99df90821c9b95e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _noiseScale: 0.01
+  _length: 100
+  _ToEnableSteps: 1
+  _toDisableSteps: 3
+  _checkRate: 1
 --- !u!1 &258665428
 GameObject:
   m_ObjectHideFlags: 0
@@ -855,7 +924,6 @@ GameObject:
   - component: {fileID: 1089720229}
   - component: {fileID: 1089720231}
   - component: {fileID: 1089720226}
-  - component: {fileID: 1089720228}
   - component: {fileID: 1089720230}
   - component: {fileID: 1089720232}
   m_Layer: 0
@@ -876,7 +944,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 216514068}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -894,30 +963,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawner: {fileID: 2012976492}
   playerPrefab: {fileID: 150519998821848632, guid: ff63a46f15570ca4d82334d9f7d7fc10, type: 3}
---- !u!114 &1089720228
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1089720223}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3ab058d3f39a2974f99df90821c9b95e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _noiseScale: 0.01
-  _environement: {fileID: 258665429}
-  _length: 100
-  _ToEnableSteps: 1
-  _toDisableSteps: 3
-  _checkRate: 1
-  _prefabsInfo:
-  - _prefab: {fileID: 4891557337233782732, guid: 9be1f2f435d0dd84bb36976aa7c1952f, type: 3}
-    _id: 1
-    _probability: 0.369
-    _minPerlinValue: 0
-    _maxPerlinValue: 1
 --- !u!114 &1089720229
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -930,7 +975,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a2e5c5dc297298a48bc8645f06c44403, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  OfflineMode: 1
+  OfflineMode: 0
 --- !u!114 &1089720230
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -943,7 +988,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9be1d16f1f74ee2498a58b8190e64322, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _chunkPlacer: {fileID: 1089720228}
+  _chunkPlacer: {fileID: 216514070}
   _nodeSize: 3
   _checkCollisionSphereDiameter: 1.5
 --- !u!114 &1089720231

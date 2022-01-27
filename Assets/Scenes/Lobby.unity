@@ -236,7 +236,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6070037421052897786, guid: bc83833f47d84c64886b5c03d27fba89, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: LobbyCanvasManager, Assembly-CSharp
+      value: MainMenuGUI, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 6070037421052897786, guid: bc83833f47d84c64886b5c03d27fba89, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
@@ -817,7 +817,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6070037421052897786, guid: bc83833f47d84c64886b5c03d27fba89, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: LobbyCanvasManager, Assembly-CSharp
+      value: MainMenuGUI, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 6070037421052897786, guid: bc83833f47d84c64886b5c03d27fba89, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
@@ -1158,7 +1158,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6042708341043444733, guid: bc83833f47d84c64886b5c03d27fba89, type: 3}
       propertyPath: m_Name
-      value: Button
+      value: LeaveRoomListButton
       objectReference: {fileID: 0}
     - target: {fileID: 6070037421052897786, guid: bc83833f47d84c64886b5c03d27fba89, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
@@ -1182,7 +1182,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6070037421052897786, guid: bc83833f47d84c64886b5c03d27fba89, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: LobbyCanvasManager, Assembly-CSharp
+      value: MainMenuGUI, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 6070037421052897786, guid: bc83833f47d84c64886b5c03d27fba89, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
@@ -1668,7 +1668,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2281205164390503614, guid: a9f4a6a80bb97ea4e92eb034e4bc5e7f, type: 3}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: LobbyCanvasManager, Assembly-CSharp
+      value: MainMenuGUI, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 2281205164390503614, guid: a9f4a6a80bb97ea4e92eb034e4bc5e7f, type: 3}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
@@ -1749,7 +1749,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6070037421052897786, guid: bc83833f47d84c64886b5c03d27fba89, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: LobbyCanvasManager, Assembly-CSharp
+      value: MainMenuGUI, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 6070037421052897786, guid: bc83833f47d84c64886b5c03d27fba89, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
@@ -2159,7 +2159,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6070037421052897786, guid: bc83833f47d84c64886b5c03d27fba89, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: LobbyCanvasManager, Assembly-CSharp
+      value: MainMenuGUI, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 6070037421052897786, guid: bc83833f47d84c64886b5c03d27fba89, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
@@ -2433,7 +2433,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6070037421052897786, guid: bc83833f47d84c64886b5c03d27fba89, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: LobbyCanvasManager, Assembly-CSharp
+      value: MainMenuGUI, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 6070037421052897786, guid: bc83833f47d84c64886b5c03d27fba89, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
@@ -2606,7 +2606,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6042708341043444733, guid: bc83833f47d84c64886b5c03d27fba89, type: 3}
       propertyPath: m_Name
-      value: LeaveButton
+      value: LeaveRoomButton
       objectReference: {fileID: 0}
     - target: {fileID: 6070037421052897786, guid: bc83833f47d84c64886b5c03d27fba89, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
@@ -2630,7 +2630,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6070037421052897786, guid: bc83833f47d84c64886b5c03d27fba89, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: LobbyCanvasManager, Assembly-CSharp
+      value: MainMenuGUI, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 6070037421052897786, guid: bc83833f47d84c64886b5c03d27fba89, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
@@ -2954,14 +2954,14 @@ PrefabInstance:
     - target: {fileID: 2281205164390503614, guid: a9f4a6a80bb97ea4e92eb034e4bc5e7f, type: 3}
       propertyPath: m_OnEndEdit.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1418811330}
+      objectReference: {fileID: 1418811327}
     - target: {fileID: 2281205164390503614, guid: a9f4a6a80bb97ea4e92eb034e4bc5e7f, type: 3}
       propertyPath: m_OnEndEdit.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2281205164390503614, guid: a9f4a6a80bb97ea4e92eb034e4bc5e7f, type: 3}
       propertyPath: m_OnEndEdit.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: OnRoomNameChanged
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 2281205164390503614, guid: a9f4a6a80bb97ea4e92eb034e4bc5e7f, type: 3}
       propertyPath: m_OnEndEdit.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
@@ -3258,7 +3258,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf2167d7e519a0043af4232161c75d26, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _canvasManager: {fileID: 1418811330}
+  _mainMenuGUI: {fileID: 1418811330}
   _levelName: Test
   _playerNickName: Player
 --- !u!4 &1418811329
@@ -3285,10 +3285,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1418811327}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe2b7f6e6f7db834c9b62e57a51e0341, type: 3}
+  m_Script: {fileID: 11500000, guid: 3ca0e35a934f06940aeac5ef37d30c55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _lobbyManager: {fileID: 1418811328}
+  _mainMenu: {fileID: 1418811328}
   _canvases:
   - {fileID: 1379190217}
   - {fileID: 482083657}
@@ -3329,7 +3329,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6042708341043444733, guid: bc83833f47d84c64886b5c03d27fba89, type: 3}
       propertyPath: m_Name
-      value: LeaveButton
+      value: LeaveCreateRoomButton
       objectReference: {fileID: 0}
     - target: {fileID: 6070037421052897786, guid: bc83833f47d84c64886b5c03d27fba89, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
@@ -3353,7 +3353,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6070037421052897786, guid: bc83833f47d84c64886b5c03d27fba89, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: LobbyCanvasManager, Assembly-CSharp
+      value: MainMenuGUI, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 6070037421052897786, guid: bc83833f47d84c64886b5c03d27fba89, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
@@ -3997,7 +3997,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6070037421052897786, guid: bc83833f47d84c64886b5c03d27fba89, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: LobbyCanvasManager, Assembly-CSharp
+      value: MainMenuGUI, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 6070037421052897786, guid: bc83833f47d84c64886b5c03d27fba89, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
@@ -4641,7 +4641,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6070037421052897786, guid: bc83833f47d84c64886b5c03d27fba89, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: LobbyCanvasManager, Assembly-CSharp
+      value: MainMenuGUI, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 6070037421052897786, guid: bc83833f47d84c64886b5c03d27fba89, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
