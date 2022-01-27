@@ -5,8 +5,8 @@ using UnityEngine;
 
 public class CameraFollow : MonoBehaviour
 {
-    [SerializeField] private Transform _offsetPoint;
-    [SerializeField] private float _smoothTime = 0.4f;
+    [SerializeField] private Transform offsetPoint;
+    [SerializeField] private float smoothTime = 0.25f;
 
     private Transform _target;
     private Vector3 _offset;
@@ -14,24 +14,27 @@ public class CameraFollow : MonoBehaviour
     private Vector3 _desiredPosition;
     private void Start()
     {
-        _offset = transform.position - _offsetPoint.position;
-        _desiredPosition = _offsetPoint.position;
-        StartCoroutine(FollowTargetRoutine());
+        _offset = transform.position - offsetPoint.position;
+        _desiredPosition = offsetPoint.position;
+        StartCoroutine(FollowTargetCoroutine());
     }
-    private IEnumerator FollowTargetRoutine()
+    private IEnumerator FollowTargetCoroutine()
     {
-        yield return StartCoroutine(FindTargetRoutine());
+        yield return StartCoroutine(FindTargetCoroutine());
 
-        while(true)
+        while (true)
         {
-            if (_target.gameObject.activeSelf) _desiredPosition = _target.position + _offset;
-            Vector3 smoothedPosiiton = Vector3.SmoothDamp(transform.position, _desiredPosition, ref _velocity, _smoothTime);
+            if (_target.gameObject.activeSelf)
+            {
+                _desiredPosition = _target.position + _offset;
+            }
+            var smoothedPosiiton = Vector3.SmoothDamp(transform.position, _desiredPosition, ref _velocity, smoothTime);
             transform.position = smoothedPosiiton;
 
             yield return new WaitForFixedUpdate();
         }
     }
-    private IEnumerator FindTargetRoutine()
+    private IEnumerator FindTargetCoroutine()
     {
         while (true)
         {
