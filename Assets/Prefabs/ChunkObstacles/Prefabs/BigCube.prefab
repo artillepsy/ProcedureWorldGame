@@ -183,7 +183,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d377dbd25f59e24db29069a8d1c11c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _obstacleShape:
+  shapes:
   - {fileID: 8684656778599209044}
 --- !u!1001 &3235116249361267243
 PrefabInstance:

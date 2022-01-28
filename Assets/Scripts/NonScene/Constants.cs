@@ -35,6 +35,7 @@ public static class Constants
     {
         public const string Password = "123";
         public const string PlayerSpeed = "ps";
+        public const string ColliderEnableMode = "cem";
     }
     public static class ChunkPlacer
     {

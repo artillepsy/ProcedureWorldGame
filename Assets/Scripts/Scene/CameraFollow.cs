@@ -2,6 +2,7 @@ using Photon.Pun;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Character.Components;
 
 public class CameraFollow : MonoBehaviour
 {
@@ -38,7 +39,7 @@ public class CameraFollow : MonoBehaviour
     {
         while (true)
         {
-            foreach (PlayerMovement player in FindObjectsOfType<PlayerMovement>())
+            foreach (Movement player in FindObjectsOfType<Movement>())
             {
                 if (player.GetComponent<PhotonView>().OwnerActorNr == PhotonNetwork.LocalPlayer.ActorNumber)
                 {

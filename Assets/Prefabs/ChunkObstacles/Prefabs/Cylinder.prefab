@@ -70,7 +70,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d377dbd25f59e24db29069a8d1c11c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _obstacleShape:
+  shapes:
   - {fileID: 5821960402279229847}
 --- !u!54 &5284583499121513165
 Rigidbody:

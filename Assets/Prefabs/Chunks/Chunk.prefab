@@ -111,28 +111,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12f3edd87b013d04eab1276ab37f57d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _noiseScale: 0.02
-  _chunkHalfSize: 50
-  _maxCheckAreaAttempts: 50
-  _minCount: 6
-  _maxCount: 28
-  _prefabsInfo:
+  scale: 0.01
+  maxCheckAreaAttempts: 50
+  minCount: 6
+  maxCount: 14
+  prefabsInfo:
   - _prefab: {fileID: 3004351776454164502, guid: dbffc516f9488c341abdee2fc77b4ebe, type: 3}
     _id: 101
-    _probability: 0.1
+    _probability: 0.062
     _minPerlinValue: 0
-    _maxPerlinValue: 0.2
+    _maxPerlinValue: 0.201
   - _prefab: {fileID: 3004351776454164502, guid: 59f540ced5d923d4f9c652f719597e12, type: 3}
     _id: 102
-    _probability: 0.53
+    _probability: 0.565
     _minPerlinValue: 0
-    _maxPerlinValue: 0.853
+    _maxPerlinValue: 0.588
   - _prefab: {fileID: 120420223088157047, guid: 9c248dbf84e5f984290a29ebaa85d153, type: 3}
     _id: 103
-    _probability: 0.591
-    _minPerlinValue: 0.168
+    _probability: 0.55
+    _minPerlinValue: 0.41
     _maxPerlinValue: 1
-  _enableDebugTexture: 0
-  _renderer: {fileID: 4891557337233782736}
-  _width: 256
-  _height: 256
+  enableDebugTexture: 0
+  renderer: {fileID: 4891557337233782736}
+  width: 256
+  height: 256
