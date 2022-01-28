@@ -131,6 +131,8 @@
     <Compile Include="Assets\Scripts\Surface\Chunk\Scanner.cs" />
     <Compile Include="Assets\Scripts\Surface\Chunk\Obstacle\Placement\Observer.cs" />
     <Compile Include="Assets\Scripts\Surface\Chunk\Obstacle\Placement\Utils.cs" />
+    <Compile Include="Assets\Scripts\UI\Minimap\Minimap.cs" />
+    <Compile Include="Assets\Scripts\UI\Minimap\Icon.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
@@ -957,6 +959,9 @@
     </Reference>
     <Reference Include="Unity.VisualScripting.State">
       <HintPath>Library\ScriptAssemblies\Unity.VisualScripting.State.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.2D.Sprite.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.2D.Sprite.Editor.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
