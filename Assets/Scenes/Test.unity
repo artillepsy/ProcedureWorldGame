@@ -336,7 +336,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   camera: {fileID: 758229061}
-  iconScale: 6
+  iconScale: 3
 --- !u!1 &450342765
 GameObject:
   m_ObjectHideFlags: 0
