@@ -84,7 +84,7 @@
     <Compile Include="Assets\Scripts\NonScene\MainMenuGUI.cs" />
     <Compile Include="Assets\Scripts\NonScene\EnemySpawnerTest.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexJitter.cs" />
-    <Compile Include="Assets\Scripts\NavGrid\Mover.cs" />
+    <Compile Include="Assets\Scripts\NavGrid\GridMover.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextEventHandler.cs" />
     <Compile Include="Assets\Scripts\NonScene\Constants.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\DropdownSample.cs" />
@@ -99,6 +99,7 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01_UGUI.cs" />
     <Compile Include="Assets\Scripts\NonScene\CommandHandler.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark04.cs" />
+    <Compile Include="Assets\Scripts\Surface\Reformer.cs" />
     <Compile Include="Assets\Scripts\Scene\MinimapCamera.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\ChatController.cs" />
     <Compile Include="Assets\Photon\PhotonChat\Demos\Common\EventSystemSpawner.cs" />
@@ -119,6 +120,7 @@
     <Compile Include="Assets\Photon\PhotonChat\Demos\DemoChat\IgnoreUiRaycastWhenInactive.cs" />
     <Compile Include="Assets\Scripts\NonScene\ObjectPool.cs" />
     <Compile Include="Assets\Scripts\Scene\AIMovementTest.cs" />
+    <Compile Include="Assets\Scripts\NonScene\PlayerObserver.cs" />
     <Compile Include="Assets\Scripts\NonScene\PrefabInfo.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextSelector_B.cs" />
     <Compile Include="Assets\Photon\PhotonChat\Demos\DemoChat\FriendItem.cs" />
@@ -126,9 +128,7 @@
     <Compile Include="Assets\Photon\PhotonChat\Demos\DemoChat\ChatGui.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexZoom.cs" />
     <Compile Include="Assets\Photon\PhotonChat\Demos\Common\OnStartDelete.cs" />
-    <Compile Include="Assets\Scripts\Surface\Reformer.cs" />
-    <Compile Include="Assets\Scripts\NonScene\PlayerObserver.cs" />
-    <Compile Include="Assets\Scripts\Surface\ChunkGrid.cs" />
+    <Compile Include="Assets\Scripts\Surface\ChunkGridScanner.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
