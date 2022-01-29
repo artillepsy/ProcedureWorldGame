@@ -188,7 +188,7 @@ GameObject:
   - component: {fileID: 216514069}
   - component: {fileID: 216514070}
   m_Layer: 0
-  m_Name: Surface
+  m_Name: ChunkManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -290,7 +290,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52b45924ccc94b745ae30d807894c29b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shouldClamp: 1
+  type: 0
 --- !u!1 &320979703
 GameObject:
   m_ObjectHideFlags: 0
@@ -336,7 +336,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   camera: {fileID: 758229061}
-  iconScale: 3
+  icons: []
 --- !u!1 &450342765
 GameObject:
   m_ObjectHideFlags: 0
