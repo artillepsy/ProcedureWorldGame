@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 4891557337233782736}
   - component: {fileID: 4891557337233782737}
   - component: {fileID: 8917383021395402477}
+  - component: {fileID: 6224586187703828300}
   m_Layer: 0
   m_Name: Chunk
   m_TagString: Untagged
@@ -113,8 +114,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scale: 0.01
   maxCheckAreaAttempts: 50
-  minCount: 6
-  maxCount: 14
   prefabsInfo:
   - _prefab: {fileID: 3004351776454164502, guid: dbffc516f9488c341abdee2fc77b4ebe, type: 3}
     _id: 101
@@ -135,3 +134,17 @@ MonoBehaviour:
   renderer: {fileID: 4891557337233782736}
   width: 256
   height: 256
+--- !u!114 &6224586187703828300
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4891557337233782732}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62340263b9fab65448741942e7cb588a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minCount: 6
+  maxCount: 14
