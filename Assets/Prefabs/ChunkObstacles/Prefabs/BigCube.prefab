@@ -106,7 +106,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3416730984290229782}
-  - component: {fileID: 3763951213916294257}
   - component: {fileID: 3088921791024102515}
   - component: {fileID: 1519820461515850682}
   m_Layer: 9
@@ -133,28 +132,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &3763951213916294257
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3004351776454164502}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ObservedComponentsFoldoutOpen: 1
-  Group: 0
-  prefixField: -1
-  Synchronization: 3
-  OwnershipTransfer: 0
-  observableSearch: 2
-  ObservedComponents: []
-  sceneViewId: 0
-  InstantiationId: 0
-  isRuntimeInstantiated: 0
 --- !u!54 &3088921791024102515
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -183,7 +160,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d377dbd25f59e24db29069a8d1c11c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shapes:
+  shapeList:
   - {fileID: 6133832789715606198}
 --- !u!1001 &3235116249361267243
 PrefabInstance:

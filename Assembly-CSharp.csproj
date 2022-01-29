@@ -86,7 +86,7 @@
     <Compile Include="Assets\Scripts\Core\PrefabInfo.cs" />
     <Compile Include="Assets\Scripts\NonScene\EnemySpawnerTest.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexJitter.cs" />
-    <Compile Include="Assets\Scripts\Navigation\GridScanner.cs" />
+    <Compile Include="Assets\Scripts\Navigation\NavigationGridScanner.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextEventHandler.cs" />
     <Compile Include="Assets\Scripts\UI\Icon.cs" />
     <Compile Include="Assets\Scripts\Chunks\ObstaclePlacementObserver.cs" />
@@ -112,7 +112,7 @@
     <Compile Include="Assets\Scripts\NonScene\CheatConsole.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\ObjectSpin.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextEventCheck.cs" />
-    <Compile Include="Assets\Scripts\Chunks\ObstacleEntity.cs" />
+    <Compile Include="Assets\Scripts\Chunks\Obstacle.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\ShaderPropAnimator.cs" />
     <Compile Include="Assets\Photon\PhotonLibs\WebSocket\WebSocket.cs" />
     <Compile Include="Assets\Scripts\Scene\BulletBehaviourTest.cs" />

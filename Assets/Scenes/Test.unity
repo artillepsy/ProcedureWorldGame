@@ -222,7 +222,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   environement: {fileID: 258665429}
-  prefabsInfo:
+  prefabInfoList:
   - _prefab: {fileID: 4891557337233782732, guid: 9be1f2f435d0dd84bb36976aa7c1952f, type: 3}
     _id: 1
     _probability: 1
@@ -1861,7 +1861,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 614587136443760034, guid: a0f63ceda12b16e4a9acc8b47c969512, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 45
+      value: 90
       objectReference: {fileID: 0}
     - target: {fileID: 614587136650430873, guid: a0f63ceda12b16e4a9acc8b47c969512, type: 3}
       propertyPath: m_Name
