@@ -223,26 +223,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   environement: {fileID: 258665429}
   prefabInfoList:
-  - _prefab: {fileID: 4891557337233782732, guid: 9be1f2f435d0dd84bb36976aa7c1952f, type: 3}
-    _id: 1
-    _probability: 0.853
-    _minPerlinValue: 0
-    _maxPerlinValue: 1
-  - _prefab: {fileID: 4891557337233782732, guid: 2f69e753c0a7cd0408ea9a6d462dba24, type: 3}
-    _id: 2
-    _probability: 0.207
-    _minPerlinValue: 0
-    _maxPerlinValue: 1
-  - _prefab: {fileID: 4891557337233782732, guid: 8ccec4d9f6923e2498a28f352aa8ec54, type: 3}
-    _id: 3
-    _probability: 0.174
-    _minPerlinValue: 0
-    _maxPerlinValue: 1
-  - _prefab: {fileID: 4891557337233782732, guid: 8ea9becbd80639646a30119fbe126638, type: 3}
-    _id: 4
-    _probability: 0.169
-    _minPerlinValue: 0
-    _maxPerlinValue: 1
+  - prefab: {fileID: 4891557337233782732, guid: 9be1f2f435d0dd84bb36976aa7c1952f, type: 3}
+    id: 1
+    probability: 1
 --- !u!114 &216514070
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -255,13 +238,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 960b1605b88c65645b1c92160661f216, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nodeSize: 400
-  inDimension: 9
-  outDimension: 11
-  showNodePoins: 1
-  nodePointSize: 5.34
-  enableDimension: 19
-  disableDimension: 21
+  nodeSize: 300
+  inDimension: 3
+  outDimension: 5
+  showNodePoins: 0
+  nodePointSize: 1.49
+  enableDimension: 3
+  disableDimension: 5
 --- !u!1 &258665428
 GameObject:
   m_ObjectHideFlags: 0
