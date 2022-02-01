@@ -49,7 +49,7 @@ Rigidbody:
   m_GameObject: {fileID: 150519998821848632}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 1
+  m_Drag: 3
   m_AngularDrag: 1
   m_UseGravity: 0
   m_IsKinematic: 0
@@ -228,7 +228,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
   m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
+  m_RenderingLayerMask: 257
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: 5e24b274c8f518343b7154c3c39d419b, type: 2}

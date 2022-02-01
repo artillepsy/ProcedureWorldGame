@@ -68,11 +68,12 @@
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_DigitValidator.cs" />
      <Compile Include="Assets\Scripts\Character\Movement.cs" />
      <Compile Include="Assets\Scripts\Scene\EnemyMovementTest.cs" />
+     <Compile Include="Assets\Scripts\Core\ObjectPool.cs" />
      <Compile Include="Assets\Photon\PhotonChat\Demos\DemoChat\NamePickGui.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TextMeshSpawner.cs" />
      <Compile Include="Assets\Scripts\NonScene\MainMenuGUI.cs" />
      <Compile Include="Assets\Scripts\Chunks\PunCustom.cs" />
-     <Compile Include="Assets\Scripts\Chunks\PrefabInfo.cs" />
+     <Compile Include="Assets\Scripts\Core\BasePrefabInfo.cs" />
      <Compile Include="Assets\Scripts\NonScene\EnemySpawnerTest.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexJitter.cs" />
      <Compile Include="Assets\Scripts\Navigation\NavigationGridScanner.cs" />
@@ -87,6 +88,7 @@
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TeleType.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
      <Compile Include="Assets\Photon\PhotonRealtime\Demos\DemoLoadBalancing\ConnectAndJoinRandomLb.cs" />
+     <Compile Include="Assets\Scripts\Core\UniqueId.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\SkewTextExample.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\SimpleScript.cs" />
      <Compile Include="Assets\Scripts\UI\Minimap.cs" />
@@ -113,7 +115,6 @@
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_FrameRateCounter.cs" />
      <Compile Include="Assets\Scripts\Chunks\ScanNoiseUtils.cs" />
      <Compile Include="Assets\Photon\PhotonChat\Demos\DemoChat\IgnoreUiRaycastWhenInactive.cs" />
-     <Compile Include="Assets\Scripts\Core\ObjectPool.cs" />
      <Compile Include="Assets\Scripts\Scene\AIMovementTest.cs" />
      <Compile Include="Assets\Scripts\NonScene\PlayerObserver.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextSelector_B.cs" />
