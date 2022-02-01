@@ -13,19 +13,14 @@ GameObject:
   - component: {fileID: 4891557337233782736}
   - component: {fileID: 4891557337233782737}
   - component: {fileID: 8917383021395402477}
-<<<<<<< HEAD
   - component: {fileID: 428052347123723621}
   - component: {fileID: 6452866379297169}
-=======
-  - component: {fileID: 6224586187703828300}
-  - component: {fileID: -5471808274191608148}
->>>>>>> bf989f9347e526d7e669fc7a69708ec16b766101
   m_Layer: 0
   m_Name: Chunk
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 1
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &4891557337233782742
 Transform:
@@ -61,13 +56,13 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
-  m_StaticShadowCaster: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
   m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 257
+  m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: 5789a8dcda3c2d7408f2c1d57866184d, type: 2}
@@ -125,7 +120,6 @@ MonoBehaviour:
   nodePointSize: 3
   maxOverlapAttempts: 50
   prefabInfoList:
-<<<<<<< HEAD
   - prefab: {fileID: -2002363868330802891, guid: dbffc516f9488c341abdee2fc77b4ebe, type: 3}
     probability: 0.138
   - prefab: {fileID: -8540335711105903319, guid: 59f540ced5d923d4f9c652f719597e12, type: 3}
@@ -145,15 +139,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &6452866379297169
-=======
-  - prefab: {fileID: -3493730623894758960, guid: dbffc516f9488c341abdee2fc77b4ebe, type: 3}
-    probability: 0.176
-  - prefab: {fileID: -9196995237070751250, guid: 59f540ced5d923d4f9c652f719597e12, type: 3}
-    probability: 0.88
-  - prefab: {fileID: 6094983983939793385, guid: 9c248dbf84e5f984290a29ebaa85d153, type: 3}
-    probability: 0.195
---- !u!114 &6224586187703828300
->>>>>>> bf989f9347e526d7e669fc7a69708ec16b766101
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -167,18 +152,3 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minCount: 6
   maxCount: 14
-<<<<<<< HEAD
-=======
---- !u!114 &-5471808274191608148
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4891557337233782732}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0ff02d5aa282194f9ff59f40e7e3a0e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
->>>>>>> bf989f9347e526d7e669fc7a69708ec16b766101
