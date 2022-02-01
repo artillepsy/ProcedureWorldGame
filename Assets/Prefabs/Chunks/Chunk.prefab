@@ -61,7 +61,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
   m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
+  m_RenderingLayerMask: 257
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: 5789a8dcda3c2d7408f2c1d57866184d, type: 2}
@@ -121,7 +121,7 @@ MonoBehaviour:
   prefabInfoList:
   - prefab: {fileID: 3004351776454164502, guid: dbffc516f9488c341abdee2fc77b4ebe, type: 3}
     id: 101
-    probability: 0.021
+    probability: 0.176
   - prefab: {fileID: 3004351776454164502, guid: 59f540ced5d923d4f9c652f719597e12, type: 3}
     id: 102
     probability: 0.88
