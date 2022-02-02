@@ -337,10 +337,10 @@
      <HintPath>C:/Users/Dell/Desktop/Unity/projects/Course Project 3.2/Assets/Photon/PhotonLibs/netstandard2.0/Photon3Unity3D.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Burst.Unsafe">
-     <HintPath>C:/Users/Dell/Desktop/Unity/projects/Course Project 3.2/Library/PackageCache/com.unity.burst@1.6.0/Unity.Burst.Unsafe.dll</HintPath>
+     <HintPath>C:/Users/Dell/Desktop/Unity/projects/Course Project 3.2/Library/PackageCache/com.unity.burst@1.6.4/Unity.Burst.Unsafe.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Burst.Cecil.Mdb">
-     <HintPath>C:/Users/Dell/Desktop/Unity/projects/Course Project 3.2/Library/PackageCache/com.unity.burst@1.6.0/Unity.Burst.CodeGen/Unity.Burst.Cecil.Mdb.dll</HintPath>
+     <HintPath>C:/Users/Dell/Desktop/Unity/projects/Course Project 3.2/Library/PackageCache/com.unity.burst@1.6.4/Unity.Burst.CodeGen/Unity.Burst.Cecil.Mdb.dll</HintPath>
      </Reference>
      <Reference Include="Unity.VisualScripting.IonicZip">
      <HintPath>C:/Users/Dell/Desktop/Unity/projects/Course Project 3.2/Library/PackageCache/com.unity.visualscripting@1.7.6/Editor/VisualScripting.Core/Dependencies/DotNetZip/Unity.VisualScripting.IonicZip.dll</HintPath>
@@ -349,16 +349,16 @@
      <HintPath>C:/Users/Dell/Desktop/Unity/projects/Course Project 3.2/Assets/AstarPathfindingProject/Plugins/DotNetZip/Pathfinding.Ionic.Zip.Reduced.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Burst.Cecil.Pdb">
-     <HintPath>C:/Users/Dell/Desktop/Unity/projects/Course Project 3.2/Library/PackageCache/com.unity.burst@1.6.0/Unity.Burst.CodeGen/Unity.Burst.Cecil.Pdb.dll</HintPath>
+     <HintPath>C:/Users/Dell/Desktop/Unity/projects/Course Project 3.2/Library/PackageCache/com.unity.burst@1.6.4/Unity.Burst.CodeGen/Unity.Burst.Cecil.Pdb.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Burst.Cecil">
-     <HintPath>C:/Users/Dell/Desktop/Unity/projects/Course Project 3.2/Library/PackageCache/com.unity.burst@1.6.0/Unity.Burst.CodeGen/Unity.Burst.Cecil.dll</HintPath>
+     <HintPath>C:/Users/Dell/Desktop/Unity/projects/Course Project 3.2/Library/PackageCache/com.unity.burst@1.6.4/Unity.Burst.CodeGen/Unity.Burst.Cecil.dll</HintPath>
      </Reference>
      <Reference Include="log4netPlastic">
      <HintPath>C:/Users/Dell/Desktop/Unity/projects/Course Project 3.2/Library/PackageCache/com.unity.collab-proxy@1.15.4/Lib/Editor/PlasticSCM/log4netPlastic.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Burst.Cecil.Rocks">
-     <HintPath>C:/Users/Dell/Desktop/Unity/projects/Course Project 3.2/Library/PackageCache/com.unity.burst@1.6.0/Unity.Burst.CodeGen/Unity.Burst.Cecil.Rocks.dll</HintPath>
+     <HintPath>C:/Users/Dell/Desktop/Unity/projects/Course Project 3.2/Library/PackageCache/com.unity.burst@1.6.4/Unity.Burst.CodeGen/Unity.Burst.Cecil.Rocks.dll</HintPath>
      </Reference>
      <Reference Include="Pathfinding.ClipperLib">
      <HintPath>C:/Users/Dell/Desktop/Unity/projects/Course Project 3.2/Assets/AstarPathfindingProject/Plugins/Clipper/Pathfinding.ClipperLib.dll</HintPath>

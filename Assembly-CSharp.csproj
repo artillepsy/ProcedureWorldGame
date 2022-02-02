@@ -45,6 +45,7 @@
      <Compile Include="Assets\Scripts\NonScene\MainMenu.cs" />
      <Compile Include="Assets\Photon\PhotonChat\Demos\DemoChat\ChatAppIdCheckerUI.cs" />
      <Compile Include="Assets\Photon\PhotonChat\Demos\DemoChat\AppSettingsExtensions.cs" />
+     <Compile Include="Assets\Scripts\Enemy\EnemySpawner.cs" />
      <Compile Include="Assets\Scripts\NonScene\OfflineModeTest.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextSelector_A.cs" />
      <Compile Include="Assets\Scripts\NotForUse\PerlinNoiseUtils.cs" />
@@ -126,7 +127,7 @@
      <Compile Include="Assets\Scripts\Chunks\ChunkScanner.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexZoom.cs" />
      <Compile Include="Assets\Photon\PhotonChat\Demos\Common\OnStartDelete.cs" />
-     <Compile Include="Assets\Scripts\Enemy\EnemySpawner.cs" />
+     <Compile Include="Assets\Scripts\Navigation\Pathfinding.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\Photon\PhotonLibs\netstandard2.0\Photon3Unity3D.xml" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
@@ -409,22 +410,22 @@
      <HintPath>C:/Users/Dell/Desktop/Unity/projects/Course Project 3.2/Assets/Photon/PhotonLibs/netstandard2.0/Photon3Unity3D.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Burst.Unsafe">
-     <HintPath>C:/Users/Dell/Desktop/Unity/projects/Course Project 3.2/Library/PackageCache/com.unity.burst@1.6.0/Unity.Burst.Unsafe.dll</HintPath>
+     <HintPath>C:/Users/Dell/Desktop/Unity/projects/Course Project 3.2/Library/PackageCache/com.unity.burst@1.6.4/Unity.Burst.Unsafe.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Burst.Cecil.Mdb">
-     <HintPath>C:/Users/Dell/Desktop/Unity/projects/Course Project 3.2/Library/PackageCache/com.unity.burst@1.6.0/Unity.Burst.CodeGen/Unity.Burst.Cecil.Mdb.dll</HintPath>
+     <HintPath>C:/Users/Dell/Desktop/Unity/projects/Course Project 3.2/Library/PackageCache/com.unity.burst@1.6.4/Unity.Burst.CodeGen/Unity.Burst.Cecil.Mdb.dll</HintPath>
      </Reference>
      <Reference Include="Pathfinding.Ionic.Zip.Reduced">
      <HintPath>C:/Users/Dell/Desktop/Unity/projects/Course Project 3.2/Assets/AstarPathfindingProject/Plugins/DotNetZip/Pathfinding.Ionic.Zip.Reduced.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Burst.Cecil.Pdb">
-     <HintPath>C:/Users/Dell/Desktop/Unity/projects/Course Project 3.2/Library/PackageCache/com.unity.burst@1.6.0/Unity.Burst.CodeGen/Unity.Burst.Cecil.Pdb.dll</HintPath>
+     <HintPath>C:/Users/Dell/Desktop/Unity/projects/Course Project 3.2/Library/PackageCache/com.unity.burst@1.6.4/Unity.Burst.CodeGen/Unity.Burst.Cecil.Pdb.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Burst.Cecil">
-     <HintPath>C:/Users/Dell/Desktop/Unity/projects/Course Project 3.2/Library/PackageCache/com.unity.burst@1.6.0/Unity.Burst.CodeGen/Unity.Burst.Cecil.dll</HintPath>
+     <HintPath>C:/Users/Dell/Desktop/Unity/projects/Course Project 3.2/Library/PackageCache/com.unity.burst@1.6.4/Unity.Burst.CodeGen/Unity.Burst.Cecil.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Burst.Cecil.Rocks">
-     <HintPath>C:/Users/Dell/Desktop/Unity/projects/Course Project 3.2/Library/PackageCache/com.unity.burst@1.6.0/Unity.Burst.CodeGen/Unity.Burst.Cecil.Rocks.dll</HintPath>
+     <HintPath>C:/Users/Dell/Desktop/Unity/projects/Course Project 3.2/Library/PackageCache/com.unity.burst@1.6.4/Unity.Burst.CodeGen/Unity.Burst.Cecil.Rocks.dll</HintPath>
      </Reference>
      <Reference Include="Pathfinding.ClipperLib">
      <HintPath>C:/Users/Dell/Desktop/Unity/projects/Course Project 3.2/Assets/AstarPathfindingProject/Plugins/Clipper/Pathfinding.ClipperLib.dll</HintPath>
