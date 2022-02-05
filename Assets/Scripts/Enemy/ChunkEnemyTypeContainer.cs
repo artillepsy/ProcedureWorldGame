@@ -16,11 +16,11 @@ namespace Enemy
 
         private void OnEnable()
         {
-            EnemySpawnerManager.Inst.AddContainerToList(this);
+            EnemySpawnDataManager.Inst.AddContainerToList(this);
         }
         private void OnDisable()
         {
-            EnemySpawnerManager.Inst.RemoveContainerFromList(this);
+            EnemySpawnDataManager.Inst.RemoveContainerFromList(this);
         }
     }
 }

@@ -42,11 +42,10 @@
   </PropertyGroup>
   <ItemGroup>
      <Compile Include="Assets\Photon\PhotonLibs\WebSocket\SocketWebTcp.cs" />
-     <Compile Include="Assets\Scripts\Enemy\ChunkEnemyTypeContainer.cs" />
      <Compile Include="Assets\Scripts\NonScene\MainMenu.cs" />
      <Compile Include="Assets\Photon\PhotonChat\Demos\DemoChat\ChatAppIdCheckerUI.cs" />
      <Compile Include="Assets\Photon\PhotonChat\Demos\DemoChat\AppSettingsExtensions.cs" />
-     <Compile Include="Assets\Scripts\Enemy\EnemySpawnerManager.cs" />
+     <Compile Include="Assets\Scripts\Enemy\EnemySpawnDataManager.cs" />
      <Compile Include="Assets\Scripts\NonScene\OfflineModeTest.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextSelector_A.cs" />
      <Compile Include="Assets\Scripts\NotForUse\PerlinNoiseUtils.cs" />
@@ -59,6 +58,7 @@
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexShakeB.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\EnvMapAnimator.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\CameraController.cs" />
+     <Compile Include="Assets\Scripts\Enemy\Entity\EnemyTargetObserver.cs" />
      <Compile Include="Assets\Scripts\Character\CameraFollow.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMPro_InstructionOverlay.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_ExampleScript_01.cs" />
@@ -66,10 +66,11 @@
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextInfoDebugTool.cs" />
      <Compile Include="Assets\Scripts\NonScene\SyncActiveStatus.cs" />
      <Compile Include="Assets\Photon\PhotonChat\Demos\Common\TextButtonTransition.cs" />
+     <Compile Include="Assets\Scripts\Enemy\Entity\EnemyManager.cs" />
      <Compile Include="Assets\Scripts\Chunks\ObstacleScanner.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_DigitValidator.cs" />
      <Compile Include="Assets\Scripts\Character\Movement.cs" />
-     <Compile Include="Assets\Scripts\Scene\EnemyMovementTest.cs" />
+     <Compile Include="Assets\Scripts\Enemy\Entity\EnemyDestinationSetter.cs" />
      <Compile Include="Assets\Scripts\Core\ObjectPool.cs" />
      <Compile Include="Assets\Photon\PhotonChat\Demos\DemoChat\NamePickGui.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TextMeshSpawner.cs" />
@@ -77,12 +78,14 @@
      <Compile Include="Assets\Scripts\Chunks\PunCustom.cs" />
      <Compile Include="Assets\Scripts\Core\BasePrefabInfo.cs" />
      <Compile Include="Assets\Scripts\NonScene\EnemySpawnerTest.cs" />
+     <Compile Include="Assets\Scripts\Enemy\Entity\EnemyDamageData.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexJitter.cs" />
      <Compile Include="Assets\Scripts\Navigation\NavigationGridScanner.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextEventHandler.cs" />
      <Compile Include="Assets\Scripts\UI\Icon.cs" />
      <Compile Include="Assets\Scripts\Chunks\ObstaclePlacementObserver.cs" />
      <Compile Include="Assets\Scripts\Core\Constants.cs" />
+     <Compile Include="Assets\Scripts\Enemy\Entity\EnemyHealthData.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\DropdownSample.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_PhoneNumberValidator.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexColorCycler.cs" />
@@ -90,7 +93,6 @@
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TeleType.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
      <Compile Include="Assets\Photon\PhotonRealtime\Demos\DemoLoadBalancing\ConnectAndJoinRandomLb.cs" />
-     <Compile Include="Assets\Scripts\Scene\CameraFollow.cs" />
      <Compile Include="Assets\Scripts\Core\UniqueId.cs" />
      <Compile Include="Assets\Scripts\Character\BaseCameraFollow.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\SkewTextExample.cs" />
@@ -102,6 +104,8 @@
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark04.cs" />
      <Compile Include="Assets\Scripts\Chunks\ChunkPlacer.cs" />
      <Compile Include="Assets\Scripts\Character\MinimapCamera.cs" />
+     <Compile Include="Assets\Scripts\Enemy\ChunkEnemyTypeContainer.cs" />
+     <Compile Include="Assets\Scripts\Enemy\EnemyState.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\ChatController.cs" />
      <Compile Include="Assets\Photon\PhotonChat\Demos\Common\EventSystemSpawner.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_UiFrameRateCounter.cs" />
@@ -120,7 +124,7 @@
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_FrameRateCounter.cs" />
      <Compile Include="Assets\Scripts\Chunks\ScanNoiseUtils.cs" />
      <Compile Include="Assets\Photon\PhotonChat\Demos\DemoChat\IgnoreUiRaycastWhenInactive.cs" />
-     <Compile Include="Assets\Scripts\Scene\AIMovementTest.cs" />
+     <Compile Include="Assets\Scripts\Enemy\Entity\EnemyMovementData.cs" />
      <Compile Include="Assets\Scripts\Core\PlayerObserver.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextSelector_B.cs" />
      <Compile Include="Assets\Photon\PhotonChat\Demos\DemoChat\FriendItem.cs" />
@@ -129,6 +133,8 @@
      <Compile Include="Assets\Scripts\Chunks\ChunkScanner.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexZoom.cs" />
      <Compile Include="Assets\Photon\PhotonChat\Demos\Common\OnStartDelete.cs" />
+     <Compile Include="Assets\Scripts\Enemy\EnemySynchronizationManager.cs" />
+     <Compile Include="Assets\Scripts\Enemy\Entity\EnemySpawnerManager.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\Photon\PhotonLibs\netstandard2.0\Photon3Unity3D.xml" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />

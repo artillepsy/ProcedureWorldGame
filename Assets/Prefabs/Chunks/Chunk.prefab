@@ -13,8 +13,9 @@ GameObject:
   - component: {fileID: 4891557337233782736}
   - component: {fileID: 4891557337233782737}
   - component: {fileID: 8917383021395402477}
-  - component: {fileID: 428052347123723621}
   - component: {fileID: 6452866379297169}
+  - component: {fileID: 428052347123723621}
+  - component: {fileID: 7677898976189758909}
   m_Layer: 0
   m_Name: Chunk
   m_TagString: Untagged
@@ -113,31 +114,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12f3edd87b013d04eab1276ab37f57d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nodeSize: 20
-  inDimension: 7
-  outDimension: 9
+  nodeSize: 10
+  inDimension: 13
+  outDimension: 15
   showNodePoins: 0
   nodePointSize: 3
-  maxOverlapAttempts: 50
+  maxOverlapAttempts: 20
   prefabInfoList:
   - prefab: {fileID: -2002363868330802891, guid: dbffc516f9488c341abdee2fc77b4ebe, type: 3}
-    probability: 0.138
+    probability: 0.83
   - prefab: {fileID: -8540335711105903319, guid: 59f540ced5d923d4f9c652f719597e12, type: 3}
     probability: 0.869
   - prefab: {fileID: -566033911767667703, guid: 9c248dbf84e5f984290a29ebaa85d153, type: 3}
-    probability: 0.608
---- !u!114 &428052347123723621
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4891557337233782732}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0ff02d5aa282194f9ff59f40e7e3a0e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+    probability: 0.131
 --- !u!114 &6452866379297169
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -150,5 +139,32 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62340263b9fab65448741942e7cb588a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minCount: 6
-  maxCount: 14
+  minCount: 10
+  maxCount: 25
+--- !u!114 &428052347123723621
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4891557337233782732}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0ff02d5aa282194f9ff59f40e7e3a0e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &7677898976189758909
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4891557337233782732}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4eda07c5d137477eb45cb13f92ae1faa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefabInfoList:
+  - prefab: {fileID: 2835643497776296574, guid: d29ba159952dfa148aae1a2e0e729c57, type: 3}
+    probability: 0.679
