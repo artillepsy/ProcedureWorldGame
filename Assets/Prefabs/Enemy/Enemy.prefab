@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 1257003716816570509}
   - component: {fileID: 1257003716816570499}
   - component: {fileID: 1257003716816570508}
-  - component: {fileID: 1257003716816570511}
   - component: {fileID: 7189404967244447156}
   - component: {fileID: 6438710793675432660}
+  - component: {fileID: 6403711319526037044}
   - component: {fileID: 2835643497776296574}
   - component: {fileID: 898379989113704909}
   m_Layer: 10
@@ -83,18 +83,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 84
   m_CollisionDetection: 0
---- !u!114 &1257003716816570511
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1257003716816570497}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e486e9af7ddc4d54d986bae0d78b8d25, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &7189404967244447156
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -122,8 +110,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 858b2a5a8615c7843a09888419f48f66, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speed: 22
-  _distanceToNextWaypoint: 1.5
+  _speed: 5
+  _distanceToNextWaypoint: 0.1
+  searchPathRateInSeconds: 1
+  debugPath: 0
+--- !u!114 &6403711319526037044
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1257003716816570497}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66a7e9e65e4a4687adaf20a5ab87b2ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  changeTargetRateInSeconds: 5
 --- !u!114 &2835643497776296574
 MonoBehaviour:
   m_ObjectHideFlags: 0

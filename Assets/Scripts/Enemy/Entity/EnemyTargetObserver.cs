@@ -9,10 +9,13 @@ namespace Enemy.Entity
     {
         [SerializeField] private float changeTargetRateInSeconds;
         private readonly List<Transform> _players = PlayerObserver.FoundPlayers;
-        private Transform _target;
         private float _sqrMaxDistance;
+        private EnemyMovementData _movementData;
         // check if player is dead (when i add health component to him)
-
+        private void Awake()
+        {
+            _movementData = GetComponent<EnemyMovementData>();
+        }
         private void Start()
         {
             InvokeRepeating(nameof(SearchTarget), 0, changeTargetRateInSeconds);
@@ -25,7 +28,7 @@ namespace Enemy.Entity
                 var distance = Vector3.Distance(transform.position, player.position);
                 if(distance >= minDistance) continue;
                 minDistance = distance;
-                _target = player;
+                _movementData.Target = player;
             }
         }
         
