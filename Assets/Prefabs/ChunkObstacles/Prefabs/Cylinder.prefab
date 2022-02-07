@@ -9,7 +9,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 120420223088157046}
-  - component: {fileID: 3705004790603612773}
   - component: {fileID: 7098588187321453600}
   - component: {fileID: 5284583499121513165}
   - component: {fileID: -566033911767667703}
@@ -36,28 +35,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &3705004790603612773
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 120420223088157047}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ObservedComponentsFoldoutOpen: 1
-  Group: 0
-  prefixField: -1
-  Synchronization: 3
-  OwnershipTransfer: 0
-  observableSearch: 2
-  ObservedComponents: []
-  sceneViewId: 0
-  InstantiationId: 0
-  isRuntimeInstantiated: 0
 --- !u!114 &7098588187321453600
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -112,6 +89,7 @@ GameObject:
   - component: {fileID: 120420224881659079}
   - component: {fileID: 120420224881659072}
   - component: {fileID: 120420224881659073}
+  - component: {fileID: 1229156548606528701}
   m_Layer: 9
   m_Name: Mesh
   m_TagString: ChunkObject
@@ -127,7 +105,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 120420224881659075}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: 0}
+  m_LocalPosition: {x: 0, y: 5, z: 0}
   m_LocalScale: {x: 14, y: 5, z: 14}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -199,6 +177,22 @@ CapsuleCollider:
   m_Height: 4.01
   m_Direction: 1
   m_Center: {x: 0.000000059604645, y: -0.38, z: -0.00000008940697}
+--- !u!114 &1229156548606528701
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 120420224881659075}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 183748dd497aa473a98ff0cd8cb67fc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 1
+  uniqueID: 1785701911402342010
+  updateError: 1
+  checkTime: 0.5
 --- !u!1001 &335705530605751272
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -41,104 +41,65 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets\Photon\PhotonLibs\WebSocket\SocketWebTcp.cs" />
-     <Compile Include="Assets\Scripts\NonScene\MainMenu.cs" />
-     <Compile Include="Assets\Photon\PhotonChat\Demos\DemoChat\ChatAppIdCheckerUI.cs" />
-     <Compile Include="Assets\Photon\PhotonChat\Demos\DemoChat\AppSettingsExtensions.cs" />
-     <Compile Include="Assets\Scripts\Enemy\EnemySpawnDataManager.cs" />
-     <Compile Include="Assets\Scripts\NonScene\OfflineModeTest.cs" />
+     <Compile Include="Assets\Scripts\Enemy\Management\SpawnerManager.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextSelector_A.cs" />
-     <Compile Include="Assets\Scripts\NotForUse\PerlinNoiseUtils.cs" />
-     <Compile Include="Assets\Photon\PhotonChat\Demos\DemoChat\ChannelSelector.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexShakeA.cs" />
      <Compile Include="Assets\Scripts\Chunks\ObstacleShape.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TextMeshProFloatingText.cs" />
-     <Compile Include="Assets\Scripts\Character\Shooting.cs" />
-     <Compile Include="Assets\Scripts\NonScene\JoinRoomButton.cs" />
+     <Compile Include="Assets\Scripts\Player\Shooting.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexShakeB.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\EnvMapAnimator.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\CameraController.cs" />
-     <Compile Include="Assets\Scripts\Enemy\Entity\EnemyTargetObserver.cs" />
-     <Compile Include="Assets\Scripts\Character\CameraFollow.cs" />
+     <Compile Include="Assets\Scripts\Player\CameraFollow.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMPro_InstructionOverlay.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_ExampleScript_01.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TextConsoleSimulator.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextInfoDebugTool.cs" />
-     <Compile Include="Assets\Scripts\NonScene\SyncActiveStatus.cs" />
-     <Compile Include="Assets\Photon\PhotonChat\Demos\Common\TextButtonTransition.cs" />
-     <Compile Include="Assets\Scripts\Enemy\Entity\EnemyManager.cs" />
      <Compile Include="Assets\Scripts\Chunks\ObstacleScanner.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_DigitValidator.cs" />
-     <Compile Include="Assets\Scripts\Character\Movement.cs" />
-     <Compile Include="Assets\Scripts\Enemy\Entity\EnemyDestinationSetter.cs" />
+     <Compile Include="Assets\Scripts\Player\Movement.cs" />
      <Compile Include="Assets\Scripts\Core\ObjectPool.cs" />
-     <Compile Include="Assets\Photon\PhotonChat\Demos\DemoChat\NamePickGui.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TextMeshSpawner.cs" />
-     <Compile Include="Assets\Scripts\NonScene\MainMenuGUI.cs" />
-     <Compile Include="Assets\Scripts\Chunks\PunCustom.cs" />
      <Compile Include="Assets\Scripts\Core\BasePrefabInfo.cs" />
-     <Compile Include="Assets\Scripts\NonScene\EnemySpawnerTest.cs" />
-     <Compile Include="Assets\Scripts\Enemy\Entity\EnemyDamageData.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexJitter.cs" />
      <Compile Include="Assets\Scripts\Navigation\NavigationGridScanner.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextEventHandler.cs" />
      <Compile Include="Assets\Scripts\UI\Icon.cs" />
-     <Compile Include="Assets\Scripts\Chunks\ObstaclePlacementObserver.cs" />
      <Compile Include="Assets\Scripts\Core\Constants.cs" />
-     <Compile Include="Assets\Scripts\Enemy\Entity\EnemyHealthData.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\DropdownSample.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_PhoneNumberValidator.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexColorCycler.cs" />
-     <Compile Include="Assets\Photon\PhotonChat\Demos\Common\TextToggleIsOnTransition.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TeleType.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
-     <Compile Include="Assets\Photon\PhotonRealtime\Demos\DemoLoadBalancing\ConnectAndJoinRandomLb.cs" />
      <Compile Include="Assets\Scripts\Core\UniqueId.cs" />
-     <Compile Include="Assets\Scripts\Character\BaseCameraFollow.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\SkewTextExample.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\SimpleScript.cs" />
-     <Compile Include="Assets\Scripts\Navigation\Pathfinding.cs" />
      <Compile Include="Assets\Scripts\UI\Minimap.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01_UGUI.cs" />
-     <Compile Include="Assets\Scripts\NonScene\CommandHandler.cs" />
+     <Compile Include="Assets\Scripts\Development\CommandHandler.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark04.cs" />
-     <Compile Include="Assets\Scripts\Chunks\ChunkPlacer.cs" />
-     <Compile Include="Assets\Scripts\Character\MinimapCamera.cs" />
-     <Compile Include="Assets\Scripts\Enemy\ChunkEnemyTypeContainer.cs" />
-     <Compile Include="Assets\Scripts\Enemy\EnemyState.cs" />
+     <Compile Include="Assets\Scripts\Player\MinimapCameraFollow.cs" />
+     <Compile Include="Assets\Scripts\Enemy\Management\EnemyTypesContainer.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\ChatController.cs" />
-     <Compile Include="Assets\Photon\PhotonChat\Demos\Common\EventSystemSpawner.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_UiFrameRateCounter.cs" />
-     <Compile Include="Assets\Scripts\NonScene\CheatConsole.cs" />
+     <Compile Include="Assets\Scripts\Development\CheatConsole.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\ObjectSpin.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextEventCheck.cs" />
      <Compile Include="Assets\Scripts\Chunks\Obstacle.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\ShaderPropAnimator.cs" />
-     <Compile Include="Assets\Photon\PhotonLibs\WebSocket\WebSocket.cs" />
-     <Compile Include="Assets\Scripts\Character\Bullet.cs" />
+     <Compile Include="Assets\Scripts\Player\Bullet.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\WarpTextExample.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark02.cs" />
-     <Compile Include="Assets\Scripts\NonScene\CustomEventHandler.cs" />
+     <Compile Include="Assets\Scripts\Development\CustomEventHandler.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark03.cs" />
-     <Compile Include="Assets\Scripts\Chunks\ObstaclePlacer.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_FrameRateCounter.cs" />
      <Compile Include="Assets\Scripts\Chunks\ScanNoiseUtils.cs" />
-     <Compile Include="Assets\Photon\PhotonChat\Demos\DemoChat\IgnoreUiRaycastWhenInactive.cs" />
-     <Compile Include="Assets\Scripts\Enemy\Entity\EnemyMovementData.cs" />
-     <Compile Include="Assets\Scripts\Core\PlayerObserver.cs" />
+     <Compile Include="Assets\Scripts\Enemy\EnemyMovement.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextSelector_B.cs" />
-     <Compile Include="Assets\Photon\PhotonChat\Demos\DemoChat\FriendItem.cs" />
-     <Compile Include="Assets\Scripts\Enemy\EnemySynchronizationManager.cs" />
-     <Compile Include="Assets\Scripts\NonScene\PlayerSpawnerTest.cs" />
-     <Compile Include="Assets\Photon\PhotonChat\Demos\DemoChat\ChatGui.cs" />
      <Compile Include="Assets\Scripts\Chunks\ChunkScanner.cs" />
-     <Compile Include="Assets\Scripts\Enemy\EnemySpawnerManager.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexZoom.cs" />
-     <Compile Include="Assets\Photon\PhotonChat\Demos\Common\OnStartDelete.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
-     <None Include="Assets\Photon\PhotonLibs\netstandard2.0\Photon3Unity3D.xml" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
-     <None Include="Assets\Photon\PhotonUnityNetworking\changelog.txt" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
      <None Include="Assets\TextMesh Pro\Examples &amp; Extras\Fonts\Oswald-Bold - OFL.txt" />
      <None Include="Assets\TextMesh Pro\Examples &amp; Extras\Fonts\Anton OFL.txt" />
@@ -150,19 +111,14 @@
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Custom-Atlas.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile SSD.shader" />
-     <None Include="Assets\Photon\PhotonLibs\changes-library.txt" />
      <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro_Properties.cginc" />
-     <None Include="Assets\Photon\PhotonLibs\netstandard2.0\Photon3Unity3D.deps.json" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro_Surface.cginc" />
-     <None Include="Assets\Photon\PhotonUnityNetworking\readme.txt" />
      <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Masking.shader" />
-     <None Include="Assets\Photon\PhotonLibs\Photon3Unity3D.xml" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF Overlay.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Mobile.shader" />
      <None Include="Assets\TextMesh Pro\Fonts\LiberationSans - OFL.txt" />
-     <None Include="Assets\Photon\PhotonUnityNetworking\link.xml" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile.shader" />
      <None Include="Assets\TextMesh Pro\Sprites\EmojiOne.json" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Sprite.shader" />
@@ -410,12 +366,6 @@
      <Reference Include="UnityEditor.UnityConnectModule">
      <HintPath>C:/Program Files/unity/2021.2.7f1/Editor/Data/Managed/UnityEngine/UnityEditor.UnityConnectModule.dll</HintPath>
      </Reference>
-     <Reference Include="websocket-sharp">
-     <HintPath>C:/Users/Dell/Desktop/Unity/projects/Course Project 3.2/Assets/Photon/PhotonLibs/WebSocket/websocket-sharp.dll</HintPath>
-     </Reference>
-     <Reference Include="Photon3Unity3D">
-     <HintPath>C:/Users/Dell/Desktop/Unity/projects/Course Project 3.2/Assets/Photon/PhotonLibs/netstandard2.0/Photon3Unity3D.dll</HintPath>
-     </Reference>
      <Reference Include="Unity.Burst.Unsafe">
      <HintPath>C:/Users/Dell/Desktop/Unity/projects/Course Project 3.2/Library/PackageCache/com.unity.burst@1.6.4/Unity.Burst.Unsafe.dll</HintPath>
      </Reference>
@@ -423,7 +373,7 @@
      <HintPath>C:/Users/Dell/Desktop/Unity/projects/Course Project 3.2/Library/PackageCache/com.unity.burst@1.6.4/Unity.Burst.CodeGen/Unity.Burst.Cecil.Mdb.dll</HintPath>
      </Reference>
      <Reference Include="Pathfinding.Ionic.Zip.Reduced">
-     <HintPath>C:/Users/Dell/Desktop/Unity/projects/Course Project 3.2/Assets/Plugins/AstarPathfindingProject/Plugins/DotNetZip/Pathfinding.Ionic.Zip.Reduced.dll</HintPath>
+     <HintPath>C:/Users/Dell/Desktop/Unity/projects/Course Project 3.2/Assets/AstarPathfindingProject/Plugins/DotNetZip/Pathfinding.Ionic.Zip.Reduced.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Burst.Cecil.Pdb">
      <HintPath>C:/Users/Dell/Desktop/Unity/projects/Course Project 3.2/Library/PackageCache/com.unity.burst@1.6.4/Unity.Burst.CodeGen/Unity.Burst.Cecil.Pdb.dll</HintPath>
@@ -435,7 +385,7 @@
      <HintPath>C:/Users/Dell/Desktop/Unity/projects/Course Project 3.2/Library/PackageCache/com.unity.burst@1.6.4/Unity.Burst.CodeGen/Unity.Burst.Cecil.Rocks.dll</HintPath>
      </Reference>
      <Reference Include="Pathfinding.ClipperLib">
-     <HintPath>C:/Users/Dell/Desktop/Unity/projects/Course Project 3.2/Assets/Plugins/AstarPathfindingProject/Plugins/Clipper/Pathfinding.ClipperLib.dll</HintPath>
+     <HintPath>C:/Users/Dell/Desktop/Unity/projects/Course Project 3.2/Assets/AstarPathfindingProject/Plugins/Clipper/Pathfinding.ClipperLib.dll</HintPath>
      </Reference>
      <Reference Include="Unity.VisualScripting.Antlr3.Runtime">
      <HintPath>C:/Users/Dell/Desktop/Unity/projects/Course Project 3.2/Library/PackageCache/com.unity.visualscripting@1.7.6/Runtime/VisualScripting.Flow/Dependencies/NCalc/Unity.VisualScripting.Antlr3.Runtime.dll</HintPath>
@@ -450,7 +400,7 @@
      <HintPath>C:/Users/Dell/Desktop/Unity/projects/Course Project 3.2/Library/PackageCache/com.unity.nuget.newtonsoft-json@2.0.0/Runtime/Newtonsoft.Json.dll</HintPath>
      </Reference>
      <Reference Include="Pathfinding.Poly2Tri">
-     <HintPath>C:/Users/Dell/Desktop/Unity/projects/Course Project 3.2/Assets/Plugins/AstarPathfindingProject/Plugins/Poly2Tri/Pathfinding.Poly2Tri.dll</HintPath>
+     <HintPath>C:/Users/Dell/Desktop/Unity/projects/Course Project 3.2/Assets/AstarPathfindingProject/Plugins/Poly2Tri/Pathfinding.Poly2Tri.dll</HintPath>
      </Reference>
      <Reference Include="netstandard">
      <HintPath>C:/Program Files/unity/2021.2.7f1/Editor/Data/NetStandard/ref/2.1.0/netstandard.dll</HintPath>
@@ -866,14 +816,14 @@
      <Reference Include="Unity.EditorCoroutines.Editor">
      <HintPath>C:/Users/Dell/Desktop/Unity/projects/Course Project 3.2/Library/ScriptAssemblies/Unity.EditorCoroutines.Editor.dll</HintPath>
      </Reference>
-     <Reference Include="Unity.ShaderGraph.Editor">
-     <HintPath>C:/Users/Dell/Desktop/Unity/projects/Course Project 3.2/Library/ScriptAssemblies/Unity.ShaderGraph.Editor.dll</HintPath>
-     </Reference>
      <Reference Include="Cinemachine">
      <HintPath>C:/Users/Dell/Desktop/Unity/projects/Course Project 3.2/Library/ScriptAssemblies/Cinemachine.dll</HintPath>
      </Reference>
      <Reference Include="com.unity.cinemachine.editor">
      <HintPath>C:/Users/Dell/Desktop/Unity/projects/Course Project 3.2/Library/ScriptAssemblies/com.unity.cinemachine.editor.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.ShaderGraph.Editor">
+     <HintPath>C:/Users/Dell/Desktop/Unity/projects/Course Project 3.2/Library/ScriptAssemblies/Unity.ShaderGraph.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Formats.Fbx.Runtime">
      <HintPath>C:/Users/Dell/Desktop/Unity/projects/Course Project 3.2/Library/ScriptAssemblies/Unity.Formats.Fbx.Runtime.dll</HintPath>
@@ -961,57 +911,17 @@
      </Reference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="PhotonChat.csproj">
-      <Project>{a5e6e409-f2dc-afef-0e5f-9f712567366c}</Project>
-      <Name>PhotonChat</Name>
-    </ProjectReference>
-    <ProjectReference Include="PackageToolsEditor.csproj">
-      <Project>{c8d7c367-f498-00e1-c4b4-781dd3d72bfc}</Project>
-      <Name>PackageToolsEditor</Name>
-    </ProjectReference>
-    <ProjectReference Include="PhotonUnityNetworking.Editor.csproj">
-      <Project>{92eaf95f-73b4-fdbc-6f5d-ae95a18fdec7}</Project>
-      <Name>PhotonUnityNetworking.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="PhotonUnityNetworking.Utilities.PhotonPlayer.Editor.csproj">
-      <Project>{8f74912d-2a4e-1517-8130-f35201923604}</Project>
-      <Name>PhotonUnityNetworking.Utilities.PhotonPlayer.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="PunDemos.DemoHubEditor.csproj">
-      <Project>{ca1d4d66-faec-a215-993e-227f4c9898ef}</Project>
-      <Name>PunDemos.DemoHubEditor</Name>
-    </ProjectReference>
-    <ProjectReference Include="PhotonUnityNetworking.csproj">
-      <Project>{eb697295-973c-ccaf-ba7c-33cc0ca982aa}</Project>
-      <Name>PhotonUnityNetworking</Name>
-    </ProjectReference>
     <ProjectReference Include="AstarPathfindingProjectEditor.csproj">
       <Project>{3d13ef47-5025-2846-7873-17f4cd4628e6}</Project>
       <Name>AstarPathfindingProjectEditor</Name>
-    </ProjectReference>
-    <ProjectReference Include="PunDemos.DemoSlotcarEditor.csproj">
-      <Project>{3ad980d5-34a3-2268-756c-affd90a17c8d}</Project>
-      <Name>PunDemos.DemoSlotcarEditor</Name>
-    </ProjectReference>
-    <ProjectReference Include="PhotonUnityNetworking.Utilities.Culling.Editor.csproj">
-      <Project>{d8da3606-464f-eb29-9144-04314fa6d194}</Project>
-      <Name>PhotonUnityNetworking.Utilities.Culling.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="PhotonRealtime.csproj">
-      <Project>{823d9057-689b-f9e4-bef7-f860e0d829be}</Project>
-      <Name>PhotonRealtime</Name>
-    </ProjectReference>
-    <ProjectReference Include="PhotonUnityNetworking.Utilities.csproj">
-      <Project>{3914222d-0443-a298-a543-a6e4a458629e}</Project>
-      <Name>PhotonUnityNetworking.Utilities</Name>
     </ProjectReference>
     <ProjectReference Include="AstarPathfindingProject.csproj">
       <Project>{20624482-f030-f030-9c95-8d9470effc45}</Project>
       <Name>AstarPathfindingProject</Name>
     </ProjectReference>
-    <ProjectReference Include="PhotonUnityNetworking.Demos.csproj">
-      <Project>{52d47d98-19a3-2a8d-a017-8872c7b50f16}</Project>
-      <Name>PhotonUnityNetworking.Demos</Name>
+    <ProjectReference Include="PackageToolsEditor.csproj">
+      <Project>{c8d7c367-f498-00e1-c4b4-781dd3d72bfc}</Project>
+      <Name>PackageToolsEditor</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
