@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using Player;
 using UnityEngine;
 
@@ -48,7 +47,6 @@ namespace Enemy
         {
             if (other.GetComponentInParent<PlayerHealth>() == _playerHealth)
             {
-                Debug.Log("<color=green>player is near</color>");
                 _isPlayerNear = true;
             }
         }
@@ -56,8 +54,6 @@ namespace Enemy
         {
             if (other.GetComponentInParent<PlayerHealth>() == _playerHealth)
             {
-                
-                Debug.Log("player is far");
                 _isPlayerNear = false;
             }
         }

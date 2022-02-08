@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.Events;
 
 namespace Enemy
 {
@@ -6,13 +7,14 @@ namespace Enemy
     public class EnemyHealth : MonoBehaviour
     {
         [SerializeField] private float health = 100f;
+        public static readonly UnityEvent OnEnemyDie = new UnityEvent();
         public void TakeDamage(float damage)
         {
             health -= damage;
             if (health <= 0)
             {
                 health = 0;
-                Debug.Log("Enemy is dead");
+                OnEnemyDie?.Invoke();
                 Destroy(gameObject);
             }
         }

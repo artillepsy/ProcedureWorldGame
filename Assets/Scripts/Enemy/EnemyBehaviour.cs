@@ -1,5 +1,4 @@
-﻿using System;
-using Player;
+﻿using Player;
 using UnityEngine;
 
 namespace Enemy
@@ -18,6 +17,7 @@ namespace Enemy
         private float _sqrDistanceToAttack;
         private State _currentState = State.MovingToTarget;
         private State _previousState = State.MovingToTarget;
+        
         private void Awake()
         {
             _components = GetComponents<IOnEnemyStateChange>();
@@ -45,17 +45,14 @@ namespace Enemy
             if (_previousState == _currentState) return;
             ChangeState();
         }
-
         private void ChangeState()
         {
             _previousState = _currentState;
             foreach (var component in _components)
             {
-                Debug.Log("call");
                 component.OnStateChange(_currentState);
             }
         }
-
         private void OnDrawGizmosSelected()
         {
             Gizmos.color = Color.green;
