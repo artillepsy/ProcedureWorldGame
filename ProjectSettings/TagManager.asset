@@ -21,8 +21,8 @@ TagManager:
   - Minimap
   - ChunkObstacle
   - Character
-  - 
-  - 
+  - Enemy
+  - Ammo
   - 
   - 
   - 

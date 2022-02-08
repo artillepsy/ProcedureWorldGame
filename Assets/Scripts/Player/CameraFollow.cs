@@ -12,7 +12,7 @@ namespace Player
         private Transform _player;
         private void Awake()
         {
-            _player = FindObjectOfType<Movement>().transform;
+            _player = FindObjectOfType<PlayerMovement>().transform;
             _offset = transform.position - offsetPoint.position;
             _desiredPosition = offsetPoint.position;
         }

@@ -24,7 +24,7 @@ namespace Chunks
         private List<CachedPointInfo> _inDimensionPointsList;
         protected void Awake()
         {
-            _player = FindObjectOfType<Movement>().transform;
+            _player = FindObjectOfType<PlayerMovement>().transform;
             _halfNodeSize = nodeSize / 2;
             _cachedPointsDictionary = new Dictionary<Vector3, CachedPointInfo>();
             _inDimensionPointsList = new List<CachedPointInfo>();

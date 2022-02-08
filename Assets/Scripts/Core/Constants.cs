@@ -15,6 +15,11 @@ namespace Core
             public const string Vertical = "Vertical";
         }
 
+        public static class Tags
+        {
+            public const string Player = "Player";
+        }
+
         public static class LayerMasks
         {
             public static LayerMask Obstacle => LayerMask.GetMask(ChunkObstacle);

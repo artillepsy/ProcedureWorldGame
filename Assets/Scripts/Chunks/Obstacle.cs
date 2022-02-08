@@ -50,7 +50,7 @@ namespace Chunks
                 var overlappedColliders = Physics.OverlapBox(overlapBoxPosition, shapeTransform.lossyScale, overlapBoxRotation); // anchor parent rotation add
                 foreach (Collider otherCollider in overlappedColliders)
                 {
-                    if (otherCollider.GetComponentInParent<Obstacle>() || otherCollider.GetComponentInParent<Movement>())
+                    if (otherCollider.GetComponentInParent<Obstacle>() || otherCollider.GetComponentInParent<PlayerMovement>())
                     {
                         //Debug.DrawLine(overlapBoxPosition, overlapBoxPosition + Vector3.up * 15, Color.red, 50);
                         return true;

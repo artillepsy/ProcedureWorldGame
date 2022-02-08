@@ -3,7 +3,8 @@ using UnityEngine;
 
 namespace Player
 {
-    public class Movement : MonoBehaviour
+    [AddComponentMenu("Player/PlayerMovement")]
+    public class PlayerMovement : MonoBehaviour
     {
         [SerializeField] private Joystick joystick;
         [SerializeField] private float speed = 15f;

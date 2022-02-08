@@ -8,7 +8,7 @@ namespace Player
         private Transform _player;
         private void Awake()
         {
-            _player = FindObjectOfType<Movement>().transform;
+            _player = FindObjectOfType<PlayerMovement>().transform;
             GetComponent<Camera>().orthographicSize = size;
         }
         private void FixedUpdate()
