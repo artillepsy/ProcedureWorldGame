@@ -5,20 +5,17 @@ namespace Player
 {
     public class Movement : MonoBehaviour
     {
+        [SerializeField] private Joystick joystick;
         [SerializeField] private float speed = 15f;
-
-        private string _horizontalInputAxis = Constants.InputAsixes.Horizontal;
-        private string _verticalInputAxis = Constants.InputAsixes.Vertical;
-
-        private Camera _camera;
+        [Range(0, 1)]
+        [SerializeField] private float movementStartValue = 0.2f;
+        
         private Rigidbody _rigidBody;
-        private Plane _rayCastPlane;
         private bool _inputEnapled = true;
 
         private void Awake()
         {
             _rigidBody = GetComponent<Rigidbody>();
-            _rayCastPlane = new Plane(Vector3.up, 0);
         }
         private void OnEnable()
         {
@@ -26,37 +23,25 @@ namespace Player
             CommandHandler.OnPlayerSpeedChanged.AddListener(newSpeed => speed = newSpeed);
             CommandHandler.OnColliderVisibilityChanged.AddListener(mode => GetComponentInChildren<Collider>().enabled = mode);
         }
-        private void Start()
-        {
-            _camera = Camera.main;
-        }
         private void Update()
         {
-            if (_inputEnapled)
-            {
-                MovementInput();
-                MouseInput();
-            }
-        }
-        private void MouseInput()
-        {
-            float distance;
-            Vector3 worldPosition;
-            var ray = _camera.ScreenPointToRay(Input.mousePosition);
-            if (_rayCastPlane.Raycast(ray, out distance))
-            {
-                worldPosition = ray.GetPoint(distance);
-                worldPosition.y = transform.position.y;
-
-                var newForward = new Vector3(worldPosition.x - transform.position.x, 0, worldPosition.z - transform.position.z);
-                transform.forward = newForward;
-            }
+            if (!_inputEnapled) return;
+            MovementInput();
         }
         private void MovementInput()
         {
-            var xAxis = Input.GetAxisRaw(_horizontalInputAxis);
-            var zAxis = Input.GetAxisRaw(_verticalInputAxis);
-            var velocity = Vector3.ClampMagnitude(new Vector3(xAxis, 0, zAxis) * speed, speed);
+            var xAxis = joystick.Horizontal;
+            var zAxis = joystick.Vertical;
+            var newForward = new Vector3(xAxis, 0, zAxis);
+            if (newForward.magnitude > movementStartValue)
+            {
+                newForward.Normalize();
+            }
+            else
+            {
+                newForward = Vector3.zero;
+            }
+            var velocity = Vector3.ClampMagnitude(newForward * speed, speed);
             _rigidBody.velocity = velocity;
         }
     }
