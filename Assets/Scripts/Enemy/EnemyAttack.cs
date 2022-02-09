@@ -23,13 +23,6 @@ namespace Enemy
             _playerHealth = FindObjectOfType<PlayerHealth>();
             StartCoroutine(AttackingCoroutine());
         }
-        private void Update()
-        {
-            if (_isPlayerNear)
-            {
-                transform.LookAt(_playerHealth.transform);
-            }
-        }
         private IEnumerator AttackingCoroutine()
         {
             while (true)
