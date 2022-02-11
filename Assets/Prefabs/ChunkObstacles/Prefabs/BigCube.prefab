@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6402150455088036286}
   - component: {fileID: 50785863000870272}
   - component: {fileID: 4287927443094992077}
-  - component: {fileID: 542357789946864739}
+  - component: {fileID: 1645518161020875635}
   m_Layer: 9
   m_Name: Mesh
   m_TagString: ChunkObject
@@ -99,22 +99,22 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &542357789946864739
-MonoBehaviour:
+--- !u!208 &1645518161020875635
+NavMeshObstacle:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2104606197638764646}
   m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 183748dd497aa473a98ff0cd8cb67fc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  version: 1
-  uniqueID: 418646655155857321
-  updateError: 1
-  checkTime: 0.5
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.5, y: 0.5, z: 0.5}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 0, z: 0}
+  m_TimeToStationary: 0.5
 --- !u!1 &3004351776454164502
 GameObject:
   m_ObjectHideFlags: 0
