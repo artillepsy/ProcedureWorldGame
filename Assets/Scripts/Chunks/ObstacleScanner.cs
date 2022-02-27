@@ -6,7 +6,7 @@ using Random = UnityEngine.Random;
 
 namespace Chunks
 {
-    public class ObstacleScanner : ScanNoiseUtils
+    public class ObstacleScanner : MonoBehaviour
     {
         [Header("Scan settings")]
         [Range(10, 100)]
@@ -15,13 +15,14 @@ namespace Chunks
         [SerializeField] private List<PlacementPrefabInfo> prefabInfoList;
         [SerializeField] private int minCount = 6;
         [SerializeField] private int maxCount = 14;
+        private NoiseUtils _noiseUtils;
         private List<CachedInfo> _cachedObstacleInfo;
         private int _obstacleCount;
         private ChunkBounds _chunkBounds;
         private bool _afterStart = false;
         private void Awake()
         {
-            base.Awake();
+            _noiseUtils = GetComponent<NoiseUtils>();
             _chunkBounds = new ChunkBounds(transform.position, ChunkScanner.Inst.ChunkLength);
             _obstacleCount = Random.Range(minCount, maxCount);
             _cachedObstacleInfo = new List<CachedInfo>();
@@ -42,7 +43,7 @@ namespace Chunks
         }
         private IEnumerator FindFreeSpaceCoroutine()
         {
-            AddPointToNode(transform.position, prefabInfoList);
+            _noiseUtils.AddPointToNode(transform.position, prefabInfoList);
             int count = 0;
             for (var i = 0; i < _obstacleCount; i++)
             {
@@ -59,16 +60,16 @@ namespace Chunks
             {
                 var position = ScanHelper.GetRandomPoint(_chunkBounds.Left, _chunkBounds.Right, _chunkBounds.Bottom,
                     _chunkBounds.Up);
-                var id = GetNearestNoisePointId(position);
-                var info = ObjectPool.GetPrefabInfoById(id, prefabInfoList);
+                var id = _noiseUtils.GetNearestNoisePointId(position);
+                var info = GameObjectPool.GetPrefabInfoById(id, prefabInfoList);
 
                 if (info == null) continue;
 
                 var obstacleComp = info.Prefab.GetComponent<Obstacle>();
                 var halfLength = ChunkScanner.Inst.ChunkLength / 2;
 
-                if (obstacleComp.IsOutChunk(position, transform.position, halfLength)) continue;
-                if (obstacleComp.IsOverlapping(position, rotation)) continue;
+                if (obstacleComp.OutOfChunk(position, transform.position, halfLength)) continue;
+                if (obstacleComp.Overlapping(position, rotation)) continue;
                 
                 Spawn(info.Prefab.Id, position, rotation);
                 return true;
@@ -83,10 +84,10 @@ namespace Chunks
         }
         public void Spawn(int id, Vector3 position, Quaternion rotation)
         {
-            GameObject inst = ObjectPool.Inst.GetInstanceById(id);
+            GameObject inst = GameObjectPool.Inst.GetInstanceById(id);
             if (inst == null)
             {
-                inst = Instantiate(ObjectPool.Inst.GetPrefabById(id).gameObject, position, rotation);
+                inst = Instantiate(GameObjectPool.Inst.GetPrefabById(id).gameObject, position, rotation);
             }
             AddInstancesToCache(id, position, rotation, inst);
         }
@@ -112,16 +113,16 @@ namespace Chunks
                 {
                     objectsToPool.Add(info.Inst, info.Id);
                 }
-                ObjectPool.Inst.AddInstances(objectsToPool);
+                GameObjectPool.Inst.AddInstances(objectsToPool);
             }
             public static void GetAllFromPool(List<CachedInfo> cachedInfo, Transform parent)
             {
                 foreach (CachedInfo info in cachedInfo)
                 {
-                    GameObject inst = ObjectPool.Inst.GetInstanceById(info.Id);
+                    GameObject inst = GameObjectPool.Inst.GetInstanceById(info.Id);
                     if (inst == null)
                     {
-                        inst = Instantiate(ObjectPool.Inst.GetPrefabById(info.Id).gameObject, info.Position, info.Rotation);
+                        inst = Instantiate(GameObjectPool.Inst.GetPrefabById(info.Id).gameObject, info.Position, info.Rotation);
                     }
                     info.UpdateInstTransform(inst, parent);
                 }

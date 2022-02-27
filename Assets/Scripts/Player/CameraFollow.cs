@@ -16,11 +16,11 @@ namespace Player
             _offset = transform.position - offsetPoint.position;
             _desiredPosition = offsetPoint.position;
         }
-        private void FixedUpdate()
+        private void LateUpdate()
         {
             _desiredPosition = _player.position + _offset;
-            var smoothedPosiiton = Vector3.SmoothDamp(transform.position, _desiredPosition, ref _velocity, smoothTime);
-            transform.position = smoothedPosiiton;
+            var smoothedPosition = Vector3.SmoothDamp(transform.position, _desiredPosition, ref _velocity, smoothTime);
+            transform.position = smoothedPosition;
         }
     }
 }

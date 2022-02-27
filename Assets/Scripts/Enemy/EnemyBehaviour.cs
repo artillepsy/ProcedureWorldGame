@@ -1,5 +1,6 @@
 ﻿using Player;
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace Enemy
 {
@@ -12,6 +13,8 @@ namespace Enemy
     public class EnemyBehaviour : MonoBehaviour
     {
         [SerializeField] private float distanceToAttack = 3f;
+        [SerializeField] private float maxDistanceToDestroy = 200f;
+        public static readonly UnityEvent OnEnemyTooFar = new UnityEvent();
         private IOnEnemyStateChange[] _components;
         private Transform _player;
         private float _sqrDistanceToAttack;
@@ -29,8 +32,17 @@ namespace Enemy
         }
         private void Update()
         {
+            CheckDistanceToDestroy();
             CheckDistanceToPlayer();
         }
+        private void CheckDistanceToDestroy()
+        {
+            var distance = (transform.position - _player.position).magnitude;
+            if (distance < maxDistanceToDestroy) return;
+            OnEnemyTooFar?.Invoke();
+            Destroy(gameObject);
+        }
+        
         private void CheckDistanceToPlayer()
         {
             var sqrDistance = (_player.transform.position - transform.position).sqrMagnitude;

@@ -3,11 +3,11 @@ using UnityEngine;
 
 namespace Core
 {
-    public class ObjectPool : MonoBehaviour
+    public class GameObjectPool : MonoBehaviour
     {
         [SerializeField] private List<UniqueId> prefabs;
         private Dictionary<GameObject, int> _instances;
-        public static ObjectPool Inst = null;
+        public static GameObjectPool Inst = null;
         public void AddInstances(Dictionary<GameObject, int> activeInstances)
         {
             foreach (var (key, value) in activeInstances)

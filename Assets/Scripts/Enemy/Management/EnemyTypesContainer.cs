@@ -10,7 +10,7 @@ namespace Enemy.Management
 
         public UniqueId GetPrefabByProbability()
         {
-            return ObjectPool.GetPrefabByProbability(prefabInfoList);
+            return GameObjectPool.GetPrefabByProbability(prefabInfoList);
         }
         private void OnEnable()
         {

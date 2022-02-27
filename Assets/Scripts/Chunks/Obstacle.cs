@@ -7,8 +7,7 @@ namespace Chunks
     public class Obstacle : MonoBehaviour
     {
         [SerializeField] private List<ObstacleShape> shapeList;
-        public List<ObstacleShape> ShapeList => shapeList;
-        public bool IsOutChunk(Vector3 position, Vector3 chunkPosition, float chunkHalfLength)
+        public bool OutOfChunk(Vector3 position, Vector3 chunkPosition, float chunkHalfLength)
         {
             if (shapeList.Count == 0)
             {
@@ -34,7 +33,7 @@ namespace Chunks
             return false;
              
         }
-        public bool IsOverlapping(Vector3 position, Quaternion rotation)
+        public bool Overlapping(Vector3 position, Quaternion rotation)
         {
             if (shapeList.Count == 0)
             {

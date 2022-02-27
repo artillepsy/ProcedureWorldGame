@@ -1,11 +1,11 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Core;
+using Player;
 
 namespace Chunks
 {
-    public class ChunkScanner : ScanNoiseUtils
+    public class ChunkScanner : MonoBehaviour
     {
         [Header("Global parent")]
         [SerializeField] private Transform environement;
@@ -21,47 +21,53 @@ namespace Chunks
         [SerializeField] private int disableDimension = 5;
         
         public float ChunkLength => chunkLength;
-        public int EnableDimension => enableDimension;
-        public int DisableDimension => disableDimension;
-        public float ScanRateInSeconds => scanRateInSeconds;
-
+        private NoiseUtils _noiseUtils;
+        private Transform _player;
         public static ChunkScanner Inst = null;
+        private float _totalScanTime = 0;
         private int _minEnableRadius;
         private int _maxEnableRadius;
         private void Awake()
         {
-            base.Awake();
+            _noiseUtils = GetComponent<NoiseUtils>();
+            _player = FindObjectOfType<PlayerMovement>().transform;
             _spawnedChunks = new Dictionary<Vector3, GameObject>();
             if (Inst == null) Inst = this;
-            _minEnableRadius = (DisableDimension - EnableDimension) / 2;
-            _maxEnableRadius = (DisableDimension + EnableDimension) / 2;
+            _minEnableRadius = (disableDimension - enableDimension) / 2;
+            _maxEnableRadius = (disableDimension + enableDimension) / 2;
         }
-        private void Start()
+
+        private void Update()
         {
-            StartCoroutine(ScanTerrainCoroutine());
+            if (!ReadyToScan()) return;
+            _noiseUtils.AddPointToNode(_player.position ,prefabInfoList);
+            ScanAreaInGrid(_player.position);
         }
-        private IEnumerator ScanTerrainCoroutine()
+
+        private bool ReadyToScan()
         {
-            while (true)
+            if (_totalScanTime <= 0)
             {
-                AddPointToNode(_player.position ,prefabInfoList);
-                ScanAreaInGrid(_player.position);
-                yield return new WaitForSeconds(ScanRateInSeconds);
+                _totalScanTime = scanRateInSeconds;
+                return true;
             }
+            _totalScanTime -= Time.deltaTime;
+            return false;
         }
+        
         private void ScanAreaInGrid(Vector3 playerPosition)
         {
             int i, j;
             float x, z;
-            var start = VectorHelper.GetConvertedStartPoint(playerPosition, DisableDimension, ChunkLength);
+            var start = NoiseUtilsHelper.GetConvertedStartPoint(playerPosition, disableDimension, ChunkLength);
 
-            for (x = start.x, i = 0; i < DisableDimension; i++, x = start.x + ChunkLength * i)
+            for (x = start.x, i = 0; i < disableDimension; i++, x = start.x + ChunkLength * i)
             {
-                for (z = start.z, j = 0; j < DisableDimension; j++, z = start.z + ChunkLength * j)
+                for (z = start.z, j = 0; j < disableDimension; j++, z = start.z + ChunkLength * j)
                 {
                     var checkPoint = new Vector3(x, 0, z);
 
-                    if (VectorHelper.IsInEnableArea(i, j, _minEnableRadius, _maxEnableRadius))
+                    if (NoiseUtilsHelper.IsInEnableArea(i, j, _minEnableRadius, _maxEnableRadius))
                     {
                         if (_spawnedChunks.TryGetValue(checkPoint, out var chunk))
                         {
@@ -82,8 +88,8 @@ namespace Chunks
         }
         private void SpawnChunk(Vector3 position)
         {
-            var newId = GetNearestNoisePointId(position);
-            var prefab = ObjectPool.GetPrefabInfoById(newId, prefabInfoList).Prefab;
+            var newId = _noiseUtils.GetNearestNoisePointId(position);
+            var prefab = GameObjectPool.GetPrefabInfoById(newId, prefabInfoList).Prefab;
             var chunk = Instantiate(prefab, position, Quaternion.identity);
             chunk.transform.SetParent(environement.transform);
             _spawnedChunks.Add(position, chunk.gameObject);
