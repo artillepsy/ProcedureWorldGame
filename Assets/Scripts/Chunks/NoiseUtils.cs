@@ -18,18 +18,10 @@ namespace Chunks
         private int _minInRadius;
         private int _maxInRadius;
         
-        private Dictionary<Vector3, CachedPointInfo> _cachedPointsDictionary;
+        private Dictionary<Vector3, CachedPointInfo> _cachedPoints;
         private List<CachedPointInfo> _inDimensionPointsList;
-        private void Awake()
-        {
-            
-            _halfNodeSize = nodeSize / 2;
-            _cachedPointsDictionary = new Dictionary<Vector3, CachedPointInfo>();
-            _inDimensionPointsList = new List<CachedPointInfo>();
-            _minInRadius = (outDimension - inDimension) / 2;
-            _maxInRadius = (outDimension + inDimension) / 2;
-        }
-        public void AddPointToNode(Vector3 position ,List<PlacementPrefabInfo> prefabInfoList) // before scan
+
+        public void AddPointToNode(Vector3 position ,List<ObstaclePrefabInfo> prefabInfoList) // before scan
         {
             _inDimensionPointsList.Clear();
             int i, j;
@@ -41,19 +33,15 @@ namespace Chunks
                 {
                     if (!NoiseUtilsHelper.IsInEnableArea(i, j, _minInRadius, _maxInRadius)) continue;
                     var checkPoint = new Vector3(x, 0, z);
-                    if (_cachedPointsDictionary.TryGetValue(checkPoint, out var buffer))
+                    if (_cachedPoints.TryGetValue(checkPoint, out var buffer))
                     {
                         _inDimensionPointsList.Add(buffer);
                         continue;
                     }
-                    var left = checkPoint.x - _halfNodeSize;
-                    var right = checkPoint.x + _halfNodeSize;
-                    var up = checkPoint.z + _halfNodeSize;
-                    var down = checkPoint.z - _halfNodeSize;
-                    var randomPointInCurrentNode = NoiseUtilsHelper.GetRandomPointInBounds(left, right, down, up);
-                    var id = GameObjectPool.GetIdByProbability(prefabInfoList);
+                    var randomPointInCurrentNode = NoiseUtilsHelper.GetRandomPointInBounds(checkPoint, _halfNodeSize);
+                    var id = GameObjectPool.GetInfoByProbability(prefabInfoList).Prefab.Id;
                     var cachedPoint = new CachedPointInfo(id, randomPointInCurrentNode);
-                    _cachedPointsDictionary.Add(checkPoint, cachedPoint);
+                    _cachedPoints.Add(checkPoint, cachedPoint);
                     _inDimensionPointsList.Add(cachedPoint);
                 }
             }
@@ -64,16 +52,35 @@ namespace Chunks
             var idToReturn = -1;
             foreach (CachedPointInfo info in _inDimensionPointsList)
             {
-                float distance = Vector3.Distance(position, info.Position);
-                if (distance< minDist)
-                {
-                    idToReturn = info.Id;
-                    minDist = distance;
-                }
+                var distance = Vector3.Distance(position, info.Position);
+                if (distance >= minDist) continue;
+             
+                idToReturn = info.Id;
+                minDist = distance;
             }
             return idToReturn;
         }
-       
+
+        private void Awake()
+        {
+            _halfNodeSize = nodeSize / 2;
+            _cachedPoints = new Dictionary<Vector3, CachedPointInfo>();
+            _inDimensionPointsList = new List<CachedPointInfo>();
+            _minInRadius = (outDimension - inDimension) / 2;
+            _maxInRadius = (outDimension + inDimension) / 2;
+        }
+
+        private class CachedPointInfo
+        {
+            public readonly int Id;
+            public readonly Vector3 Position;
+            public CachedPointInfo(int id, Vector3 position)
+            {
+                Id = id;
+                Position = position;
+            }
+        }
+
         private void OnDrawGizmos()
         {
             if(!showNodePoins ||_inDimensionPointsList == null || _inDimensionPointsList.Count == 0)
@@ -84,17 +91,6 @@ namespace Chunks
             foreach(CachedPointInfo info in _inDimensionPointsList)
             {
                 Gizmos.DrawSphere(info.Position, nodePointSize);
-            }
-        }
-        
-        private class CachedPointInfo
-        {
-            public readonly int Id;
-            public readonly Vector3 Position;
-            public CachedPointInfo(int id, Vector3 position)
-            {
-                Id = id;
-                Position = position;
             }
         }
     }

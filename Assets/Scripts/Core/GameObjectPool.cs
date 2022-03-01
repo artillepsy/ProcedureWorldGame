@@ -5,17 +5,10 @@ namespace Core
 {
     public class GameObjectPool : MonoBehaviour
     {
-        [SerializeField] private List<UniqueId> prefabs;
+        [SerializeField] private List<UniqueInfo> prefabs;
         private Dictionary<GameObject, int> _instances;
         public static GameObjectPool Inst = null;
-        public void AddInstances(Dictionary<GameObject, int> activeInstances)
-        {
-            foreach (var (key, value) in activeInstances)
-            {
-                _instances.Add(key, value);
-                key.SetActive(false);
-            }
-        }
+        
         public GameObject GetInstanceById(int id)
         {
             if (!_instances.ContainsValue(id)) return null;
@@ -27,16 +20,16 @@ namespace Core
             }
             return null;
         }
-        public UniqueId GetPrefabById(int id)
+        public UniqueInfo GetPrefabById(int id)
         {
-            foreach (UniqueId prefab in prefabs)
+            foreach (UniqueInfo prefab in prefabs)
             {
                 if(prefab.Id != id) continue;
                 return prefab;
             }
             return null;
         }
-        public static T GetPrefabInfoById<T>(int prefabId, List<T> prefabInfoList) where T: BasePrefabInfo
+        public static T GetInfoById<T>(int prefabId, List<T> prefabInfoList) where T: BasePrefabInfo
         {
             foreach (T prefabInfo in prefabInfoList)
             {
@@ -45,7 +38,7 @@ namespace Core
             }
             return null;
         }
-        public static int GetIdByProbability<T>(List<T> prefabInfoList) where T: ProbabilityPrefabInfo
+        public static T GetInfoByProbability<T>(List<T> prefabInfoList) where T : ProbabilityPrefabInfo
         {
             float probabilitySum = 0;
 
@@ -57,27 +50,30 @@ namespace Core
 
             foreach (T info in prefabInfoList)
             {
-                if (randomPoint < info.Probability) return info.Prefab.Id;
+                if (randomPoint < info.Probability) return info;
                 else randomPoint -= info.Probability;
             }
-            return prefabInfoList[prefabInfoList.Count - 1].Prefab.Id;
+            return prefabInfoList[prefabInfoList.Count - 1];
         }
-        public static UniqueId GetPrefabByProbability<T>(List<T> prefabInfoList) where T : ProbabilityPrefabInfo
+        public void AddAll(IEnumerable<CachedTransformInfo> cachedInfo)
         {
-            float probabilitySum = 0;
-
-            foreach (T info in prefabInfoList)
+            foreach (var info in cachedInfo)
             {
-                probabilitySum += info.Probability;
+                _instances.Add(info.Inst, info.Id);
+                info.Inst.SetActive(false);
             }
-            var randomPoint = Random.value * probabilitySum;
-
-            foreach (T info in prefabInfoList)
+        }
+        public void GetAll(IEnumerable<CachedTransformInfo> cachedInfo, Transform parent)
+        {
+            foreach (CachedTransformInfo info in cachedInfo)
             {
-                if (randomPoint < info.Probability) return info.Prefab;
-                else randomPoint -= info.Probability;
+                var inst = GetInstanceById(info.Id);
+                if (inst == null)
+                {
+                    inst = Instantiate(GetPrefabById(info.Id).gameObject, info.Position, info.Rotation);
+                }
+                info.UpdateInstTransform(inst, parent);
             }
-            return prefabInfoList[prefabInfoList.Count - 1].Prefab;
         }
         
         private void Awake()

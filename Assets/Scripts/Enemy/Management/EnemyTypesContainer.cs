@@ -8,9 +8,9 @@ namespace Enemy.Management
     {
         [SerializeField] private List<EnemyPrefabInfo> prefabInfoList;
 
-        public UniqueId GetPrefabByProbability()
+        public UniqueInfo GetPrefabByProbability()
         {
-            return GameObjectPool.GetPrefabByProbability(prefabInfoList);
+            return GameObjectPool.GetInfoByProbability(prefabInfoList).Prefab;
         }
         private void OnEnable()
         {

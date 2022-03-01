@@ -5,8 +5,8 @@ namespace Core
     [System.Serializable]
     public class BasePrefabInfo
     {
-        [SerializeField] protected UniqueId prefab;
-        public UniqueId Prefab => prefab;
+        [SerializeField] protected UniqueInfo prefab;
+        public UniqueInfo Prefab => prefab;
     }
     [System.Serializable]
     public class ProbabilityPrefabInfo : BasePrefabInfo
@@ -16,12 +16,17 @@ namespace Core
         public float Probability => probability;
     }
     [System.Serializable]
-    public class PlacementPrefabInfo : ProbabilityPrefabInfo
+    public class ObstaclePrefabInfo : ProbabilityPrefabInfo
     {
     }
     
     [System.Serializable]
     public class EnemyPrefabInfo : ProbabilityPrefabInfo
+    {
+    } 
+    
+    [System.Serializable]
+    public class ItemPrefabInfo : ProbabilityPrefabInfo
     {
     }
 }

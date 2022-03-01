@@ -5,12 +5,12 @@ using Player;
 
 namespace Chunks
 {
-    public class ChunkScanner : MonoBehaviour
+    public class ChunkPlacer : MonoBehaviour
     {
         [Header("Global parent")]
         [SerializeField] private Transform environement;
         [Header("Prefabs settings")]
-        [SerializeField] private List<PlacementPrefabInfo> prefabInfoList;
+        [SerializeField] private List<ObstaclePrefabInfo> prefabInfoList;
         private Dictionary<Vector3, GameObject> _spawnedChunks;
         [Header("Scan settings")]
         [SerializeField] private float chunkLength = 100;
@@ -23,7 +23,7 @@ namespace Chunks
         public float ChunkLength => chunkLength;
         private NoiseUtils _noiseUtils;
         private Transform _player;
-        public static ChunkScanner Inst = null;
+        public static ChunkPlacer Inst = null;
         private float _totalScanTime = 0;
         private int _minEnableRadius;
         private int _maxEnableRadius;
@@ -89,7 +89,7 @@ namespace Chunks
         private void SpawnChunk(Vector3 position)
         {
             var newId = _noiseUtils.GetNearestNoisePointId(position);
-            var prefab = GameObjectPool.GetPrefabInfoById(newId, prefabInfoList).Prefab;
+            var prefab = GameObjectPool.GetInfoById(newId, prefabInfoList).Prefab;
             var chunk = Instantiate(prefab, position, Quaternion.identity);
             chunk.transform.SetParent(environement.transform);
             _spawnedChunks.Add(position, chunk.gameObject);

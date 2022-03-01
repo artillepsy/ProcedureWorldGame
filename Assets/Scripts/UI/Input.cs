@@ -1,8 +1,5 @@
 ﻿using Player;
 using UnityEngine;
-using UnityEngine.Rendering;
-using UnityEngine.UI;
-using Weapons;
 
 namespace UI
 {
