@@ -8,6 +8,7 @@ namespace Enemy
     {
         [SerializeField] private float health = 100f;
         public static readonly UnityEvent OnEnemyDie = new UnityEvent();
+        public readonly UnityEvent OnDie = new UnityEvent();
         public void TakeDamage(float damage)
         {
             health -= damage;
@@ -15,6 +16,7 @@ namespace Enemy
             {
                 health = 0;
                 OnEnemyDie?.Invoke();
+                OnDie?.Invoke();
                 Destroy(gameObject);
             }
         }

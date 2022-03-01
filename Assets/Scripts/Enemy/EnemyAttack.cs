@@ -38,6 +38,7 @@ namespace Enemy
         }
         private void OnTriggerEnter(Collider other)
         {
+            if (other.isTrigger) return;
             if (other.GetComponentInParent<PlayerHealth>() == _playerHealth)
             {
                 _isPlayerNear = true;
@@ -45,6 +46,7 @@ namespace Enemy
         }
         private void OnTriggerExit(Collider other)
         {
+            if (other.isTrigger) return;
             if (other.GetComponentInParent<PlayerHealth>() == _playerHealth)
             {
                 _isPlayerNear = false;
