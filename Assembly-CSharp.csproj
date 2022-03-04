@@ -41,8 +41,10 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\Items\Ammo.cs" />
      <Compile Include="Assets\Joystick Pack\Scripts\Joysticks\VariableJoystick.cs" />
      <Compile Include="Assets\Scripts\Items\Item.cs" />
+     <Compile Include="Assets\Scripts\Enemy\ItemDropper.cs" />
      <Compile Include="Assets\Scripts\Enemy\Management\SpawnerManager.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextSelector_A.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexShakeA.cs" />
@@ -94,6 +96,7 @@
      <Compile Include="Assets\Scripts\Player\MinimapCameraFollow.cs" />
      <Compile Include="Assets\Scripts\Enemy\Management\EnemyTypesContainer.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\ChatController.cs" />
+     <Compile Include="Assets\Scripts\Player\ItemPicker.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_UiFrameRateCounter.cs" />
      <Compile Include="Assets\Scripts\DevConsole\CheatConsole.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\ObjectSpin.cs" />
@@ -119,9 +122,6 @@
      <Compile Include="Assets\Scripts\Chunks\ChunkPlacer.cs" />
      <Compile Include="Assets\Scripts\Core\CachedTransformInfo.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexZoom.cs" />
-     <Compile Include="Assets\Scripts\Enemy\ItemDropper.cs" />
-     <Compile Include="Assets\Scripts\Items\Ammo.cs" />
-     <Compile Include="Assets\Scripts\Player\ItemPicker.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />

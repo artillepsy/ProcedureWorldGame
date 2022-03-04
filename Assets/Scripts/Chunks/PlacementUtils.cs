@@ -50,9 +50,5 @@ namespace Chunks
             _cachedTransformInfo = new List<CachedTransformInfo>();
             _afterStart = true;
         }
-
-      
-        
-        
     }
 }

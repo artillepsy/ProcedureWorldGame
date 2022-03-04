@@ -37,7 +37,7 @@ namespace Chunks
         }
         private IEnumerator FindFreeSpaceCoroutine()
         {
-            _noiseUtils.AddPointToNode(transform.position, prefabInfoList);
+            //_noiseUtils.AddPointToNode(transform.position, prefabInfoList);
             int count = 0;
             for (var i = 0; i < _obstacleCount; i++)
             {
@@ -53,8 +53,9 @@ namespace Chunks
             for (var i = 0; i < maxOverlapAttempts; i++)
             {
                 var position = TransformUtils.GetRandomPoint(transform.position, _placementUtils.HalfChunkLength);
-                var id = _noiseUtils.GetNearestNoisePointId(position);
-                var info = GameObjectPool.GetInfoById(id, prefabInfoList);
+                //var id = _noiseUtils.GetNearestNoisePointId(position);
+                var info = GameObjectPool.GetInfoByProbability(prefabInfoList);
+               // var info = GameObjectPool.GetInfoById(id, prefabInfoList);
 
                 if (info == null) continue;
 
@@ -62,7 +63,7 @@ namespace Chunks
                 if (obstacle.OutOfChunk(position, transform.position, _placementUtils.HalfChunkLength)) continue;
                 if (obstacle.Overlapping(position, rotation)) continue;
 
-                _placementUtils.SpawnObstacle(id, position, rotation);
+                _placementUtils.SpawnObstacle(info.Prefab.Id, position, rotation);
                 return true;
             }
             return false;
