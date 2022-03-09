@@ -32,7 +32,7 @@ namespace Weapons
         private int _ammoInClip = 0;
         
         private Transform _player;
-        private Coroutine _reloadCoroutine;
+        private Collider _playerCollider;
         private bool _reloading = false;
         public bool Shooting { get; set; }
 
@@ -52,6 +52,7 @@ namespace Weapons
         private void Start()
         {
             _player = FindObjectOfType<PlayerMovement>().transform;
+            _playerCollider = _player.GetComponent<CapsuleCollider>();
             OnAmmoCountChange?.Invoke(_totalAmmoCount, clipSize, _ammoInClip);
         }
 
@@ -68,7 +69,7 @@ namespace Weapons
             var inst = Instantiate(bulletPrefab, fireTransform.position, Quaternion.identity);
             var deviationAngle = Random.Range(0, maxDeviationAngle);
             var direction = Quaternion.Euler(0, deviationAngle, 0) * _player.forward;
-            inst.SetUp(direction, damage, bulletSpeed);
+            inst.SetUp(direction, damage, bulletSpeed, _playerCollider);
             _ammoInClip--;
             _totalRpsTime = 1f / rps;
             OnShoot?.Invoke(_ammoInClip);

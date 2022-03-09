@@ -1,5 +1,4 @@
-﻿using System.Collections;
-using Player;
+﻿using Player;
 using UnityEngine;
 
 namespace Enemy
@@ -11,8 +10,10 @@ namespace Enemy
         [SerializeField] private float damage;
 
         private PlayerHealth _playerHealth;
-        private bool _isPlayerNear = false;
+        
         private bool _isAttacking = false;
+        private float _totalAttackTime = 0;
+        
 
         public void OnStateChange(State newEnemyState)
         {
@@ -21,36 +22,27 @@ namespace Enemy
         private void Start()
         {
             _playerHealth = FindObjectOfType<PlayerHealth>();
-            StartCoroutine(AttackingCoroutine());
+            
         }
-        private IEnumerator AttackingCoroutine()
+
+        private void Update()
         {
-            while (true)
-            {
-                if (!_isPlayerNear && !_isAttacking)
-                {
-                    yield return null;
-                    continue;
-                }
-                _playerHealth.TakeDamage(damage);
-                yield return new WaitForSeconds(attackRateInSeconds);
-            }
+            if (!ReadyToAttack()) return;
+            if (!_isAttacking) return;
+            Attack();
         }
-        private void OnTriggerEnter(Collider other)
+
+        private bool ReadyToAttack()
         {
-            if (other.isTrigger) return;
-            if (other.GetComponentInParent<PlayerHealth>() == _playerHealth)
-            {
-                _isPlayerNear = true;
-            }
+            if (_totalAttackTime <= 0) return true;
+            else _totalAttackTime -= Time.deltaTime;
+            return false;
         }
-        private void OnTriggerExit(Collider other)
+
+        private void Attack()
         {
-            if (other.isTrigger) return;
-            if (other.GetComponentInParent<PlayerHealth>() == _playerHealth)
-            {
-                _isPlayerNear = false;
-            }
+            _playerHealth.TakeDamage(damage);
+            _totalAttackTime = attackRateInSeconds;
         }
     }
 }
