@@ -150,7 +150,7 @@ MonoBehaviour:
   maxCount: 1
   prefabInfoList:
   - prefab: {fileID: 2148620426052169830, guid: 0696072527e884444b4f2e0297de873f, type: 3}
-    probability: 0.667
+    probability: 0.56
 --- !u!114 &8917383021395402477
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -165,14 +165,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxOverlapAttempts: 25
   prefabInfoList:
-  - prefab: {fileID: -2002363868330802891, guid: dbffc516f9488c341abdee2fc77b4ebe, type: 3}
-    probability: 0.83
-  - prefab: {fileID: -8540335711105903319, guid: 59f540ced5d923d4f9c652f719597e12, type: 3}
-    probability: 0.869
-  - prefab: {fileID: -566033911767667703, guid: 9c248dbf84e5f984290a29ebaa85d153, type: 3}
+  - prefab: {fileID: -2002363868330802891, guid: 2d9a5f9afb70029418b8734d9c67cf17, type: 3}
+    probability: 0.288
+  - prefab: {fileID: -2002363868330802891, guid: a5cfa0eb4bbb01340a5911068b2dc9a7, type: 3}
+    probability: 0.589
+  - prefab: {fileID: -2002363868330802891, guid: c02bdbebc5f7a57448fcb7cd3248c4b2, type: 3}
+    probability: 0.778
+  - prefab: {fileID: -2002363868330802891, guid: fcc6b84ea1d418943abd4046acfd242a, type: 3}
     probability: 0.379
-  minCount: 6
-  maxCount: 14
+  - prefab: {fileID: -2002363868330802891, guid: b91eb226e80ffeb4aaf63d01ecc75b30, type: 3}
+    probability: 0.506
+  - prefab: {fileID: -2002363868330802891, guid: d48e2e55224d0814e97f102df25b61f6, type: 3}
+    probability: 0.379
+  - prefab: {fileID: -2002363868330802891, guid: dbffc516f9488c341abdee2fc77b4ebe, type: 3}
+    probability: 0.134
+  - prefab: {fileID: -2002363868330802891, guid: 78999d05e036d2f4387070c2544e18b4, type: 3}
+    probability: 0.078
+  minCount: 14
+  maxCount: 25
 --- !u!114 &428052347123723621
 MonoBehaviour:
   m_ObjectHideFlags: 0

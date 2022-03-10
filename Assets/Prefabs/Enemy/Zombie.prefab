@@ -115,6 +115,7 @@ GameObject:
   - component: {fileID: 2835643497776296574}
   - component: {fileID: 898379989113704909}
   - component: {fileID: 1912936051637740901}
+  - component: {fileID: 5206561159128278822}
   - component: {fileID: 1180863360256446655}
   m_Layer: 11
   m_Name: Zombie
@@ -235,6 +236,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attackRateInSeconds: 3
   damage: 25
+  OnKick:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &2835643497776296574
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -277,6 +281,18 @@ MonoBehaviour:
     probability: 0.676
   dropChance: 0.3
   exp: 10
+--- !u!114 &5206561159128278822
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1257003716816570497}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56b84d4bed484db4bae6ee07c9b7fbe4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!136 &1180863360256446655
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -447,7 +463,7 @@ PrefabInstance:
     - target: {fileID: 95643654809460224, guid: 15fa57f984877cc4f9acd0e63babc93e, type: 3}
       propertyPath: m_Controller
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 9100000, guid: 40a780aefe01e95489ebeb0af331f69d, type: 2}
     - target: {fileID: 95643654809460224, guid: 15fa57f984877cc4f9acd0e63babc93e, type: 3}
       propertyPath: m_UpdateMode
       value: 0

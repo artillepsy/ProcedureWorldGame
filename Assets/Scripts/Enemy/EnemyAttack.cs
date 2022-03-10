@@ -1,5 +1,6 @@
 ﻿using Player;
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace Enemy
 {
@@ -10,25 +11,23 @@ namespace Enemy
         [SerializeField] private float damage;
 
         private PlayerHealth _playerHealth;
-        
-        private bool _isAttacking = false;
+        private bool _attackMode = false;
         private float _totalAttackTime = 0;
-        
+        public UnityEvent OnKick = new UnityEvent();
 
         public void OnStateChange(State newEnemyState)
         {
-            _isAttacking = newEnemyState == State.AttackingTarget;
+            _attackMode = newEnemyState == State.AttackingTarget;
         }
         private void Start()
         {
             _playerHealth = FindObjectOfType<PlayerHealth>();
-            
         }
 
         private void Update()
         {
             if (!ReadyToAttack()) return;
-            if (!_isAttacking) return;
+            if (!_attackMode) return;
             Attack();
         }
 
@@ -43,6 +42,7 @@ namespace Enemy
         {
             _playerHealth.TakeDamage(damage);
             _totalAttackTime = attackRateInSeconds;
+            OnKick?.Invoke();
         }
     }
 }
