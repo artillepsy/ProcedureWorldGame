@@ -19,6 +19,7 @@ namespace UI
         private PlayerShooting _playerShooting;
 
         public void OnClickReload() => _playerShooting.Reload();
+        public void OnClickThrowGrenade() => _playerShooting.SpawnGrenade();
 
         private void OnEnable()
         {

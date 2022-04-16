@@ -8,6 +8,7 @@ namespace Enemy
         private Animator _animator;
         private static readonly int AttackMode = Animator.StringToHash("AttackMode");
         private static readonly int OnKick = Animator.StringToHash("OnKick");
+        private static readonly int Dying = Animator.StringToHash("Dying");
 
         private void Start()
         {
@@ -17,13 +18,13 @@ namespace Enemy
         public void OnStateChange(State newEnemyState)
         {
             _animator.SetBool(AttackMode ,newEnemyState == State.AttackingTarget);
-            Debug.Log("Attack mode");
+            _animator.SetBool(Dying ,newEnemyState == State.Dying);
+            Debug.Log("dying: "+ (newEnemyState == State.Dying));
         }
 
         private void OnKickEvent()
         {
             _animator.SetTrigger(OnKick);
-            Debug.Log("On Kick");
         }
     }
 }

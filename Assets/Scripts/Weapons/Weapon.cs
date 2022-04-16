@@ -1,5 +1,4 @@
-﻿using System.Collections;
-using Player;
+﻿using Player;
 using UnityEngine;
 using UnityEngine.Events;
 using Random = UnityEngine.Random;
@@ -21,6 +20,14 @@ namespace Weapons
         [Space]
         [SerializeField] private Transform fireTransform;
         [SerializeField] private Bullet bulletPrefab;
+        [Header("Sound")]
+        [SerializeField] private float volume = 0.3f;
+        [SerializeField] private AudioClip shootAudio;
+        [SerializeField] private AudioClip reloadAudio;
+        [Header("Particles")] 
+        [SerializeField] private ParticleSystem firePS;
+
+        
         
         public static readonly UnityEvent<int, int, int> OnAmmoCountChange = new UnityEvent<int, int, int>();
         public static readonly UnityEvent<int> OnShoot = new UnityEvent<int>();
@@ -32,6 +39,7 @@ namespace Weapons
         private int _ammoInClip = 0;
         
         private Transform _player;
+        private AudioSource _src;
         private Collider _playerCollider;
         private bool _reloading = false;
         public bool Shooting { get; set; }
@@ -40,11 +48,14 @@ namespace Weapons
         {
             if (_ammoInClip == clipSize) return;
             if (_totalAmmoCount == 0) return;
+            _src.PlayOneShot(reloadAudio, volume);
             _totalReloadTIme = reloadTimeInSeconds;
         }
 
         private void Awake()
         {
+            firePS.Stop();
+            _src = GetComponent<AudioSource>();
             _ammoInClip = clipSize;
             Shooting = false;
         }
@@ -73,6 +84,8 @@ namespace Weapons
             _ammoInClip--;
             _totalRpsTime = 1f / rps;
             OnShoot?.Invoke(_ammoInClip);
+            _src.PlayOneShot(shootAudio, volume);
+            firePS.Play();
             if (_ammoInClip == 0) StartReload();
         }
 
@@ -102,6 +115,7 @@ namespace Weapons
                 _totalAmmoCount -= needAmount;
                 _ammoInClip = clipSize;
             }
+            _src.PlayOneShot(reloadAudio, volume);
             OnAmmoCountChange?.Invoke(_totalAmmoCount, clipSize, _ammoInClip);
             return true;
         }

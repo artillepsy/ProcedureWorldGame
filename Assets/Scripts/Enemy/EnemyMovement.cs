@@ -1,7 +1,7 @@
 using Player;
 using UnityEngine;
 using UnityEngine.AI;
-using UnityEngine.Events;
+using Weapons;
 
 namespace Enemy
 {
@@ -14,6 +14,7 @@ namespace Enemy
         
         private NavMeshAgent _agent;
         private Transform _player;
+        private Transform _target;
         private float _totalRepathTime = 0;
         private bool _isMoving = true;
         private float _angularSpeed;
@@ -23,19 +24,25 @@ namespace Enemy
             _isMoving = newEnemyState == State.MovingToTarget;
             if (!_isMoving) _agent.ResetPath();
         }
-        private void Awake()
-        {
-            _agent = GetComponent<NavMeshAgent>();
-        }
+
         private void Start()
         {
+            _agent = GetComponent<NavMeshAgent>();
             _player = FindObjectOfType<PlayerMovement>().transform;
+            InvokeRepeating(nameof(UpdateTarget), 0, 1);
         }
         
         private void Update()
         {
+            if(!_target) UpdateTarget();
             if(!_isMoving) RotateToTarget();
             else if(ReadyToUpdate()) UpdatePath();
+        }
+
+        private void UpdateTarget()
+        {
+            var grenade = FindObjectOfType<Grenade>();
+            _target = grenade ? grenade.transform : _player;
         }
 
         private bool ReadyToUpdate()
@@ -52,14 +59,14 @@ namespace Enemy
         {
             if (_agent.isActiveAndEnabled && _agent.isOnNavMesh)
             {
-                _agent.SetDestination(_player.position);
+                _agent.SetDestination(_target.position);
             }
             _totalRepathTime = repathRateInSeconds;
         }
 
         private void RotateToTarget()
         {
-            var directionToTarget = (_player.position - transform.position).normalized;
+            var directionToTarget = (_target.position - transform.position).normalized;
             directionToTarget.y = 0f;
             var rotationToTarget = Quaternion.LookRotation(directionToTarget);
             
