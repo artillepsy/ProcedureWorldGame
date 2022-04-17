@@ -19,7 +19,7 @@ namespace UI
         {
             Weapon.OnAmmoCountChange.AddListener(UpdateAllAmmoData);
             Weapon.OnShoot.AddListener(DecrementClipSize);
-            FindObjectOfType<PlayerHealth>().OnTakeDamage.AddListener(UpdateHealthStats);
+            FindObjectOfType<PlayerHealth>().OnHealthChanged.AddListener(UpdateHealthStats);
         }
 
         private void Start()

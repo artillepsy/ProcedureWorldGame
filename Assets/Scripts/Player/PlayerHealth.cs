@@ -13,19 +13,26 @@ namespace Player
         [SerializeField] private float volume = 1f;
         [SerializeField] private ParticleSystem damagedPS;
         private AudioSource _src;
-        public readonly UnityEvent<float, float> OnTakeDamage = new UnityEvent<float,float>();
+        public readonly UnityEvent<float, float> OnHealthChanged = new UnityEvent<float,float>();
 
-        public void TakeDamage(float damage)
+        public void ChangeHealth(float amount, bool isDamage = true)
         {
-            health -= damage;
-            _src.PlayOneShot(damagedAudios[Random.Range(0, damagedAudios.Count)], volume);
-            damagedPS.Play();
+            health += isDamage ? -amount : amount;
+            if (isDamage)
+            {
+                _src.PlayOneShot(damagedAudios[Random.Range(0, damagedAudios.Count)], volume);
+                damagedPS.Play();    
+            }
             if (health <= 0)
             {
                 health = 0;
                 Debug.Log("player's dead"); 
             }
-            OnTakeDamage?.Invoke(health, maxHealth);
+            else if (health > maxHealth)
+            {
+                health = maxHealth;
+            }
+            OnHealthChanged?.Invoke(health, maxHealth);
         }
 
         private void Awake() => _src = GetComponent<AudioSource>();

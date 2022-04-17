@@ -11,6 +11,7 @@ namespace Player
         [SerializeField] private Transform grenadePrefab;
         private Vector3 _prevDirection = Vector3.forward;
         private Weapon _weapon;
+        public Weapon CurrentWeapon=> _weapon;
 
         public void SpawnGrenade() => Instantiate(grenadePrefab, hand.position, transform.rotation);
         public void Reload() => _weapon.StartReload();

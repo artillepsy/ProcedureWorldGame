@@ -40,7 +40,7 @@ namespace Enemy
 
         private void Attack()
         {
-            _playerHealth.TakeDamage(damage);
+            _playerHealth.ChangeHealth(damage);
             _totalAttackTime = attackRateInSeconds;
             OnKick?.Invoke();
         }

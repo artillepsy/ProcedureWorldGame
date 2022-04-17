@@ -44,6 +44,12 @@ namespace Weapons
         private bool _reloading = false;
         public bool Shooting { get; set; }
 
+        public void AddAmmo(int count)
+        {
+            _totalAmmoCount += count;
+            OnAmmoCountChange?.Invoke(_totalAmmoCount, clipSize, _ammoInClip);
+        }
+
         public void StartReload()
         {
             if (_ammoInClip == clipSize) return;

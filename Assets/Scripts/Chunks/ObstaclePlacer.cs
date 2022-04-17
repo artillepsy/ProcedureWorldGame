@@ -34,12 +34,6 @@ namespace Chunks
         private void Start()
         {
             StartCoroutine(FindFreeSpaceCoroutine());
-            Debug.Log(prefabInfoList.Count);
-            foreach (var prefabInfo in prefabInfoList)
-            {
-                Debug.Log(prefabInfo.Prefab);
-                Debug.Log(prefabInfo.Probability);
-            }
         }
         private IEnumerator FindFreeSpaceCoroutine()
         {

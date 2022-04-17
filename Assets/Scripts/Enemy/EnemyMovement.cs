@@ -59,6 +59,9 @@ namespace Enemy
         {
             if (_agent.isActiveAndEnabled && _agent.isOnNavMesh)
             {
+                //var path = new NavMeshPath();
+                //NavMesh.CalculatePath(transform.position, _target.position, -1, path);
+                //_agent.SetPath(path);
                 _agent.SetDestination(_target.position);
             }
             _totalRepathTime = repathRateInSeconds;

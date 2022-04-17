@@ -10,8 +10,6 @@ namespace Items
     public class ItemPlacer : MonoBehaviour
     {
         [Header("Scan settings")]
-        [Range(10, 100)]
-        [SerializeField] private int maxOverlapAttempts = 50;
         [Space]
         [SerializeField] private int minCount;
         [SerializeField] private int maxCount;
@@ -27,27 +25,21 @@ namespace Items
 
         private IEnumerator FindFreeSpaceCoroutine()
         {
-            int count = 0;
+            var count = 0;
             for (var i = 0; i < _itemCount; i++)
             {
-                if (TrySpawnItem()) count++;
+                TrySpawnItem();
+                count++;
                 yield return null;
             }
             _itemCount = count;
         }
-        private bool TrySpawnItem()
-        {
-            for (var i = 0; i < maxOverlapAttempts; i++)
-            {
-                var position = TransformUtils.GetRandomPoint(transform.position, _placementUtils.HalfChunkLength);
-                var prefab = GameObjectPool.GetInfoByProbability(prefabInfoList).Prefab;
 
-                var obstacle = prefab.GetComponent<Obstacle>();
-                if (obstacle.Overlapping(position, Quaternion.identity)) continue;
-                Instantiate(prefab, position, Quaternion.identity);
-                return true;
-            }
-            return false;
+        private void TrySpawnItem()
+        {
+            var position = TransformUtils.GetRandomPoint(transform.position, _placementUtils.HalfChunkLength);
+            var prefab = GameObjectPool.GetInfoByProbability(prefabInfoList).Prefab;
+            Instantiate(prefab, position, Quaternion.identity);
         }
     }
 }

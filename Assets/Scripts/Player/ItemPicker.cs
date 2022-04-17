@@ -14,10 +14,11 @@ namespace Player
         private void OnTriggerEnter(Collider other)
         {
             if (!other.isTrigger) return;
-            if (!other.GetComponentInParent<Item>()) return;
+            var comp = other.GetComponentInParent<Item>();
+            if (!comp) return;
             
+            comp.Use(transform);
             _src.PlayOneShot(pickAudio, volume);
-            Debug.Log("Picked");
             Destroy(other.gameObject);
         }
     }
