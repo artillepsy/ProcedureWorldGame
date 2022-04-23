@@ -1,48 +1,50 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.Experimental.GlobalIllumination;
-using UnityEngine.SceneManagement;
 
 namespace Core
 {
-[ExecuteInEditMode]
-public class ExtractFalloff : MonoBehaviour
-{
-    public void OnEnable()
+    [ExecuteInEditMode]
+    public class ExtractFalloff : MonoBehaviour
     {
-        Lightmapping.RequestLightsDelegate testDel = (Light[] requests, Unity.Collections.NativeArray<LightDataGI> lightsOutput) =>
+        
+        public FalloffType fallOff;
+     
+        public void OnEnable()
         {
-            DirectionalLight dLight = new DirectionalLight();
-            PointLight point = new PointLight();
-            SpotLight spot = new SpotLight();
-            RectangleLight rect = new RectangleLight();
-            DiscLight disc = new DiscLight();
-            Cookie cookie = new Cookie();
-            LightDataGI ld = new LightDataGI();
-            
-            for (int i = 0; i < requests.Length; i++)
+            Lightmapping.RequestLightsDelegate testDel = (Light[] requests, Unity.Collections.NativeArray<LightDataGI> lightsOutput) =>
             {
-                Light l = requests[i];
-                switch (l.type)
+               
+                DirectionalLight dLight = new DirectionalLight();
+                PointLight point = new PointLight();
+                SpotLight spot = new SpotLight();
+                RectangleLight rect = new RectangleLight();
+                LightDataGI ld = new LightDataGI();
+     
+                for (int i = 0; i < requests.Length; i++)
                 {
-                    case UnityEngine.LightType.Directional: LightmapperUtils.Extract(l, ref dLight); LightmapperUtils.Extract(l, out cookie); ld.Init(ref dLight, ref cookie); break;
-                    case UnityEngine.LightType.Point: LightmapperUtils.Extract(l, ref point); LightmapperUtils.Extract(l, out cookie); ld.Init(ref point, ref cookie); break;
-                    case UnityEngine.LightType.Spot: LightmapperUtils.Extract(l, ref spot); LightmapperUtils.Extract(l, out cookie); ld.Init(ref spot, ref cookie); break;
-                    case UnityEngine.LightType.Area: LightmapperUtils.Extract(l, ref rect); LightmapperUtils.Extract(l, out cookie); ld.Init(ref rect, ref cookie); break;
-                    case UnityEngine.LightType.Disc: LightmapperUtils.Extract(l, ref disc); LightmapperUtils.Extract(l, out cookie); ld.Init(ref disc, ref cookie); break;
-                    default: ld.InitNoBake(l.GetInstanceID()); break;
+                    Light l = requests[i];
+                    switch (l.type)
+                    {
+                        case UnityEngine.LightType.Directional: LightmapperUtils.Extract(l, ref dLight); ld.Init(ref dLight); break;
+                        case UnityEngine.LightType.Point: LightmapperUtils.Extract(l, ref point); ld.Init(ref point); break;
+                        case UnityEngine.LightType.Spot: LightmapperUtils.Extract(l, ref spot); ld.Init(ref spot); break;
+                        case UnityEngine.LightType.Area: LightmapperUtils.Extract(l, ref rect); ld.Init(ref rect); break;
+                        default: ld.InitNoBake(l.GetInstanceID()); break;
+                    }
+     
+                    ld.falloff = fallOff;
+                    lightsOutput[i] = ld;
                 }
-                ld.cookieID = l.cookie?.GetInstanceID() ?? 0;
-                ld.falloff = FalloffType.Linear;
-                lightsOutput[i] = ld;
-            }
-        };
-        Lightmapping.SetDelegate(testDel);
+            };
+     
+            Lightmapping.SetDelegate(testDel);
+        }
+     
+     
+        void OnDisable()
+        {
+            Lightmapping.ResetDelegate();
+        }
     }
-    void OnDisable()
-    {
-        Lightmapping.ResetDelegate();
-    }
-}
+
 }

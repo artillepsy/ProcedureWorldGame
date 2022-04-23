@@ -13,8 +13,8 @@ namespace Chunks
         [SerializeField] private List<ObstaclePrefabInfo> prefabInfoList;
         private Dictionary<Vector3, GameObject> _spawnedChunks;
         [Header("Scan settings")]
-        [SerializeField] private float chunkLength = 100;
-        [SerializeField] private float scanRateInSeconds = 0.2f;
+        [SerializeField] private float chunkLength = 40;
+        [SerializeField] private float scanRateInSeconds = 1f;
         [Min(3)]
         [SerializeField] private int enableDimension = 3;
         [Min(5)]
@@ -24,35 +24,27 @@ namespace Chunks
         private NoiseUtils _noiseUtils;
         private Transform _player;
         public static ChunkPlacer Inst = null;
-        private float _totalScanTime = 0;
         private int _minEnableRadius;
         private int _maxEnableRadius;
         private void Awake()
         {
             _noiseUtils = GetComponent<NoiseUtils>();
-            _player = FindObjectOfType<PlayerMovement>().transform;
             _spawnedChunks = new Dictionary<Vector3, GameObject>();
             if (Inst == null) Inst = this;
             _minEnableRadius = (disableDimension - enableDimension) / 2;
             _maxEnableRadius = (disableDimension + enableDimension) / 2;
         }
 
-        private void Update()
+        private void Start()
         {
-            if (!ReadyToScan()) return;
-            _noiseUtils.AddPointToNode(_player.position ,prefabInfoList);
-            ScanAreaInGrid(_player.position);
+            _player = FindObjectOfType<PlayerMovement>().transform;
+            InvokeRepeating(nameof(Scan), 0, scanRateInSeconds);
         }
 
-        private bool ReadyToScan()
+        private void Scan()
         {
-            if (_totalScanTime <= 0)
-            {
-                _totalScanTime = scanRateInSeconds;
-                return true;
-            }
-            _totalScanTime -= Time.deltaTime;
-            return false;
+            _noiseUtils.AddPointToNode(_player.position ,prefabInfoList);
+            ScanAreaInGrid(_player.position);
         }
         
         private void ScanAreaInGrid(Vector3 playerPosition)

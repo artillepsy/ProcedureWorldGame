@@ -131,12 +131,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f71418f58e364514ad7a868b42f5909c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 20
-  bulletSpeed: 27.17
-  maxDeviationAngle: 9.9
+  damage: 26
+  penetration: 1
+  bulletSpeed: 35
+  maxDeviationAngle: 8.64
   reloadTimeInSeconds: 1
-  rps: 11
-  clipSize: 1111
+  rps: 8
+  clipSize: 30
   maxAmmo: 200
   fireTransform: {fileID: 118623179630673735}
   bulletPrefab: {fileID: 4268046978477611073, guid: d06ec7e0e60151f4f8e96bddc8e254a5, type: 3}
@@ -156,7 +157,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 3f783b17cac2b064d9f73a2eca19299c, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.465
+  m_Volume: 0.675
   m_Pitch: 1
   Loop: 0
   Mute: 0

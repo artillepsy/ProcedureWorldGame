@@ -23,15 +23,5 @@ namespace Player
             _animator.SetFloat(VelocityX, velocity.x);
             _animator.SetFloat(VelocityZ, velocity.z );
         }
-
-        /*private void OnDrawGizmos()
-        {
-            var angle = Vector3.SignedAngle(Vector3.forward, transform.forward, Vector3.up);
-            var velocity = Quaternion.Euler(0, -angle, 0) *_rb.velocity.normalized;
-            Gizmos.color = Color.red;
-            Gizmos.DrawLine(transform.position, transform.position + transform.forward * 5f);
-            Gizmos.color = Color.green;
-            Gizmos.DrawLine(transform.position,transform.position + velocity * 5f);
-        }*/
     }
 }

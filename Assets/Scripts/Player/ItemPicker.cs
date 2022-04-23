@@ -19,7 +19,6 @@ namespace Player
             
             comp.Use(transform);
             _src.PlayOneShot(pickAudio, volume);
-            Destroy(other.gameObject);
         }
     }
 }

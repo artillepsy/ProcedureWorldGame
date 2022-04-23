@@ -18,7 +18,7 @@ namespace UI.Minimap
             foreach (IconPrefab iconPrefab in iconPrefabList)
             {
                 if (iconPrefab.Type != icon.Type) continue;
-                
+
                 icon.Instance = Instantiate(iconPrefab.Prefab, icon.transform);
                 icon.Instance.transform.position = new Vector3(
                     icon.transform.position.x,
@@ -38,37 +38,31 @@ namespace UI.Minimap
         {
             _icons = new List<Icon>();
             _clampValue = minimapCamera.orthographicSize;
-            if(Inst == null) Inst = this;
+            if (Inst == null) Inst = this;
         }
 
-        private void Start()
+        private void Update()
         {
-            StartCoroutine(ClampIconsCoroutine());
-        }
-        private IEnumerator ClampIconsCoroutine()
-        {
-            while (true)
+            var cameraPosition = minimapCamera.transform.position;
+            var clampMinX = cameraPosition.x - _clampValue;
+            var clampMaxX = cameraPosition.x + _clampValue;
+            var clampMinZ = cameraPosition.z - _clampValue;
+
+            var clampMaxZ = cameraPosition.z + _clampValue;
+            foreach (Icon icon in _icons)
             {
-                var cameraPosition = minimapCamera.transform.position;
-                var clampMinX = cameraPosition.x - _clampValue;
-                var clampMaxX = cameraPosition.x + _clampValue;
-                var clampMinZ = cameraPosition.z - _clampValue;
-                var clampMaxZ = cameraPosition.z + _clampValue;
-                foreach (Icon icon in _icons)
+                if (!icon.gameObject.activeSelf)
                 {
-                    if (!icon.gameObject.activeSelf)
-                    {
-                        continue;
-                    }
-                    var iconPosition = icon.transform.position;
-                    var clampX = Mathf.Clamp(iconPosition.x, clampMinX, clampMaxX);
-                    var clampZ = Mathf.Clamp(iconPosition.z, clampMinZ, clampMaxZ);
-                    icon.Instance.transform.position = new Vector3(clampX, icon.Instance.transform.position.y, clampZ);
+                    continue;
                 }
-                yield return null;
+
+                var iconPosition = icon.transform.position;
+                var clampX = Mathf.Clamp(iconPosition.x, clampMinX, clampMaxX);
+                var clampZ = Mathf.Clamp(iconPosition.z, clampMinZ, clampMaxZ);
+                icon.Instance.transform.position = new Vector3(clampX, icon.Instance.transform.position.y, clampZ);
             }
         }
-        
+
         [System.Serializable]
         private class IconPrefab
         {

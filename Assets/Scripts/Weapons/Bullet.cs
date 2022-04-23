@@ -7,7 +7,8 @@ namespace Weapons
     {
         [SerializeField] private float destroyDelay = 10f;
         [SerializeField] private Rigidbody rb;
-        
+
+        private float _penetration;
         private float _damage;
         private Vector3 _velocity;
         private Rigidbody _rb;
@@ -18,9 +19,10 @@ namespace Weapons
             if (!_instantiated) return;
             rb.velocity = _velocity;
         }
-        public void SetUp(Vector3 direction, float damage, float speed, Collider playerCollider)
+        public void SetUp(Vector3 direction, float damage, float speed, int penetration, Collider playerCollider)
         {
             transform.forward = direction;
+            _penetration = penetration;
             _damage = damage;
             _velocity = direction * speed;
             _instantiated = true;
@@ -34,8 +36,9 @@ namespace Weapons
             if (health)
             {
                 health.TakeDamage(_damage);
-            }
-            Destroy(gameObject);
+                _penetration--;
+                if(_penetration <= 0) Destroy(gameObject);
+            } else Destroy(gameObject);
         }
     }
 }

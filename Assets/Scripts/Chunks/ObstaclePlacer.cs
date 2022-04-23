@@ -18,17 +18,12 @@ namespace Chunks
         [SerializeField] private int maxCount = 14;
         
         public readonly UnityEvent OnPlaced = new UnityEvent(); 
-        private NoiseUtils _noiseUtils;
         private PlacementUtils _placementUtils;
-
         private int _obstacleCount;
-        
         
         private void Awake()
         {
-            _noiseUtils = GetComponent<NoiseUtils>();
             _placementUtils = GetComponent<PlacementUtils>();
-            
             _obstacleCount = Random.Range(minCount, maxCount);
         }
         private void Start()
@@ -37,7 +32,6 @@ namespace Chunks
         }
         private IEnumerator FindFreeSpaceCoroutine()
         {
-            //_noiseUtils.AddPointToNode(transform.position, prefabInfoList);
             int count = 0;
             for (var i = 0; i < _obstacleCount; i++)
             {
@@ -53,9 +47,7 @@ namespace Chunks
             for (var i = 0; i < maxOverlapAttempts; i++)
             {
                 var position = TransformUtils.GetRandomPoint(transform.position, _placementUtils.HalfChunkLength);
-                //var id = _noiseUtils.GetNearestNoisePointId(position);
                 var info = GameObjectPool.GetInfoByProbability(prefabInfoList);
-               // var info = GameObjectPool.GetInfoById(id, prefabInfoList);
 
                 if (info == null) continue;
 

@@ -10,6 +10,7 @@ namespace Items
         public override void Use(Transform player)
         {
             player.GetComponent<PlayerHealth>().ChangeHealth(healAmount, false);
+            Destroy(gameObject);
         }
     }
 }

@@ -34,7 +34,7 @@ namespace Core
         }
         public static class Icons
         {
-            public enum Type { Player, Enemy }
+            public enum Type { Player, Enemy, Item }
         }
     }
 }

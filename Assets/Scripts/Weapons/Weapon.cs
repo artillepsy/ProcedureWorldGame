@@ -9,6 +9,7 @@ namespace Weapons
     {
         [Header("Bullet behaviour")]
         [SerializeField] private float damage = 4f;
+        [SerializeField] private int penetration = 1;
         [SerializeField] private float bulletSpeed = 15f;
         [SerializeField] private float maxDeviationAngle = 3f;
         [Header("Ammo settings")]
@@ -27,34 +28,42 @@ namespace Weapons
         [Header("Particles")] 
         [SerializeField] private ParticleSystem firePS;
 
-        
-        
         public static readonly UnityEvent<int, int, int> OnAmmoCountChange = new UnityEvent<int, int, int>();
         public static readonly UnityEvent<int> OnShoot = new UnityEvent<int>();
         
         private float _totalReloadTIme = 0;
         private float _totalRpsTime = 0;
         
-        private int _totalAmmoCount = 99999;
+        private int _totalAmmoCount;
         private int _ammoInClip = 0;
         
         private Transform _player;
         private AudioSource _src;
         private Collider _playerCollider;
         private bool _reloading = false;
+        
         public bool Shooting { get; set; }
 
-        public void AddAmmo(int count)
+        public string GetInfo()
         {
-            _totalAmmoCount += count;
+          return "\nDamage: " + damage +
+                 "\nRPS: " + rps +
+                 "\nClip: " + clipSize;
+        } 
+        public void AddAmmo(float percent)
+        {
+            int ammoCount = (int)(maxAmmo * percent);
+            if (ammoCount == 0) ammoCount = 1;
+            _totalAmmoCount += ammoCount;
+            if (_totalAmmoCount > maxAmmo) _totalAmmoCount = maxAmmo;
             OnAmmoCountChange?.Invoke(_totalAmmoCount, clipSize, _ammoInClip);
+            if(_ammoInClip == 0) StartReload();
         }
 
         public void StartReload()
         {
             if (_ammoInClip == clipSize) return;
             if (_totalAmmoCount == 0) return;
-            _src.PlayOneShot(reloadAudio, volume);
             _totalReloadTIme = reloadTimeInSeconds;
         }
 
@@ -62,6 +71,7 @@ namespace Weapons
         {
             firePS.Stop();
             _src = GetComponent<AudioSource>();
+            _totalAmmoCount = maxAmmo;
             _ammoInClip = clipSize;
             Shooting = false;
         }
@@ -81,12 +91,12 @@ namespace Weapons
             SpawnBullet();
         }
 
-        private void SpawnBullet()
+        protected virtual void SpawnBullet()
         {
             var inst = Instantiate(bulletPrefab, fireTransform.position, Quaternion.identity);
             var deviationAngle = Random.Range(0, maxDeviationAngle);
             var direction = Quaternion.Euler(0, deviationAngle, 0) * _player.forward;
-            inst.SetUp(direction, damage, bulletSpeed, _playerCollider);
+            inst.SetUp(direction, damage, bulletSpeed, penetration, _playerCollider);
             _ammoInClip--;
             _totalRpsTime = 1f / rps;
             OnShoot?.Invoke(_ammoInClip);
@@ -97,6 +107,11 @@ namespace Weapons
 
         private bool CanSpawnBullet()
         {
+            if (_ammoInClip <= 0)
+            {
+                StartReload();
+                return false;
+            }
             if (_totalRpsTime <= 0) return true;
             _totalRpsTime -= Time.deltaTime;
             return false;

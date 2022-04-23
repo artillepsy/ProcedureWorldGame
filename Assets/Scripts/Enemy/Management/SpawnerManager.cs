@@ -8,11 +8,16 @@ using Random = UnityEngine.Random;
 
 namespace Enemy.Management
 {
+    // add item spawn
     public class SpawnerManager : MonoBehaviour
     {
-        [Header("Spawn settings")]
+        [Header("Spawn settings")] 
+        [SerializeField] private List<ProbabilityPrefabInfo> items;
+        
         [SerializeField] private int maxEnemies = 10;
+        [SerializeField] private int maxItems = 10;
         [SerializeField] private float spawnRateInSeconds = 6;
+        [SerializeField] private float itemSpawnRateInSeconds = 10;
         [Min(0)]
         [SerializeField] private float minSpawnRadius;
         [Min(0)]
@@ -20,10 +25,10 @@ namespace Enemy.Management
 
         [SerializeField] private float sampleRadius = 10f;
         [SerializeField] private bool drawGizmos = true;
-        private float _totalSpawnTime = 0f;
-        private Transform _player;
+        private Rigidbody _player;
         private List<EnemyTypesContainer> _enemyTypeContainerList;
         private int _totalEnemies = 0;
+        private int _totalItems = 0;
         public static SpawnerManager Inst = null;
         public void AddContainerToList(EnemyTypesContainer enemyTypesContainer)
         {
@@ -36,26 +41,15 @@ namespace Enemy.Management
         private void Awake()
         {
             Inst = this;
-            _player = FindObjectOfType<PlayerMovement>().transform;
             _enemyTypeContainerList = new List<EnemyTypesContainer>();
-            _totalSpawnTime = spawnRateInSeconds;
         }
         private void Start()
         {
+            _player = FindObjectOfType<PlayerMovement>().GetComponent<Rigidbody>();
             EnemyHealth.OnEnemyDie.AddListener(()=> _totalEnemies--);
             EnemyBehaviour.OnEnemyTooFar.AddListener(()=> _totalEnemies--);
-        }
-
-        private void Update()
-        {
-            if(ReadyToSpawn()) SpawnEnemies();
-        }
-
-        private bool ReadyToSpawn()
-        {
-            if (_totalSpawnTime <= 0) return true;
-            _totalSpawnTime -= Time.deltaTime;
-            return false;
+            InvokeRepeating(nameof(SpawnEnemies), spawnRateInSeconds, spawnRateInSeconds);
+            InvokeRepeating(nameof(SpawnItems), itemSpawnRateInSeconds, itemSpawnRateInSeconds);
         }
 
         private void SpawnEnemies()
@@ -64,7 +58,16 @@ namespace Enemy.Management
             if (!TryGetPrefabToSpawn(out var position, out var enemy)) return;
             Instantiate(enemy, position, Quaternion.identity);
             _totalEnemies++;
-            _totalSpawnTime = spawnRateInSeconds;
+        }
+
+        private void SpawnItems()
+        {
+            if (_totalItems >= maxItems) return;
+            Vector3 position;
+            if (FindSpawnPoint(out position) == false) return;
+            var prefab = GameObjectPool.GetInfoByProbability(items).Prefab;
+            Instantiate(prefab, position, Quaternion.identity);
+            _totalItems++;
         }
 
         private bool TryGetPrefabToSpawn(out Vector3 position, out GameObject prefab)
@@ -73,6 +76,7 @@ namespace Enemy.Management
             if (FindSpawnPoint(out position) == false) return false;
             var chunkPosition = ConvertPointToChunkPosition(position);
             var uniqueId = GetPrefabFromEnemyContainer(chunkPosition);
+           // Debug.DrawLine(chunkPosition, chunkPosition + Vector3.up*5, Color.red, 30);
             if (uniqueId == null) return false;
             prefab = uniqueId.gameObject;
             return true;
@@ -80,8 +84,8 @@ namespace Enemy.Management
         private Vector3 ConvertPointToChunkPosition(Vector3 pos)
         {
             var chunkLength = ChunkPlacer.Inst.ChunkLength;
-            var centerX = Mathf.RoundToInt((pos.x - chunkLength) / chunkLength) * chunkLength;
-            var centerZ = Mathf.RoundToInt((pos.z - chunkLength) / chunkLength) * chunkLength;
+            var centerX = Mathf.RoundToInt(pos.x / chunkLength) * chunkLength;
+            var centerZ = Mathf.RoundToInt(pos.z / chunkLength) * chunkLength;
             return new Vector3(centerX, 0, centerZ);
         }
         private UniqueInfo GetPrefabFromEnemyContainer(Vector3 chunkPosition)
@@ -95,15 +99,24 @@ namespace Enemy.Management
         }
         private bool FindSpawnPoint(out Vector3 position)
         {
+            Vector3 samplePos;
             position = Vector3.zero;
             var randomRadius = Random.Range(minSpawnRadius, maxSpawnRadius);
             var randomAngle = Random.Range(0, 360);
-            var spawnDirection = Vector3.forward * randomRadius;
-            var samplePosition = _player.position +  Quaternion.Euler(0, randomAngle, 0) * spawnDirection;
-            var result = NavMesh.SamplePosition(samplePosition, out var hit, sampleRadius, 1);
+            if (_player.velocity != Vector3.zero)
+            {
+                samplePos = _player.velocity.normalized * randomRadius;
+                samplePos =_player.position + Quaternion.Euler(0, Random.Range(-10f, 10f), 0) * samplePos;
+            }
+            else
+            {
+                samplePos = Vector3.forward * randomRadius;
+                samplePos = _player.position +  Quaternion.Euler(0, randomAngle, 0) * samplePos;
+            }
+            var result = NavMesh.SamplePosition(samplePos, out var hit, sampleRadius, 1);
             if (!result) return false;
             position = hit.position;
-            Debug.DrawLine(position, position + Vector3.up*5, Color.yellow, 30);
+           // Debug.DrawLine(position, position + Vector3.up*5, Color.yellow, 30);
             return true;
         }
         private void OnDrawGizmosSelected()

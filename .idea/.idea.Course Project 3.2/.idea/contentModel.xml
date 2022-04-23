@@ -81,7 +81,8 @@
             <e p="Constants.cs" t="Include" />
             <e p="ExtractFalloff.cs" t="Include" />
             <e p="GameObjectPool.cs" t="Include" />
-            <e p="MeshRandomizer.cs" t="Include" />
+            <e p="GameObjectRandomizer.cs" t="Include" />
+            <e p="LookAtCamera.cs" t="Include" />
             <e p="TransformUtils.cs" t="Include" />
             <e p="UniqueInfo.cs" t="Include" />
           </e>
@@ -100,6 +101,7 @@
             <e p="ItemDropper.cs" t="Include" />
             <e p="Management" t="Include">
               <e p="EnemyTypesContainer.cs" t="Include" />
+              <e p="EnemyWaves.cs" t="Include" />
               <e p="SpawnerManager.cs" t="Include" />
             </e>
           </e>
@@ -108,6 +110,7 @@
             <e p="Heal.cs" t="Include" />
             <e p="Item.cs" t="Include" />
             <e p="ItemPlacer.cs" t="Include" />
+            <e p="WeaponItem.cs" t="Include" />
           </e>
           <e p="Player" t="Include">
             <e p="CameraFollow.cs" t="Include" />
@@ -118,9 +121,13 @@
             <e p="PlayerMovement.cs" t="Include" />
             <e p="PlayerShooting.cs" t="Include" />
           </e>
+          <e p="Todo.txt" t="Include" />
           <e p="UI" t="Include">
+            <e p="CrossFollow.cs" t="Include" />
+            <e p="CrossRaycast.cs" t="Include" />
             <e p="Hud.cs" t="Include" />
             <e p="Input.cs" t="Include" />
+            <e p="MainMenuCanvas.cs" t="Include" />
             <e p="Minimap" t="Include">
               <e p="Icon.cs" t="Include" />
               <e p="Minimap.cs" t="Include" />

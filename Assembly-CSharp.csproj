@@ -41,7 +41,7 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets\Scripts\Core\ExtractFalloff.cs" />
+     <Compile Include="Assets\Scripts\Enemy\Management\EnemyWaves.cs" />
      <Compile Include="Assets\Scripts\Items\Ammo.cs" />
      <Compile Include="Assets\Joystick Pack\Scripts\Joysticks\VariableJoystick.cs" />
      <Compile Include="Assets\Scripts\Items\Item.cs" />
@@ -64,6 +64,7 @@
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextInfoDebugTool.cs" />
      <Compile Include="Assets\Scripts\Player\PlayerHealth.cs" />
      <Compile Include="Assets\Joystick Pack\Scripts\Joysticks\DynamicJoystick.cs" />
+     <Compile Include="Assets\Scripts\Items\WeaponItem.cs" />
      <Compile Include="Assets\Scripts\Chunks\NoiseUtilsHelper.cs" />
      <Compile Include="Assets\Scripts\Chunks\ObstaclePlacer.cs" />
      <Compile Include="Assets\Meshes\Guns\Polygonal Modern Weapons Asset Package\Scripts\Utility\FlyCameraBehaviour.cs" />
@@ -73,7 +74,9 @@
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TextMeshSpawner.cs" />
      <Compile Include="Assets\Scripts\Items\Heal.cs" />
      <Compile Include="Assets\Scripts\Core\BasePrefabInfo.cs" />
+     <Compile Include="Assets\Scripts\Core\ExtractFalloff.cs" />
      <Compile Include="Assets\Scripts\UI\Input.cs" />
+     <Compile Include="Assets\Scripts\Core\LookAtCamera.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexJitter.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextEventHandler.cs" />
      <Compile Include="Assets\Scripts\Chunks\PlacementUtils.cs" />
@@ -90,7 +93,7 @@
      <Compile Include="Assets\Scripts\Enemy\IOnEnemyStateChange.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\SkewTextExample.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\SimpleScript.cs" />
-     <Compile Include="Assets\Scripts\Core\MeshRandomizer.cs" />
+     <Compile Include="Assets\Scripts\Core\GameObjectRandomizer.cs" />
      <Compile Include="Assets\Joystick Pack\Scripts\Joysticks\FixedJoystick.cs" />
      <Compile Include="Assets\Scripts\UI\Minimap\Minimap.cs" />
      <Compile Include="Assets\Scripts\Audios\RepeatableAudio.cs" />
@@ -115,6 +118,7 @@
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\WarpTextExample.cs" />
      <Compile Include="Assets\Scripts\UI\Hud.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark02.cs" />
+     <Compile Include="Assets\Scripts\UI\MainMenuCanvas.cs" />
      <Compile Include="Assets\Scripts\Enemy\EnemyAttack.cs" />
      <Compile Include="Assets\Scripts\Enemy\EnemyBehaviour.cs" />
      <Compile Include="Assets\Scripts\DevConsole\CustomEventHandler.cs" />
@@ -130,8 +134,11 @@
      <Compile Include="Assets\Scripts\Chunks\ChunkPlacer.cs" />
      <Compile Include="Assets\Scripts\Core\CachedTransformInfo.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexZoom.cs" />
+     <Compile Include="Assets\Scripts\UI\CrossFollow.cs" />
+     <Compile Include="Assets\Scripts\UI\CrossRaycast.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
+     <None Include="Assets\Scripts\Todo.txt" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
      <None Include="Assets\TextMesh Pro\Examples &amp; Extras\Fonts\Oswald-Bold - OFL.txt" />
      <None Include="Assets\TextMesh Pro\Examples &amp; Extras\Fonts\Anton OFL.txt" />
@@ -867,6 +874,9 @@
      <Reference Include="Unity.VisualScripting.Flow.Editor">
      <HintPath>C:\Users\Dell\Desktop\Unity\projects\Course Project 3.2\Library\ScriptAssemblies\Unity.VisualScripting.Flow.Editor.dll</HintPath>
      </Reference>
+     <Reference Include="Unity.VisualEffectGraph.Editor">
+     <HintPath>C:\Users\Dell\Desktop\Unity\projects\Course Project 3.2\Library\ScriptAssemblies\Unity.VisualEffectGraph.Editor.dll</HintPath>
+     </Reference>
      <Reference Include="Unity.RenderPipelines.Universal.Runtime">
      <HintPath>C:\Users\Dell\Desktop\Unity\projects\Course Project 3.2\Library\ScriptAssemblies\Unity.RenderPipelines.Universal.Runtime.dll</HintPath>
      </Reference>
@@ -878,6 +888,9 @@
      </Reference>
      <Reference Include="Autodesk.Fbx.Editor">
      <HintPath>C:\Users\Dell\Desktop\Unity\projects\Course Project 3.2\Library\ScriptAssemblies\Autodesk.Fbx.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.VisualEffectGraph.Runtime">
+     <HintPath>C:\Users\Dell\Desktop\Unity\projects\Course Project 3.2\Library\ScriptAssemblies\Unity.VisualEffectGraph.Runtime.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Timeline">
      <HintPath>C:\Users\Dell\Desktop\Unity\projects\Course Project 3.2\Library\ScriptAssemblies\Unity.Timeline.dll</HintPath>

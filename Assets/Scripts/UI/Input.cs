@@ -1,5 +1,7 @@
-﻿using Player;
+﻿using System.Collections;
+using Player;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace UI
 {
@@ -13,13 +15,19 @@ namespace UI
         [SerializeField] private Joystick shootingJoystick;
         [Range(0, 1)]
         [SerializeField] private float movementStartValue = 0.2f;
-        
+        [SerializeField] private Image grenadeBtnImg;
+        [SerializeField] private float imgAlphaEmpty = 0.2f;
+        private float _imgAlphaFull;
         private bool _inputEnapled = true;
         private PlayerMovement _playerMovement;
         private PlayerShooting _playerShooting;
 
         public void OnClickReload() => _playerShooting.Reload();
-        public void OnClickThrowGrenade() => _playerShooting.SpawnGrenade();
+        public void OnClickThrowGrenade()
+        {
+           if(!_playerShooting.SpawnGrenade()) return;
+           StartCoroutine(FullGrenadeImgCO());
+        }
 
         private void OnEnable()
         {
@@ -28,6 +36,7 @@ namespace UI
 
         private void Start()
         {
+            _imgAlphaFull = grenadeBtnImg.color.a;
             _playerMovement = FindObjectOfType<PlayerMovement>();
             _playerShooting = FindObjectOfType<PlayerShooting>();
         }
@@ -37,6 +46,28 @@ namespace UI
             if (!_inputEnapled) return;
             MovementInput();
             ShootingInput();
+        }
+
+        private IEnumerator FullGrenadeImgCO()
+        {
+            var amount = Time.fixedDeltaTime/_playerShooting.GrenadeReloadTime;
+            grenadeBtnImg.fillAmount = 0f;
+            grenadeBtnImg.color = new Color(
+                grenadeBtnImg.color.r,
+                grenadeBtnImg.color.g,
+                grenadeBtnImg.color.b,
+                imgAlphaEmpty);
+            while (grenadeBtnImg.fillAmount < 1f)
+            {
+                grenadeBtnImg.fillAmount += amount;
+                yield return new WaitForFixedUpdate();
+            }
+
+            grenadeBtnImg.color = new Color(
+                grenadeBtnImg.color.r,
+                grenadeBtnImg.color.g,
+                grenadeBtnImg.color.b,
+                _imgAlphaFull);
         }
         
         private void MovementInput()

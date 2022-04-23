@@ -19,7 +19,6 @@ namespace Enemy
         {
             _animator.SetBool(AttackMode ,newEnemyState == State.AttackingTarget);
             _animator.SetBool(Dying ,newEnemyState == State.Dying);
-            Debug.Log("dying: "+ (newEnemyState == State.Dying));
         }
 
         private void OnKickEvent()

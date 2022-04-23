@@ -5,13 +5,17 @@ namespace Items
 {
     public class Ammo : Item
     {
-        [SerializeField] private int minAmmo = 10;
-        [SerializeField] private int maxAmmo = 20;
+        [Range(0, 1)]
+        [SerializeField] private float minAmmoPercent = 0.1f;
+        [Range(0, 1)]
+        [SerializeField] private float maxAmmoPercent = 0.2f;
+        
         
         public override void Use(Transform player)
         {
-            var count = Random.Range(minAmmo, maxAmmo + 1);
-            player.GetComponent<PlayerShooting>().CurrentWeapon.AddAmmo(count);
+            var percent = Random.Range(minAmmoPercent, maxAmmoPercent);
+            player.GetComponent<PlayerShooting>().CurrentWeapon.AddAmmo(percent);
+            Destroy(gameObject);
         }
     }
 }
