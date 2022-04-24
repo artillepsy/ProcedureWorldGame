@@ -287,7 +287,7 @@ Light:
   m_Type: 1
   m_Shape: 0
   m_Color: {r: 0, g: 0.20889483, b: 0.7075472, a: 1}
-  m_Intensity: 1.64
+  m_Intensity: 2.8
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -1376,8 +1376,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 2923183219
-  m_fontColor: {r: 0.4528302, g: 0.23666784, b: 0.23666784, a: 0.68235296}
+    rgba: 2923841253
+  m_fontColor: {r: 0.8962264, g: 0.2739409, b: 0.2739409, a: 0.68235296}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:

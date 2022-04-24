@@ -9,15 +9,8 @@ using Random = UnityEngine.Random;
 namespace Enemy.Management
 {
     // add item spawn
-    public class SpawnerManager : MonoBehaviour
+    public class SpawnUtils : MonoBehaviour
     {
-        [Header("Spawn settings")] 
-        [SerializeField] private List<ProbabilityPrefabInfo> items;
-        
-        [SerializeField] private int maxEnemies = 10;
-        [SerializeField] private int maxItems = 10;
-        [SerializeField] private float spawnRateInSeconds = 6;
-        [SerializeField] private float itemSpawnRateInSeconds = 10;
         [Min(0)]
         [SerializeField] private float minSpawnRadius;
         [Min(0)]
@@ -27,9 +20,8 @@ namespace Enemy.Management
         [SerializeField] private bool drawGizmos = true;
         private Rigidbody _player;
         private List<EnemyTypesContainer> _enemyTypeContainerList;
-        private int _totalEnemies = 0;
-        private int _totalItems = 0;
-        public static SpawnerManager Inst = null;
+        
+        public static SpawnUtils Inst = null;
         public void AddContainerToList(EnemyTypesContainer enemyTypesContainer)
         {
             _enemyTypeContainerList.Add(enemyTypesContainer);
@@ -46,31 +38,9 @@ namespace Enemy.Management
         private void Start()
         {
             _player = FindObjectOfType<PlayerMovement>().GetComponent<Rigidbody>();
-            EnemyHealth.OnEnemyDie.AddListener(()=> _totalEnemies--);
-            EnemyBehaviour.OnEnemyTooFar.AddListener(()=> _totalEnemies--);
-            InvokeRepeating(nameof(SpawnEnemies), spawnRateInSeconds, spawnRateInSeconds);
-            InvokeRepeating(nameof(SpawnItems), itemSpawnRateInSeconds, itemSpawnRateInSeconds);
         }
 
-        private void SpawnEnemies()
-        {
-            if (_totalEnemies >= maxEnemies) return;
-            if (!TryGetPrefabToSpawn(out var position, out var enemy)) return;
-            Instantiate(enemy, position, Quaternion.identity);
-            _totalEnemies++;
-        }
-
-        private void SpawnItems()
-        {
-            if (_totalItems >= maxItems) return;
-            Vector3 position;
-            if (FindSpawnPoint(out position) == false) return;
-            var prefab = GameObjectPool.GetInfoByProbability(items).Prefab;
-            Instantiate(prefab, position, Quaternion.identity);
-            _totalItems++;
-        }
-
-        private bool TryGetPrefabToSpawn(out Vector3 position, out GameObject prefab)
+        public bool TryGetPrefabToSpawn(out Vector3 position, out GameObject prefab)
         {
             prefab = null;
             if (FindSpawnPoint(out position) == false) return false;
@@ -97,7 +67,7 @@ namespace Enemy.Management
             }
             return null;
         }
-        private bool FindSpawnPoint(out Vector3 position)
+        public bool FindSpawnPoint(out Vector3 position)
         {
             Vector3 samplePos;
             position = Vector3.zero;

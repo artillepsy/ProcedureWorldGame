@@ -2,7 +2,7 @@
 
 namespace UI
 {
-    public class CrossFollow : MonoBehaviour
+    public class UIFollow : MonoBehaviour
     {
         [SerializeField] private Transform target;
         private Camera _cam;
@@ -16,7 +16,7 @@ namespace UI
 
         private void LateUpdate()
         {
-            //_cam.ResetWorldToCameraMatrix();
+            _cam.ResetWorldToCameraMatrix();
             var pos = _cam.WorldToScreenPoint(target.position);
             _transform.SetPositionAndRotation(pos, Quaternion.identity); 
         }

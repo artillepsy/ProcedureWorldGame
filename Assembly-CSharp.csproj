@@ -41,12 +41,12 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets\Scripts\Enemy\Management\EnemyWaves.cs" />
+     <Compile Include="Assets\Scripts\Core\ItemSpawner.cs" />
      <Compile Include="Assets\Scripts\Items\Ammo.cs" />
      <Compile Include="Assets\Joystick Pack\Scripts\Joysticks\VariableJoystick.cs" />
      <Compile Include="Assets\Scripts\Items\Item.cs" />
      <Compile Include="Assets\Scripts\Enemy\ItemDropper.cs" />
-     <Compile Include="Assets\Scripts\Enemy\Management\SpawnerManager.cs" />
+     <Compile Include="Assets\Scripts\Enemy\Management\SpawnUtils.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextSelector_A.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexShakeA.cs" />
      <Compile Include="Assets\Scripts\Chunks\ObstacleShape.cs" />
@@ -75,6 +75,7 @@
      <Compile Include="Assets\Scripts\Items\Heal.cs" />
      <Compile Include="Assets\Scripts\Core\BasePrefabInfo.cs" />
      <Compile Include="Assets\Scripts\Core\ExtractFalloff.cs" />
+     <Compile Include="Assets\Scripts\UI\CrossRaycast.cs" />
      <Compile Include="Assets\Scripts\UI\Input.cs" />
      <Compile Include="Assets\Scripts\Core\LookAtCamera.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexJitter.cs" />
@@ -101,6 +102,7 @@
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01_UGUI.cs" />
      <Compile Include="Assets\Scripts\DevConsole\CommandHandler.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark04.cs" />
+     <Compile Include="Assets\Scripts\UI\UIFollow.cs" />
      <Compile Include="Assets\Scripts\Player\PlayerAnimationController.cs" />
      <Compile Include="Assets\Scripts\Player\MinimapCameraFollow.cs" />
      <Compile Include="Assets\Scripts\Enemy\Management\EnemyTypesContainer.cs" />
@@ -108,6 +110,7 @@
      <Compile Include="Assets\Scripts\Player\ItemPicker.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_UiFrameRateCounter.cs" />
      <Compile Include="Assets\Scripts\DevConsole\CheatConsole.cs" />
+     <Compile Include="Assets\Scripts\Enemy\Management\EnemySpawner.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\ObjectSpin.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextEventCheck.cs" />
      <Compile Include="Assets\Scripts\Chunks\Obstacle.cs" />
@@ -134,8 +137,8 @@
      <Compile Include="Assets\Scripts\Chunks\ChunkPlacer.cs" />
      <Compile Include="Assets\Scripts\Core\CachedTransformInfo.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexZoom.cs" />
-     <Compile Include="Assets\Scripts\UI\CrossFollow.cs" />
-     <Compile Include="Assets\Scripts\UI\CrossRaycast.cs" />
+     <Compile Include="Assets\Scripts\UI\WaveLabel.cs" />
+     <Compile Include="Assets\Scripts\Enemy\DamageText.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\Scripts\Todo.txt" />

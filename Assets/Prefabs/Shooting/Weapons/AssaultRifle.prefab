@@ -131,12 +131,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f71418f58e364514ad7a868b42f5909c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 26
+  minDamage: 18
+  maxDamage: 32
   penetration: 1
   bulletSpeed: 35
-  maxDeviationAngle: 8.64
+  maxDeviationAngle: 7
   reloadTimeInSeconds: 1
-  rps: 8
+  rps: 10
   clipSize: 30
   maxAmmo: 200
   fireTransform: {fileID: 118623179630673735}

@@ -14,11 +14,11 @@ namespace Enemy.Management
         }
         private void OnEnable()
         {
-            SpawnerManager.Inst.AddContainerToList(this);
+            SpawnUtils.Inst.AddContainerToList(this);
         }
         private void OnDisable()
         {
-            SpawnerManager.Inst.RemoveContainerFromList(this);
+            SpawnUtils.Inst.RemoveContainerFromList(this);
         }
     }
 }

@@ -35,7 +35,7 @@ namespace Weapons
             var health = other.GetComponentInParent<EnemyHealth>();
             if (health)
             {
-                health.TakeDamage(_damage);
+                health.TakeDamage(_damage, _velocity.normalized);
                 _penetration--;
                 if(_penetration <= 0) Destroy(gameObject);
             } else Destroy(gameObject);

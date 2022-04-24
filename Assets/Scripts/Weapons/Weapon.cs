@@ -8,7 +8,8 @@ namespace Weapons
     public class Weapon : MonoBehaviour
     {
         [Header("Bullet behaviour")]
-        [SerializeField] private float damage = 4f;
+        [SerializeField] private float minDamage = 20f;
+        [SerializeField] private float maxDamage = 30f;
         [SerializeField] private int penetration = 1;
         [SerializeField] private float bulletSpeed = 15f;
         [SerializeField] private float maxDeviationAngle = 3f;
@@ -46,7 +47,7 @@ namespace Weapons
 
         public string GetInfo()
         {
-          return "\nDamage: " + damage +
+          return "\nDamage: " + Mathf.RoundToInt((minDamage + maxDamage)/2f) +
                  "\nRPS: " + rps +
                  "\nClip: " + clipSize;
         } 
@@ -94,9 +95,10 @@ namespace Weapons
         protected virtual void SpawnBullet()
         {
             var inst = Instantiate(bulletPrefab, fireTransform.position, Quaternion.identity);
-            var deviationAngle = Random.Range(0, maxDeviationAngle);
+            var deviationAngle = Random.Range(-maxDeviationAngle, maxDeviationAngle);
             var direction = Quaternion.Euler(0, deviationAngle, 0) * _player.forward;
-            inst.SetUp(direction, damage, bulletSpeed, penetration, _playerCollider);
+            var dmg = Random.Range(minDamage, maxDamage);
+            inst.SetUp(direction, dmg, bulletSpeed, penetration, _playerCollider);
             _ammoInClip--;
             _totalRpsTime = 1f / rps;
             OnShoot?.Invoke(_ammoInClip);

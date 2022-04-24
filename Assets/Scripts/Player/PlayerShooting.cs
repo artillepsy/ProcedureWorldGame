@@ -21,7 +21,7 @@ namespace Player
             _weapon.transform.SetParent(null);
             Destroy(_weapon.gameObject);
             _weapon = newPrefab;
-            _weapon = Instantiate(_weapon, hand.position, hand.localRotation, hand);
+            _weapon = Instantiate(_weapon, hand.position, hand.rotation, hand);
         }
 
         public bool SpawnGrenade()
@@ -44,7 +44,7 @@ namespace Player
             transform.LookAt(transform.position + direction, Vector3.up);
         }
 
-        private void Start() => _weapon = Instantiate(weaponPrefab, hand.position, hand.localRotation, hand);
+        private void Start() => _weapon = Instantiate(weaponPrefab, hand.position, hand.rotation, hand);
 
         private void PrepareGrenade() => _grenadePrepared = true;
     }

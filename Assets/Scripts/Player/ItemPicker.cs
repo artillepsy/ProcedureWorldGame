@@ -1,5 +1,6 @@
 ﻿using Items;
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace Player
 {
@@ -9,6 +10,7 @@ namespace Player
         [SerializeField] private float volume = 1f;
         private AudioSource _src;
 
+        public static readonly UnityEvent OnPickupItem = new UnityEvent();
         private void Awake() => _src = GetComponent<AudioSource>();
         
         private void OnTriggerEnter(Collider other)
@@ -18,6 +20,7 @@ namespace Player
             if (!comp) return;
             
             comp.Use(transform);
+            OnPickupItem?.Invoke();
             _src.PlayOneShot(pickAudio, volume);
         }
     }

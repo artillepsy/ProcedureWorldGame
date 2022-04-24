@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using Unity.Mathematics;
+using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
 
@@ -7,6 +8,8 @@ namespace Enemy
     [AddComponentMenu("Enemy/EnemyHealth")]
     public class EnemyHealth : MonoBehaviour
     {
+        [SerializeField] private DamageText dmgText;
+        [Space]
         [SerializeField] private float maxHealth = 100f;
         [SerializeField] private AudioClip deadAudio;
         [SerializeField] private AudioClip damagedAudio;
@@ -21,7 +24,7 @@ namespace Enemy
         public static readonly UnityEvent OnEnemyDie = new UnityEvent();
         public readonly UnityEvent OnDie = new UnityEvent();
         public readonly UnityEvent OnTakeDmg = new UnityEvent();
-        public void TakeDamage(float damage)
+        public void TakeDamage(float damage, Vector3 direction)
         {
             if (_health <= 0) return;
             _health -= damage;
@@ -29,6 +32,10 @@ namespace Enemy
             _src.PlayOneShot(damagedAudio, volume);
             damagedPS.Play();
             OnTakeDmg?.Invoke();
+            
+            var inst = Instantiate(dmgText, transform.position, quaternion.identity);
+            inst.SetValues(damage, direction);
+            
             if (_health <= 0)
             {
                 _health = 0;

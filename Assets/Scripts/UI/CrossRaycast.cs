@@ -19,7 +19,7 @@ namespace UI
             }
 
             var point = transform.position + transform.forward * dist;
-            crossPoint.position = new Vector3(point.x, crossPoint.position.y, point.z);
+            crossPoint.position = point;
         }
     }
 }
