@@ -1,4 +1,5 @@
-﻿using Player;
+﻿using Core;
+using Player;
 using UnityEngine;
 using UnityEngine.Events;
 using Random = UnityEngine.Random;
@@ -7,6 +8,8 @@ namespace Weapons
 {
     public class Weapon : MonoBehaviour
     {
+        [SerializeField] private float shakeTime = 0.2f;
+        
         [Header("Bullet behaviour")]
         [SerializeField] private float minDamage = 20f;
         [SerializeField] private float maxDamage = 30f;
@@ -104,6 +107,7 @@ namespace Weapons
             OnShoot?.Invoke(_ammoInClip);
             _src.PlayOneShot(shootAudio, volume);
             firePS.Play();
+            CameraShake.Inst.Shake(shakeTime);
             if (_ammoInClip == 0) StartReload();
         }
 

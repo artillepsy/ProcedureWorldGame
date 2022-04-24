@@ -50,6 +50,7 @@
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextSelector_A.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexShakeA.cs" />
      <Compile Include="Assets\Scripts\Chunks\ObstacleShape.cs" />
+     <Compile Include="Assets\Scripts\UI\WaveLabel.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TextMeshProFloatingText.cs" />
      <Compile Include="Assets\Scripts\Player\PlayerShooting.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexShakeB.cs" />
@@ -78,6 +79,7 @@
      <Compile Include="Assets\Scripts\UI\CrossRaycast.cs" />
      <Compile Include="Assets\Scripts\UI\Input.cs" />
      <Compile Include="Assets\Scripts\Core\LookAtCamera.cs" />
+     <Compile Include="Assets\Scripts\Enemy\DamageText.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexJitter.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextEventHandler.cs" />
      <Compile Include="Assets\Scripts\Chunks\PlacementUtils.cs" />
@@ -136,9 +138,8 @@
      <Compile Include="Assets\Scripts\AI\GridMover.cs" />
      <Compile Include="Assets\Scripts\Chunks\ChunkPlacer.cs" />
      <Compile Include="Assets\Scripts\Core\CachedTransformInfo.cs" />
+     <Compile Include="Assets\Scripts\Core\CameraShake.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexZoom.cs" />
-     <Compile Include="Assets\Scripts\UI\WaveLabel.cs" />
-     <Compile Include="Assets\Scripts\Enemy\DamageText.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\Scripts\Todo.txt" />

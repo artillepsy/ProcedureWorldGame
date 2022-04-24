@@ -78,6 +78,7 @@
           <e p="Core" t="Include">
             <e p="BasePrefabInfo.cs" t="Include" />
             <e p="CachedTransformInfo.cs" t="Include" />
+            <e p="CameraShake.cs" t="Include" />
             <e p="Constants.cs" t="Include" />
             <e p="ExtractFalloff.cs" t="Include" />
             <e p="GameObjectPool.cs" t="Include" />
