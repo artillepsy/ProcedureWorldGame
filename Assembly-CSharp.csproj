@@ -47,6 +47,7 @@
      <Compile Include="Assets\Scripts\Items\Item.cs" />
      <Compile Include="Assets\Scripts\Enemy\ItemDropper.cs" />
      <Compile Include="Assets\Scripts\Enemy\Management\SpawnUtils.cs" />
+     <Compile Include="Assets\Scripts\UI\PlayerDamaged.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextSelector_A.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexShakeA.cs" />
      <Compile Include="Assets\Scripts\Chunks\ObstacleShape.cs" />
@@ -57,11 +58,12 @@
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\EnvMapAnimator.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\CameraController.cs" />
      <Compile Include="Assets\Joystick Pack\Examples\JoystickPlayerExample.cs" />
-     <Compile Include="Assets\Scripts\Player\CameraFollow.cs" />
+     <Compile Include="Assets\Scripts\Player\Old_CameraFollow.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMPro_InstructionOverlay.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_ExampleScript_01.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TextConsoleSimulator.cs" />
      <Compile Include="Assets\Scripts\Enemy\EnemyHealth.cs" />
+     <Compile Include="Assets\Scripts\UI\InfoCanvas.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextInfoDebugTool.cs" />
      <Compile Include="Assets\Scripts\Player\PlayerHealth.cs" />
      <Compile Include="Assets\Joystick Pack\Scripts\Joysticks\DynamicJoystick.cs" />
@@ -78,7 +80,7 @@
      <Compile Include="Assets\Scripts\Core\ExtractFalloff.cs" />
      <Compile Include="Assets\Scripts\UI\CrossRaycast.cs" />
      <Compile Include="Assets\Scripts\UI\Input.cs" />
-     <Compile Include="Assets\Scripts\Core\LookAtCamera.cs" />
+     <Compile Include="Assets\Scripts\Core\Old_LookAtCamera.cs" />
      <Compile Include="Assets\Scripts\Enemy\DamageText.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexJitter.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextEventHandler.cs" />

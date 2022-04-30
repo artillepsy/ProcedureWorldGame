@@ -20,17 +20,39 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7e6f0f42-dd2d-4b10-9b37-f77c36952f81" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Player/CameraShake.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Player/CameraShake.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/InfoCanvas.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/InfoCanvas.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/PlayerDamaged.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/PlayerDamaged.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Course Project 3.2/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Course Project 3.2/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Course Project 3.2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Course Project 3.2/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assembly-CSharp.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Assembly-CSharp.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Meshes/Zombies/New Material.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Meshes/Zombies/New Material.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Meshes/Zombies/Prefabs/New Material.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Meshes/Zombies/Prefabs/New Material.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemy/BigZombie.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemy/BigZombie.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemy/CrawlZombie.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemy/CrawlZombie.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemy/DamageText.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemy/DamageText.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemy/FastZombie.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemy/FastZombie.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemy/InfoCanvas.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemy/InfoCanvas.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Items/Ammo.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Items/Ammo.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Items/AssaultRifle.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Items/AssaultRifle.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Items/Heal.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Items/Heal.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Items/LabelCanavs.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Items/LabelCanavs.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Items/SniperRifle.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Items/SniperRifle.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Game.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Game.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Logs/AssetImportWorker0-prev.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/AssetImportWorker0-prev.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Logs/AssetImportWorker0.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Logs/AssetImportWorker1-prev.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/AssetImportWorker1-prev.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Logs/AssetImportWorker1.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Logs/shadercompiler-AssetImportWorker0.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/LookAtCamera.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/Old_LookAtCamera.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/LookAtCamera.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/Old_LookAtCamera.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyMovement.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/CameraFollow.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/Old_CameraFollow.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/CameraFollow.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/Old_CameraFollow.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerHealth.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerHealth.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/UIFollow.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/UIFollow.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/UIFollow.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/UIFollow.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/URP/URP Asset.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/URP/URP Asset.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/URP/URP Asset_Renderer.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/URP/URP Asset_Renderer.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/AssetImportWorker0-prev.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/AssetImportWorker1-prev.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/RiderScriptEditorPersistedState.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/RiderScriptEditorPersistedState.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/obj/Debug/Assembly-CSharp.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/Assembly-CSharp.csproj.AssemblyReference.cache" afterDir="false" />
@@ -45,23 +67,18 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/1332C534-A8A4-4623-B2E5-CC943A0B790E/32/c5ab4186/SpotLight.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/1332C534-A8A4-4623-B2E5-CC943A0B790E/9b/caffbcd5/Camera.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/shaders/UnityDeferredLibrary.cginc" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Weapons/Grenade.cs" />
-        <option value="$PROJECT_DIR$/Library/PackageCache/com.unity.shadergraph@12.1.6/Editor/Generation/Targets/BuiltIn/ShaderLibrary/Lighting.hlsl" />
-        <option value="$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.universal@12.1.6/ShaderLibrary/RealtimeLights.hlsl" />
         <option value="$PROJECT_DIR$/Packages/com.unity.render-pipelines.universal/ShaderLibrary/RealtimeLights.hlsl" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Items/ItemPlacer.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerHealth.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Chunks/ObstaclePlacer.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Core/MeshRandomizer.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Core/GameObjectRandomizer.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Todo.txt" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Chunks/ChunkPlacer.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/UI/MainMenuCanvas.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerAnimationController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/Management/SpawnerManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Audios/RepeatableAudio.cs" />
@@ -72,7 +89,6 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Items/Heal.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Core/LookAtCamera.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/Minimap/Icon.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyMovement.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Items/Ammo.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Core/CustomFalloff.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Core/ExtractFalloff.cs" />
@@ -95,11 +111,18 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Weapons/Bullet.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyHealth.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/DamageText.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/UI/UIFollow.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/CrossRaycast.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Weapons/Weapon.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerFollow.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/CameraShake.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Weapons/Weapon.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerHealth.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/PlayerDamaged.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Core/CameraUpdateListener.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Core/CameraShake.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyMovement.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/MainMenuCanvas.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/UIFollow.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/InfoCanvas.cs" />
       </list>
     </option>
   </component>
@@ -229,7 +252,9 @@
       <workItem from="1650734589139" duration="1751000" />
       <workItem from="1650745983964" duration="3094000" />
       <workItem from="1650811110122" duration="12855000" />
-      <workItem from="1650834522493" duration="2557000" />
+      <workItem from="1650834522493" duration="4119000" />
+      <workItem from="1650904859769" duration="12880000" />
+      <workItem from="1650958871954" duration="2147000" />
     </task>
     <servers />
   </component>
@@ -266,21 +291,21 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="422" y="16" key="SettingsEditor/0.0.1536.834@0.0.1536.834" timestamp="1643734582244" />
-    <state x="93" y="93" width="1350" height="648" key="VCS.FileHistoryDialog" timestamp="1646920796628">
+    <state x="93" y="93" width="1350" height="648" key="VCS.FileHistoryDialog" timestamp="1650907284284">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="93" y="93" width="1350" height="648" key="VCS.FileHistoryDialog/0.0.1536.834@0.0.1536.834" timestamp="1646920796628" />
-    <state x="367" y="0" width="802" height="834" key="find.popup" timestamp="1650378336045">
+    <state x="93" y="93" width="1350" height="648" key="VCS.FileHistoryDialog/0.0.1536.834@0.0.1536.834" timestamp="1650907284284" />
+    <state x="319" y="-28" width="802" height="834" key="find.popup" timestamp="1650914563222">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="367" y="0" width="802" height="834" key="find.popup/0.0.1536.834@0.0.1536.834" timestamp="1650378336045" />
+    <state x="319" y="-28" width="802" height="834" key="find.popup/0.0.1536.834@0.0.1536.834" timestamp="1650914563222" />
     <state x="425" y="189" key="run.anything.popup" timestamp="1650103174575">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="425" y="189" key="run.anything.popup/0.0.1536.834@0.0.1536.834" timestamp="1650103174575" />
-    <state x="431" y="155" width="672" height="678" key="search.everywhere.popup" timestamp="1643975104803">
+    <state x="431" y="155" width="672" height="678" key="search.everywhere.popup" timestamp="1650919334628">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="431" y="155" width="672" height="678" key="search.everywhere.popup/0.0.1536.834@0.0.1536.834" timestamp="1643975104803" />
+    <state x="431" y="155" width="672" height="678" key="search.everywhere.popup/0.0.1536.834@0.0.1536.834" timestamp="1650919334628" />
   </component>
 </project>

@@ -84,7 +84,7 @@
             <e p="GameObjectPool.cs" t="Include" />
             <e p="GameObjectRandomizer.cs" t="Include" />
             <e p="ItemSpawner.cs" t="Include" />
-            <e p="LookAtCamera.cs" t="Include" />
+            <e p="Old_LookAtCamera.cs" t="Include" />
             <e p="TransformUtils.cs" t="Include" />
             <e p="UniqueInfo.cs" t="Include" />
           </e>
@@ -116,9 +116,9 @@
             <e p="WeaponItem.cs" t="Include" />
           </e>
           <e p="Player" t="Include">
-            <e p="CameraFollow.cs" t="Include" />
             <e p="ItemPicker.cs" t="Include" />
             <e p="MinimapCameraFollow.cs" t="Include" />
+            <e p="Old_CameraFollow.cs" t="Include" />
             <e p="PlayerAnimationController.cs" t="Include" />
             <e p="PlayerHealth.cs" t="Include" />
             <e p="PlayerMovement.cs" t="Include" />
@@ -128,12 +128,14 @@
           <e p="UI" t="Include">
             <e p="CrossRaycast.cs" t="Include" />
             <e p="Hud.cs" t="Include" />
+            <e p="InfoCanvas.cs" t="Include" />
             <e p="Input.cs" t="Include" />
             <e p="MainMenuCanvas.cs" t="Include" />
             <e p="Minimap" t="Include">
               <e p="Icon.cs" t="Include" />
               <e p="Minimap.cs" t="Include" />
             </e>
+            <e p="PlayerDamaged.cs" t="Include" />
             <e p="UIFollow.cs" t="Include" />
             <e p="WaveLabel.cs" t="Include" />
           </e>

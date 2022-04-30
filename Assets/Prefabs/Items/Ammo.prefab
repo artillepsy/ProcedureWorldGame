@@ -352,37 +352,12 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4302104223035795436, guid: 8c903efb20036744fa65d05c0999982f, type: 3}
+    - target: {fileID: 2636222283539377498, guid: 8c903efb20036744fa65d05c0999982f, type: 3}
       propertyPath: target
       value: 
       objectReference: {fileID: 3504242163880979549}
-    - target: {fileID: 7673050118455224762, guid: 8c903efb20036744fa65d05c0999982f, type: 3}
-      propertyPath: m_text
-      value: 'Ammo
-
-'
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 4302104223035795436, guid: 8c903efb20036744fa65d05c0999982f, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8c903efb20036744fa65d05c0999982f, type: 3}
---- !u!1 &37414507441061054 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 305706297949322193, guid: 8c903efb20036744fa65d05c0999982f, type: 3}
-  m_PrefabInstance: {fileID: 340859641731090287}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &2636222283539377498
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 37414507441061054}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9b5f34e13deb4b7692b4b422a05d7c46, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  target: {fileID: 3504242163880979549}
 --- !u!224 &1838353483506992437 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 2105959255972463194, guid: 8c903efb20036744fa65d05c0999982f, type: 3}

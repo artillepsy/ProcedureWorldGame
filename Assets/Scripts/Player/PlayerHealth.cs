@@ -14,6 +14,7 @@ namespace Player
         [SerializeField] private ParticleSystem damagedPS;
         private AudioSource _src;
         public readonly UnityEvent<float, float> OnHealthChanged = new UnityEvent<float,float>();
+        public static readonly UnityEvent OnDamaged = new UnityEvent();
 
         public void ChangeHealth(float amount, bool isDamage = true)
         {
@@ -21,6 +22,7 @@ namespace Player
             if (isDamage)
             {
                 _src.PlayOneShot(damagedAudios[Random.Range(0, damagedAudios.Count)], volume);
+                OnDamaged?.Invoke();
                 damagedPS.Play();    
             }
             if (health <= 0)

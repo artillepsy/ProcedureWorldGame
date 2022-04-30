@@ -75,6 +75,7 @@ namespace Enemy
             if (_agent.isActiveAndEnabled && _agent.isOnNavMesh)
             {
                 _agent.SetDestination(_target.position);
+                
             }
             _totalRepathTime = repathRateInSeconds;
         }
