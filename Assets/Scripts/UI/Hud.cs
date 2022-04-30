@@ -9,6 +9,7 @@ namespace UI
     public class Hud : MonoBehaviour
     {
         [SerializeField] private TextMeshProUGUI ammoInClipText;
+        [SerializeField] private TextMeshProUGUI grenadeCountText;
         [SerializeField] private TextMeshProUGUI totalAmmoCountText;
         [SerializeField] private Slider healthBar;
 
@@ -20,12 +21,15 @@ namespace UI
             Weapon.OnAmmoCountChange.AddListener(UpdateAllAmmoData);
             Weapon.OnShoot.AddListener(DecrementClipSize);
             FindObjectOfType<PlayerHealth>().OnHealthChanged.AddListener(UpdateHealthStats);
+            FindObjectOfType<GrenadeThrower>().OnGrenadeCountChange.AddListener(UpdateGrenadeCount);
         }
 
         private void Start()
         {
             healthBar.value = 1f;
         }
+
+        private void UpdateGrenadeCount(int count) => grenadeCountText.text = count.ToString();
 
         private void DecrementClipSize(int ammoInClip)
         {

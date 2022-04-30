@@ -20,34 +20,31 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7e6f0f42-dd2d-4b10-9b37-f77c36952f81" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Items/GrenadeItem.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Items/GrenadeItem.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Player/GrenadeThrower.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Player/GrenadeThrower.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Course Project 3.2/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Course Project 3.2/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Course Project 3.2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Course Project 3.2/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assembly-CSharp.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Assembly-CSharp.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/Damaged.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Damaged.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Chunks/ChunkCity.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Chunks/ChunkCity.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Chunks/ChunkForest.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Chunks/ChunkForest.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemy/BigZombie.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemy/BigZombie.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemy/CrawlZombie.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemy/CrawlZombie.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemy/DamageText.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemy/DamageText.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemy/FastZombie.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemy/FastZombie.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemy/InfoCanvas.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemy/InfoCanvas.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Items/Ammo.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Items/Ammo.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Items/AssaultRifle.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Items/AssaultRifle.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Items/Heal.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Items/Heal.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Items/LabelCanavs.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Items/LabelCanavs.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Items/SniperRifle.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Items/SniperRifle.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemy/ZombieInfo.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemy/ZombieInfo.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Items/ItemInfo.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Items/ItemInfo.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Player/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Player/Player.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Shooting/Weapons/AssaultRifle.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Shooting/Weapons/AssaultRifle.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Shooting/Weapons/SniperRifle.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Shooting/Weapons/SniperRifle.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Game.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Game.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Test.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Test.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy/DamageText.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/DamageText.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/InfoCanvas.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/InfoCanvas.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/InfoCanvas.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/InfoCanvas.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/UIFollow.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/UIFollow.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe0.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe0.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerShooting.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerShooting.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Hud.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Hud.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Input.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Input.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/URP/URP Asset.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/URP/URP Asset.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/RiderScriptEditorPersistedState.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/RiderScriptEditorPersistedState.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/CurrentMaximizeLayout.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/CurrentMaximizeLayout.dwlt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/Assembly-CSharp.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/Assembly-CSharp.csproj.AssemblyReference.cache" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,11 +61,7 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Scripts/Chunks/ChunkPlacer.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerAnimationController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/Management/SpawnerManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Audios/RepeatableAudio.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/UI/Input.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyAnimationController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Items/WeaponItem.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/Minimap/Minimap.cs" />
@@ -91,7 +84,6 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Core/ItemSpawner.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/ItemPicker.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Items/Item.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerShooting.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/WaveLabel.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/Management/EnemySpawner.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Weapons/Bullet.cs" />
@@ -115,6 +107,11 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/UIInvisibility.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/UIVisibility.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/UIFollow.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/Input.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerShooting.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Items/GrenadeItem.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Player/GrenadeThrower.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/Hud.cs" />
       </list>
     </option>
   </component>
@@ -248,7 +245,7 @@
       <workItem from="1650904859769" duration="12880000" />
       <workItem from="1650958871954" duration="2147000" />
       <workItem from="1651309247791" duration="3590000" />
-      <workItem from="1651314411690" duration="6563000" />
+      <workItem from="1651314411690" duration="10149000" />
     </task>
     <servers />
   </component>
@@ -285,6 +282,10 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="422" y="16" key="SettingsEditor/0.0.1536.834@0.0.1536.834" timestamp="1643734582244" />
+    <state width="927" height="446" key="SwitcherDM" timestamp="1651353608807">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="927" height="446" key="SwitcherDM/0.0.1536.834@0.0.1536.834" timestamp="1651353608807" />
     <state x="93" y="93" width="1350" height="648" key="VCS.FileHistoryDialog" timestamp="1650907284284">
       <screen x="0" y="0" width="1536" height="834" />
     </state>

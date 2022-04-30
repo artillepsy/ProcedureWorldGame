@@ -183,11 +183,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefabInfoList:
   - prefab: {fileID: 2835643497776296574, guid: f9bce316830cec64f9274a66cd9b98df, type: 3}
-    probability: 0.277
+    probability: 0.075
   - prefab: {fileID: 2835643497776296574, guid: 50070dafa6de02642ad8535168507c98, type: 3}
-    probability: 0.52
+    probability: 0.428
   - prefab: {fileID: 2835643497776296574, guid: 1657cc9df477c4f42bbf261cf1d422dc, type: 3}
-    probability: 0.52
+    probability: 0.74
 --- !u!1 &7188854096102568737
 GameObject:
   m_ObjectHideFlags: 0

@@ -21,11 +21,12 @@ namespace UI
         private bool _inputEnapled = true;
         private PlayerMovement _playerMovement;
         private PlayerShooting _playerShooting;
+        private GrenadeThrower _grenadeThrower;
 
         public void OnClickReload() => _playerShooting.Reload();
         public void OnClickThrowGrenade()
         {
-           if(!_playerShooting.SpawnGrenade()) return;
+           if(!_grenadeThrower.SpawnGrenade()) return;
            StartCoroutine(FullGrenadeImgCO());
         }
 
@@ -39,6 +40,7 @@ namespace UI
             _imgAlphaFull = grenadeBtnImg.color.a;
             _playerMovement = FindObjectOfType<PlayerMovement>();
             _playerShooting = FindObjectOfType<PlayerShooting>();
+            _grenadeThrower = FindObjectOfType<GrenadeThrower>();
         }
 
         private void FixedUpdate()
@@ -50,7 +52,7 @@ namespace UI
 
         private IEnumerator FullGrenadeImgCO()
         {
-            var amount = Time.fixedDeltaTime/_playerShooting.GrenadeReloadTime;
+            var amount = Time.fixedDeltaTime/_grenadeThrower.GrenadeReloadTime;
             grenadeBtnImg.fillAmount = 0f;
             grenadeBtnImg.color = new Color(
                 grenadeBtnImg.color.r,

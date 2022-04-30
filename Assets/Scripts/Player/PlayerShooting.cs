@@ -8,13 +8,11 @@ namespace Player
     {
         [SerializeField] private Transform hand;
         [SerializeField] private Weapon weaponPrefab;
-        [SerializeField] private float grenadeReload = 4f;
-        [SerializeField] private Transform grenadePrefab;
+        
         private Vector3 _prevDirection = Vector3.forward;
-        private bool _grenadePrepared = true;
+       
         private Weapon _weapon;
         public Weapon CurrentWeapon=> _weapon;
-        public float GrenadeReloadTime => grenadeReload;
 
         public void ChangeWeapon(Weapon newPrefab)
         {
@@ -22,15 +20,6 @@ namespace Player
             Destroy(_weapon.gameObject);
             _weapon = newPrefab;
             _weapon = Instantiate(_weapon, hand.position, hand.rotation, hand);
-        }
-
-        public bool SpawnGrenade()
-        {
-            if (!_grenadePrepared) return false;
-            Instantiate(grenadePrefab, hand.position, transform.rotation);
-            _grenadePrepared = false;
-            Invoke(nameof(PrepareGrenade), grenadeReload);
-            return true;
         }
 
         public void Reload() => _weapon.StartReload();
@@ -45,7 +34,5 @@ namespace Player
         }
 
         private void Start() => _weapon = Instantiate(weaponPrefab, hand.position, hand.rotation, hand);
-
-        private void PrepareGrenade() => _grenadePrepared = true;
     }
 }

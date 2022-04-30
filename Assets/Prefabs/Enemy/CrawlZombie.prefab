@@ -177,7 +177,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefabInfoList:
   - prefab: {fileID: 4558035062697479404, guid: 0696072527e884444b4f2e0297de873f, type: 3}
-    probability: 0.72
+    probability: 0.793
   - prefab: {fileID: 3138408635487518711, guid: 6ac215d71945a1a4d92240778aedf997, type: 3}
     probability: 0.16
   dropChance: 0.34

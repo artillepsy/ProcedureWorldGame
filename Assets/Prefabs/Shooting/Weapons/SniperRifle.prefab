@@ -48,15 +48,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f71418f58e364514ad7a868b42f5909c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  shakeTime: 0.2
   minDamage: 70
   maxDamage: 130
   penetration: 3
   bulletSpeed: 50
   maxDeviationAngle: 2
-  reloadTimeInSeconds: 1.4
-  rps: 1.5
-  clipSize: 10
-  maxAmmo: 50
+  reloadTimeInSeconds: 0.8
+  rps: 2.5
+  clipSize: 15
+  maxAmmo: 100
   fireTransform: {fileID: 118623179630673735}
   bulletPrefab: {fileID: 4268046978477611073, guid: d06ec7e0e60151f4f8e96bddc8e254a5, type: 3}
   volume: 0.3
