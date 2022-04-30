@@ -59,6 +59,14 @@
             </e>
           </e>
         </e>
+        <e p="Prefabs" t="Include">
+          <e p="Materials" t="Include">
+            <e p="Shaders" t="Include">
+              <e p="CustomLights.hlsl" t="Include" />
+              <e p="CustomRealtimeLights.hlsl" t="Include" />
+            </e>
+          </e>
+        </e>
         <e p="Scripts" t="Include">
           <e p="AI" t="Include">
             <e p="GridMover.cs" t="Include" />

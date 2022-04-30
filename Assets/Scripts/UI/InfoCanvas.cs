@@ -1,53 +1,49 @@
 ﻿using System.Collections.Generic;
-using Cinemachine;
 using UnityEngine;
 
 namespace UI
 {
     public class InfoCanvas : MonoBehaviour
     {
-        private Dictionary<RectTransform, Transform> _pairs;
+        private List<UIFollow> _elems = new List<UIFollow>();
         private RectTransform _transform;
         private Camera _cam;
 
         public static InfoCanvas Inst;
 
-        public void AddUI(RectTransform ui, Transform target)
+        public void AddUI(UIFollow uiElem)
         {
-            _pairs.Add(ui, target);
-            ui.SetParent(_transform);
+            _elems.Add(uiElem);
+            uiElem.RectTrans.SetParent(_transform);
         }
 
         private void Awake()
         {
             Inst = this;
             _cam = Camera.main;
-            _pairs = new Dictionary<RectTransform, Transform>();
             _transform = GetComponent<RectTransform>();
         }
 
-        private void OnEnable()
+        private void LateUpdate()
         {
-            CinemachineCore.CameraUpdatedEvent.AddListener((brain) => UpdatePos());
-        }
-
-        private void Update()
-        {
-            foreach (var pair in _pairs)
+            var elemsToRemove = new List<UIFollow>();
+            foreach (var elem in _elems)
             {
-                if (pair.Value) continue;
-                pair.Key.SetParent(null);
-                _pairs.Remove(pair.Key);
-                Destroy(pair.Key.gameObject);
+                if (!elem.Target)
+                {
+                    elem.RectTrans.SetParent(null);
+                    elemsToRemove.Add(elem);
+                }
+                else
+                {
+                    var pos = _cam.WorldToScreenPoint(elem.Target.position);
+                    elem.RectTrans.SetPositionAndRotation(pos, Quaternion.identity); 
+                }
             }
-        }
-
-        private void UpdatePos()
-        {
-            foreach (var pair in _pairs)
+            foreach (var elem in elemsToRemove)
             {
-                var pos = _cam.WorldToScreenPoint(pair.Value.position);
-                pair.Key.SetPositionAndRotation(pos, Quaternion.identity); 
+                _elems.Remove(elem);
+                Destroy(elem.gameObject);
             }
         }
     }

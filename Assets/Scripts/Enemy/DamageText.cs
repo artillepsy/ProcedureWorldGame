@@ -18,7 +18,6 @@ namespace Enemy
         private float _speed;
         private void Awake()
         {
-            rb.GetComponent<Rigidbody>();
             _speed = Random.Range(minStartSpeed, maxStartSpeed);            
             Destroy(gameObject, lifeTime);
         }
