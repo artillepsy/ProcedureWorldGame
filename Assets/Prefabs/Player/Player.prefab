@@ -712,8 +712,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hand: {fileID: 8241827845114189075}
-  grenadeReload: 10
+  grenadeReload: 3
   grenadePrefab: {fileID: 3600899969989374373, guid: 827563ca7a9517b44a2c3fff7cac6a27, type: 3}
+  count: 3
 --- !u!114 &6231645988411521976
 MonoBehaviour:
   m_ObjectHideFlags: 0

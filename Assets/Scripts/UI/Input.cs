@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using Player;
 using UnityEngine;
 using UnityEngine.UI;
@@ -43,16 +44,21 @@ namespace UI
             _grenadeThrower = FindObjectOfType<GrenadeThrower>();
         }
 
+        private void Update()
+        {
+            if (!_inputEnapled) return;
+            ShootingInput();
+        }
+
         private void FixedUpdate()
         {
             if (!_inputEnapled) return;
             MovementInput();
-            ShootingInput();
         }
 
         private IEnumerator FullGrenadeImgCO()
         {
-            var amount = Time.fixedDeltaTime/_grenadeThrower.GrenadeReloadTime;
+            var reloadTime = _grenadeThrower.GrenadeReloadTime;
             grenadeBtnImg.fillAmount = 0f;
             grenadeBtnImg.color = new Color(
                 grenadeBtnImg.color.r,
@@ -61,8 +67,8 @@ namespace UI
                 imgAlphaEmpty);
             while (grenadeBtnImg.fillAmount < 1f)
             {
-                grenadeBtnImg.fillAmount += amount;
-                yield return new WaitForFixedUpdate();
+                grenadeBtnImg.fillAmount += Time.deltaTime / reloadTime;
+                yield return null;
             }
 
             grenadeBtnImg.color = new Color(

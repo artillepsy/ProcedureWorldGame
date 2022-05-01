@@ -6,7 +6,7 @@ namespace Player
     public class GrenadeThrower : MonoBehaviour
     {
         [SerializeField] private Transform hand;
-        [SerializeField] private float grenadeReload = 4f;
+        [SerializeField] private float grenadeReload = 3f;
         [SerializeField] private Transform grenadePrefab;
         [SerializeField] private int count = 0;
         private bool _grenadePrepared = true;

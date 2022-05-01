@@ -1118,9 +1118,17 @@
      </Reference>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
+      <Project>{456f0b93-d02c-288a-68d7-4574e6854a9e}</Project>
+      <Name>Assembly-CSharp-firstpass</Name>
+    </ProjectReference>
     <ProjectReference Include="Assembly-CSharp.csproj">
       <Project>{fc523ed8-e0ec-4d5a-9d7c-0fd4cc34ad6b}</Project>
       <Name>Assembly-CSharp</Name>
+    </ProjectReference>
+    <ProjectReference Include="Assembly-CSharp-Editor-firstpass.csproj">
+      <Project>{aeaf7f04-893f-e5f7-4600-3f0e1b729239}</Project>
+      <Name>Assembly-CSharp-Editor-firstpass</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

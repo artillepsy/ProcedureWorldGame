@@ -95,6 +95,7 @@
             <e p="Old_LookAtCamera.cs" t="Include" />
             <e p="TransformUtils.cs" t="Include" />
             <e p="UniqueInfo.cs" t="Include" />
+            <e p="VisibilityChange.cs" t="Include" />
           </e>
           <e p="DevConsole" t="Include">
             <e p="CheatConsole.cs" t="Include" />

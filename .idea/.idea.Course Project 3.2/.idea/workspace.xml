@@ -20,29 +20,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7e6f0f42-dd2d-4b10-9b37-f77c36952f81" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Items/GrenadeItem.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Items/GrenadeItem.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Player/GrenadeThrower.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Player/GrenadeThrower.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Core/VisibilityChange.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Core/VisibilityChange.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Course Project 3.2/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Course Project 3.2/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Course Project 3.2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Course Project 3.2/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assembly-CSharp.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Assembly-CSharp.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/Damaged.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Damaged.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Chunks/ChunkCity.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Chunks/ChunkCity.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Chunks/ChunkForest.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Chunks/ChunkForest.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemy/BigZombie.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemy/BigZombie.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemy/CrawlZombie.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemy/CrawlZombie.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemy/FastZombie.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemy/FastZombie.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemy/ZombieInfo.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemy/ZombieInfo.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Items/ItemInfo.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Items/ItemInfo.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Player/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Player/Player.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Shooting/Weapons/AssaultRifle.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Shooting/Weapons/AssaultRifle.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Shooting/Weapons/SniperRifle.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Shooting/Weapons/SniperRifle.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Game.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Game.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerShooting.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerShooting.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Hud.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Hud.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/GrenadeThrower.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/GrenadeThrower.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Input.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Input.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/URP/URP Asset.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/URP/URP Asset.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/RiderScriptEditorPersistedState.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/RiderScriptEditorPersistedState.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/CurrentMaximizeLayout.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/CurrentMaximizeLayout.dwlt" afterDir="false" />
     </list>
@@ -61,7 +47,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Scripts/Audios/RepeatableAudio.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyAnimationController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Items/WeaponItem.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/Minimap/Minimap.cs" />
@@ -107,11 +92,12 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/UIInvisibility.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/UIVisibility.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/UIFollow.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/UI/Input.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerShooting.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Items/GrenadeItem.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Player/GrenadeThrower.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/Hud.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Core/VisibilityChange.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Player/GrenadeThrower.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/Input.cs" />
       </list>
     </option>
   </component>
@@ -245,7 +231,7 @@
       <workItem from="1650904859769" duration="12880000" />
       <workItem from="1650958871954" duration="2147000" />
       <workItem from="1651309247791" duration="3590000" />
-      <workItem from="1651314411690" duration="10149000" />
+      <workItem from="1651314411690" duration="11981000" />
     </task>
     <servers />
   </component>

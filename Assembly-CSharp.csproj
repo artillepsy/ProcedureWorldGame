@@ -50,6 +50,7 @@
      <Compile Include="Assets\Scripts\UI\PlayerDamaged.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextSelector_A.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexShakeA.cs" />
+     <Compile Include="Assets\Scripts\Items\GrenadeItem.cs" />
      <Compile Include="Assets\Scripts\Chunks\ObstacleShape.cs" />
      <Compile Include="Assets\Scripts\UI\WaveLabel.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TextMeshProFloatingText.cs" />
@@ -78,6 +79,7 @@
      <Compile Include="Assets\Scripts\Items\Heal.cs" />
      <Compile Include="Assets\Scripts\Core\BasePrefabInfo.cs" />
      <Compile Include="Assets\Scripts\Core\ExtractFalloff.cs" />
+     <Compile Include="Assets\Scripts\Player\GrenadeThrower.cs" />
      <Compile Include="Assets\Scripts\UI\CrossRaycast.cs" />
      <Compile Include="Assets\Scripts\UI\Input.cs" />
      <Compile Include="Assets\Scripts\Core\Old_LookAtCamera.cs" />
@@ -112,6 +114,7 @@
      <Compile Include="Assets\Scripts\Enemy\Management\EnemyTypesContainer.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\ChatController.cs" />
      <Compile Include="Assets\Scripts\Player\ItemPicker.cs" />
+     <Compile Include="Assets\Scripts\Core\VisibilityChange.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_UiFrameRateCounter.cs" />
      <Compile Include="Assets\Scripts\DevConsole\CheatConsole.cs" />
      <Compile Include="Assets\Scripts\Enemy\Management\EnemySpawner.cs" />
@@ -142,14 +145,11 @@
      <Compile Include="Assets\Scripts\Core\CachedTransformInfo.cs" />
      <Compile Include="Assets\Scripts\Core\CameraShake.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexZoom.cs" />
-     <Compile Include="Assets\Scripts\Player\GrenadeThrower.cs" />
-     <Compile Include="Assets\Scripts\Items\GrenadeItem.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\Scripts\Todo.txt" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
      <None Include="Assets\TextMesh Pro\Examples &amp; Extras\Fonts\Oswald-Bold - OFL.txt" />
-     <None Include="Assets\Prefabs\Materials\Shaders\CustomRealtimeLights.hlsl" />
      <None Include="Assets\TextMesh Pro\Examples &amp; Extras\Fonts\Anton OFL.txt" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro_Mobile.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF SSD.shader" />
@@ -167,7 +167,6 @@
      <None Include="Assets\Meshes\PolygonBattleRoyale\Shader\DamageZone.shader" />
      <None Include="Assets\Meshes\Trees\LowPolyTreePack\README.txt" />
      <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
-     <None Include="Assets\Prefabs\Materials\Shaders\CustomLights.hlsl" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Masking.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF Overlay.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Mobile.shader" />
@@ -961,6 +960,10 @@
      </Reference>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
+      <Project>{456f0b93-d02c-288a-68d7-4574e6854a9e}</Project>
+      <Name>Assembly-CSharp-firstpass</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
