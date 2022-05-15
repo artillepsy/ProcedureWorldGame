@@ -15,6 +15,7 @@ namespace Player
         private AudioSource _src;
         public readonly UnityEvent<float, float> OnHealthChanged = new UnityEvent<float,float>();
         public static readonly UnityEvent OnDamaged = new UnityEvent();
+        public static readonly UnityEvent OnDied = new UnityEvent();
 
         public void ChangeHealth(float amount, bool isDamage = true)
         {
@@ -28,7 +29,7 @@ namespace Player
             if (health <= 0)
             {
                 health = 0;
-                Debug.Log("player's dead"); 
+                OnDied?.Invoke();
             }
             else if (health > maxHealth)
             {

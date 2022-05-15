@@ -20,17 +20,27 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7e6f0f42-dd2d-4b10-9b37-f77c36952f81" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Core/VisibilityChange.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Core/VisibilityChange.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/DeadCanvas.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/DeadCanvas.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Course Project 3.2/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Course Project 3.2/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Course Project 3.2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Course Project 3.2/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assembly-CSharp.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Assembly-CSharp.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Fonts/Gladius SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Fonts/Gladius SDF.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Fonts/GorgeousPixel SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Fonts/GorgeousPixel SDF.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Player/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Player/Player.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Shooting/Weapons/Grenade.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Shooting/Weapons/Grenade.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Game.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Game.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/GrenadeThrower.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/GrenadeThrower.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Input.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Input.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainMenu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainMenu.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/Old_CameraFollow.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/Old_CameraFollow.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerHealth.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerHealth.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Course Project 3.2.sln" beforeDir="false" afterPath="$PROJECT_DIR$/Course Project 3.2.sln" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe0.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe0.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/RiderScriptEditorPersistedState.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/RiderScriptEditorPersistedState.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/CurrentMaximizeLayout.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/CurrentMaximizeLayout.dwlt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/Assembly-CSharp-Editor.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/Assembly-CSharp-Editor.csproj.AssemblyReference.cache" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,8 +57,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyAnimationController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Items/WeaponItem.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/Minimap/Minimap.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Items/Heal.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Core/LookAtCamera.cs" />
@@ -77,7 +85,6 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerFollow.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/CameraShake.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Weapons/Weapon.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerHealth.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/PlayerDamaged.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Core/CameraUpdateListener.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Core/CameraShake.cs" />
@@ -98,6 +105,9 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Core/VisibilityChange.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/GrenadeThrower.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/Input.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Weapons/Grenade.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerHealth.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/DeadCanvas.cs" />
       </list>
     </option>
   </component>
@@ -232,6 +242,9 @@
       <workItem from="1650958871954" duration="2147000" />
       <workItem from="1651309247791" duration="3590000" />
       <workItem from="1651314411690" duration="11981000" />
+      <workItem from="1652547799910" duration="1435000" />
+      <workItem from="1652602018361" duration="857000" />
+      <workItem from="1652628735222" duration="4197000" />
     </task>
     <servers />
   </component>
@@ -256,18 +269,10 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="516" y="272" key="ANALYSIS_DLG_com.jetbrains.rider.actions.impl.cleanup.RiderCodeCleanupAction$actionPerformed$dlg$1" timestamp="1643632115882">
-      <screen x="0" y="0" width="1536" height="834" />
-    </state>
-    <state x="516" y="272" key="ANALYSIS_DLG_com.jetbrains.rider.actions.impl.cleanup.RiderCodeCleanupAction$actionPerformed$dlg$1/0.0.1536.834@0.0.1536.834" timestamp="1643632115882" />
     <state x="601" y="134" key="RiderGenerateDialog" timestamp="1650716168354">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="601" y="134" key="RiderGenerateDialog/0.0.1536.834@0.0.1536.834" timestamp="1650716168354" />
-    <state x="422" y="16" key="SettingsEditor" timestamp="1643734582244">
-      <screen x="0" y="0" width="1536" height="834" />
-    </state>
-    <state x="422" y="16" key="SettingsEditor/0.0.1536.834@0.0.1536.834" timestamp="1643734582244" />
     <state width="927" height="446" key="SwitcherDM" timestamp="1651353608807">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
@@ -284,9 +289,9 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="425" y="189" key="run.anything.popup/0.0.1536.834@0.0.1536.834" timestamp="1650103174575" />
-    <state x="431" y="155" width="672" height="678" key="search.everywhere.popup" timestamp="1650919334628">
+    <state x="431" y="155" width="672" height="678" key="search.everywhere.popup" timestamp="1652632441422">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="431" y="155" width="672" height="678" key="search.everywhere.popup/0.0.1536.834@0.0.1536.834" timestamp="1650919334628" />
+    <state x="431" y="155" width="672" height="678" key="search.everywhere.popup/0.0.1536.834@0.0.1536.834" timestamp="1652632441422" />
   </component>
 </project>

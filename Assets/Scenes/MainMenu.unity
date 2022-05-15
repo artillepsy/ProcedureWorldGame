@@ -286,8 +286,8 @@ Light:
   serializedVersion: 10
   m_Type: 1
   m_Shape: 0
-  m_Color: {r: 0, g: 0.20889483, b: 0.7075472, a: 1}
-  m_Intensity: 2.8
+  m_Color: {r: 0.7058824, g: 0.47482157, b: 0, a: 1}
+  m_Intensity: 1.75
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -755,9 +755,9 @@ MonoBehaviour:
       m_Calls: []
   m_text: '
 
-    by artillepsy@gmail.com
+    artillepsy@gmail.com
 
-    and deffsnak@gmail.com'
+    deffsnak@gmail.com'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c02a82c99d7291f43ba87f8953a9beaa, type: 2}
   m_sharedMaterial: {fileID: -7210367705335286548, guid: c02a82c99d7291f43ba87f8953a9beaa, type: 2}
@@ -1334,18 +1334,18 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 571637978}
-  m_LocalRotation: {x: -0, y: -0, z: 0.022654105, w: 0.9997434}
+  m_LocalRotation: {x: -0, y: -0, z: 0.012371204, w: 0.9999235}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.52268, y: 0.52268, z: 0.52268}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 687415067}
   m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 2.596}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 1.418}
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: -194, y: 11}
-  m_SizeDelta: {x: 393.281, y: 99.41}
+  m_AnchoredPosition: {x: -157, y: 7}
+  m_SizeDelta: {x: 548.3134, y: 99.41}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &571637980
 MonoBehaviour:
@@ -1367,7 +1367,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: ZOMBIENATOR
+  m_text: FEAR THE ZOMBIES
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 3ebd6e21e409c9544bb5a78a719cab96, type: 2}
   m_sharedMaterial: {fileID: -6643368438576434413, guid: 3ebd6e21e409c9544bb5a78a719cab96, type: 2}
@@ -1376,8 +1376,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 2923841253
-  m_fontColor: {r: 0.8962264, g: 0.2739409, b: 0.2739409, a: 0.68235296}
+    rgba: 3140234495
+  m_fontColor: {r: 1, g: 0.17358488, b: 0.17358488, a: 0.73333335}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -1394,8 +1394,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 59.36
-  m_fontSizeBase: 59.36
+  m_fontSize: 47.63
+  m_fontSizeBase: 47.63
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -3234,9 +3234,15 @@ VisualEffect:
       - m_Value: {x: 90, y: 0, z: 0}
         m_Name: Rain Square Circle_circle_transform_angles
         m_Overridden: 1
+      - m_Value: {x: -0.03, y: 7.26, z: 0}
+        m_Name: Scale1
+        m_Overridden: 1
+      - m_Value: {x: 0.54, y: 11.03, z: 0}
+        m_Name: Scale2
+        m_Overridden: 1
     m_Vector4f:
       m_Array:
-      - m_Value: {x: 0.22876467, y: 0.26777834, z: 0.33962262, w: 0}
+      - m_Value: {x: 0.54339623, y: 0.562717, z: 0.6037736, w: 1}
         m_Name: Rain Color
         m_Overridden: 1
     m_Uint:

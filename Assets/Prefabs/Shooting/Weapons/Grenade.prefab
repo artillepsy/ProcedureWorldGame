@@ -255,8 +255,8 @@ TrailRenderer:
       m_RotationOrder: 4
     colorGradient:
       serializedVersion: 2
-      key0: {r: 1, g: 1, b: 1, a: 0.46666667}
-      key1: {r: 1, g: 1, b: 1, a: 0.015686275}
+      key0: {r: 1, g: 1, b: 1, a: 0.105882354}
+      key1: {r: 1, g: 1, b: 1, a: 0}
       key2: {r: 0, g: 0, b: 0, a: 0}
       key3: {r: 0, g: 0, b: 0, a: 0}
       key4: {r: 0, g: 0, b: 0, a: 0}
@@ -348,7 +348,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9012237957815510619, guid: 92d4593d6184a464b883ee67cb522468, type: 3}
       propertyPath: looping
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9012237957815510619, guid: 92d4593d6184a464b883ee67cb522468, type: 3}
       propertyPath: EmissionModule.rateOverTime.scalar
