@@ -183,11 +183,6 @@
             <e p="UniqueInfo.cs" t="Include" />
             <e p="VisibilityChange.cs" t="Include" />
           </e>
-          <e p="DevConsole" t="Include">
-            <e p="CheatConsole.cs" t="Include" />
-            <e p="CommandHandler.cs" t="Include" />
-            <e p="CustomEventHandler.cs" t="Include" />
-          </e>
           <e p="Enemy" t="Include">
             <e p="DamageText.cs" t="Include" />
             <e p="EnemyAnimationController.cs" t="Include" />
@@ -223,7 +218,8 @@
           <e p="Todo.txt" t="Include" />
           <e p="UI" t="Include">
             <e p="CrossRaycast.cs" t="Include" />
-            <e p="DeadCanvas.cs" t="Include" />
+            <e p="DeathCanvas.cs" t="Include" />
+            <e p="DeathCanvasInput.cs" t="Include" />
             <e p="Hud.cs" t="Include" />
             <e p="InfoCanvas.cs" t="Include" />
             <e p="Input.cs" t="Include" />
@@ -232,6 +228,7 @@
               <e p="Icon.cs" t="Include" />
               <e p="Minimap.cs" t="Include" />
             </e>
+            <e p="PauseCanvasInput.cs" t="Include" />
             <e p="PlayerDamaged.cs" t="Include" />
             <e p="UIFollow.cs" t="Include" />
             <e p="WaveLabel.cs" t="Include" />

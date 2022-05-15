@@ -105,7 +105,6 @@
      <Compile Include="Assets\Scripts\Audios\RepeatableAudio.cs" />
      <Compile Include="Assets\Scripts\Items\ItemPlacer.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01_UGUI.cs" />
-     <Compile Include="Assets\Scripts\DevConsole\CommandHandler.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark04.cs" />
      <Compile Include="Assets\Scripts\UI\UIFollow.cs" />
      <Compile Include="Assets\Scripts\Player\PlayerAnimationController.cs" />
@@ -115,7 +114,6 @@
      <Compile Include="Assets\Scripts\Player\ItemPicker.cs" />
      <Compile Include="Assets\Scripts\Core\VisibilityChange.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_UiFrameRateCounter.cs" />
-     <Compile Include="Assets\Scripts\DevConsole\CheatConsole.cs" />
      <Compile Include="Assets\Scripts\Enemy\Management\EnemySpawner.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\ObjectSpin.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextEventCheck.cs" />
@@ -130,7 +128,6 @@
      <Compile Include="Assets\Scripts\UI\MainMenuCanvas.cs" />
      <Compile Include="Assets\Scripts\Enemy\EnemyAttack.cs" />
      <Compile Include="Assets\Scripts\Enemy\EnemyBehaviour.cs" />
-     <Compile Include="Assets\Scripts\DevConsole\CustomEventHandler.cs" />
      <Compile Include="Assets\Scripts\Enemy\EnemyAnimationController.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark03.cs" />
      <Compile Include="Assets\Joystick Pack\Examples\JoystickSetterExample.cs" />
@@ -144,7 +141,9 @@
      <Compile Include="Assets\Scripts\Core\CachedTransformInfo.cs" />
      <Compile Include="Assets\Scripts\Core\CameraShake.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexZoom.cs" />
-     <Compile Include="Assets\Scripts\UI\DeadCanvas.cs" />
+     <Compile Include="Assets\Scripts\UI\DeathCanvas.cs" />
+     <Compile Include="Assets\Scripts\UI\DeathCanvasInput.cs" />
+     <Compile Include="Assets\Scripts\UI\PauseCanvasInput.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\Scripts\Todo.txt" />

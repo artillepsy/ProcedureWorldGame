@@ -20,27 +20,27 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7e6f0f42-dd2d-4b10-9b37-f77c36952f81" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/DeadCanvas.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/DeadCanvas.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/DeathCanvasInput.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/DeathCanvasInput.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/PauseCanvasInput.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/PauseCanvasInput.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Course Project 3.2/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Course Project 3.2/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Course Project 3.2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Course Project 3.2/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assembly-CSharp.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Assembly-CSharp.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fonts/Gladius SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Fonts/Gladius SDF.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Fonts/GorgeousPixel SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Fonts/GorgeousPixel SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Player/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Player/Player.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Shooting/Weapons/Grenade.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Shooting/Weapons/Grenade.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Game.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Game.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainMenu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainMenu.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/Old_CameraFollow.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/Old_CameraFollow.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerHealth.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerHealth.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Course Project 3.2.sln" beforeDir="false" afterPath="$PROJECT_DIR$/Course Project 3.2.sln" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe0.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe0.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/DevConsole.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/DevConsole/CheatConsole.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/DevConsole/CheatConsole.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/DevConsole/CommandHandler.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/DevConsole/CommandHandler.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/DevConsole/CustomEventHandler.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/DevConsole/CustomEventHandler.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerMovement.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/DeadCanvas.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/DeathCanvas.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/DeadCanvas.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/DeathCanvas.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Input.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Input.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/RiderScriptEditorPersistedState.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/RiderScriptEditorPersistedState.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/CurrentMaximizeLayout.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/CurrentMaximizeLayout.dwlt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/Assembly-CSharp-Editor.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/Assembly-CSharp-Editor.csproj.AssemblyReference.cache" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,11 +57,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Scripts/UI/Minimap/Minimap.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Items/Heal.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Core/LookAtCamera.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/UI/Minimap/Icon.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Items/Ammo.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Core/CustomFalloff.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Core/ExtractFalloff.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Core/LightFalloff.cs" />
@@ -104,10 +99,15 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/Hud.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Core/VisibilityChange.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/GrenadeThrower.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/UI/Input.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Weapons/Grenade.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerHealth.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/DeadCanvas.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/Input.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerMovement.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/DeathCanvas.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/CanvasesInputs.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/DeathCanvasInput.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/PauseCanvasInput.cs" />
       </list>
     </option>
   </component>
@@ -244,7 +244,7 @@
       <workItem from="1651314411690" duration="11981000" />
       <workItem from="1652547799910" duration="1435000" />
       <workItem from="1652602018361" duration="857000" />
-      <workItem from="1652628735222" duration="4197000" />
+      <workItem from="1652628735222" duration="7978000" />
     </task>
     <servers />
   </component>

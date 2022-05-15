@@ -31,11 +31,6 @@ namespace UI
            StartCoroutine(FullGrenadeImgCO());
         }
 
-        private void OnEnable()
-        {
-            CustomEventHandler.OnInputPermissionChanged.AddListener(status => _inputEnapled = status);
-        }
-
         private void Start()
         {
             _imgAlphaFull = grenadeBtnImg.color.a;

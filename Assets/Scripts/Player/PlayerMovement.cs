@@ -10,12 +10,6 @@ namespace Player
 
         public void UpdateDirection(Vector3 direction) => _rb.velocity = direction.normalized * speed;
         
-        private void OnEnable()
-        {
-            CommandHandler.OnPlayerSpeedChanged.AddListener(newSpeed => speed = newSpeed);
-            CommandHandler.OnColliderVisibilityChanged.AddListener(mode => GetComponentInChildren<Collider>().enabled = mode);
-        }
-        
         private void Awake()
         {
             _rb = GetComponent<Rigidbody>();

@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using Enemy;
 using Enemy.Management;
 using Player;
@@ -8,7 +7,7 @@ using UnityEngine;
 
 namespace UI
 {
-    public class DeadCanvas : MonoBehaviour
+    public class DeathCanvas : MonoBehaviour
     {
         [SerializeField] private GameObject deadCanvas;
         [SerializeField] private TextMeshProUGUI killsLabel;
@@ -26,7 +25,7 @@ namespace UI
             PlayerHealth.OnDied.AddListener(ShowDeadCanvas);
             EnemyHealth.OnEnemyDie.AddListener(()=> _kills++);
             EnemySpawner.OnStartWave.AddListener((wave) => _wave = wave);
-            InvokeRepeating(nameof(IncrementSeconds), 1, 0.0001f);
+            InvokeRepeating(nameof(IncrementSeconds), 1, 1);
         }
 
         private void ShowDeadCanvas()
