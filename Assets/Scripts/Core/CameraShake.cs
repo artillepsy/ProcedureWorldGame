@@ -26,6 +26,12 @@ namespace Core
             CancelInvoke();
             _noise.m_AmplitudeGain = amplitude;
             Invoke(nameof(StopShake), duration);
+        } 
+        
+        public void Shake()
+        {
+            CancelInvoke();
+            _noise.m_AmplitudeGain = amplitude;
         }
 
         private void StopShake() => _noise.m_AmplitudeGain = 0f;

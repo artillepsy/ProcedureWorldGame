@@ -220,6 +220,7 @@
             <e p="CrossRaycast.cs" t="Include" />
             <e p="DeathCanvas.cs" t="Include" />
             <e p="DeathCanvasInput.cs" t="Include" />
+            <e p="EnemyNameRandomizer.cs" t="Include" />
             <e p="Hud.cs" t="Include" />
             <e p="InfoCanvas.cs" t="Include" />
             <e p="Input.cs" t="Include" />

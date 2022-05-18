@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using Core;
 using Enemy;
 using Enemy.Management;
 using Player;
@@ -28,6 +29,12 @@ namespace UI
             InvokeRepeating(nameof(IncrementSeconds), 1, 1);
         }
 
+        private void Update()
+        {
+            if (!UnityEngine.Input.GetKeyDown(KeyCode.K)) return;
+            PlayerHealth.OnDied.Invoke();
+        }
+
         private void ShowDeadCanvas()
         {
             killsLabel.text = _kills.ToString();
@@ -39,7 +46,6 @@ namespace UI
                 canvas.SetActive(false);
             }
             deadCanvas.SetActive(true);
-
             Time.timeScale = 0f;
             CancelInvoke(nameof(IncrementSeconds));
         }

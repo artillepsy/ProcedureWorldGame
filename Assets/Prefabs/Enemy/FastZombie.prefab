@@ -1050,6 +1050,42 @@ PrefabInstance:
       propertyPath: m_Name
       value: ZombieInfo
       objectReference: {fileID: 0}
+    - target: {fileID: 7456636078407606477, guid: 68b0dca7829e79a4ba2a217539c5a177, type: 3}
+      propertyPath: enemyNames.Array.size
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 7456636078407606477, guid: 68b0dca7829e79a4ba2a217539c5a177, type: 3}
+      propertyPath: enemyNames.Array.data[0]
+      value: Linux
+      objectReference: {fileID: 0}
+    - target: {fileID: 7456636078407606477, guid: 68b0dca7829e79a4ba2a217539c5a177, type: 3}
+      propertyPath: enemyNames.Array.data[1]
+      value: Bulbash-1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7456636078407606477, guid: 68b0dca7829e79a4ba2a217539c5a177, type: 3}
+      propertyPath: enemyNames.Array.data[2]
+      value: Bulbash-2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7456636078407606477, guid: 68b0dca7829e79a4ba2a217539c5a177, type: 3}
+      propertyPath: enemyNames.Array.data[3]
+      value: Podsos
+      objectReference: {fileID: 0}
+    - target: {fileID: 7456636078407606477, guid: 68b0dca7829e79a4ba2a217539c5a177, type: 3}
+      propertyPath: enemyNames.Array.data[4]
+      value: Joker
+      objectReference: {fileID: 0}
+    - target: {fileID: 7456636078407606477, guid: 68b0dca7829e79a4ba2a217539c5a177, type: 3}
+      propertyPath: enemyNames.Array.data[5]
+      value: Ratatui
+      objectReference: {fileID: 0}
+    - target: {fileID: 7456636078407606477, guid: 68b0dca7829e79a4ba2a217539c5a177, type: 3}
+      propertyPath: enemyNames.Array.data[6]
+      value: Buffer
+      objectReference: {fileID: 0}
+    - target: {fileID: 7456636078407606477, guid: 68b0dca7829e79a4ba2a217539c5a177, type: 3}
+      propertyPath: enemyNames.Array.data[7]
+      value: Bomzhara
+      objectReference: {fileID: 0}
     - target: {fileID: 8961810662492757934, guid: 68b0dca7829e79a4ba2a217539c5a177, type: 3}
       propertyPath: target
       value: 

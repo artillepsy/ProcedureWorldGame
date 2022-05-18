@@ -17,9 +17,9 @@ namespace Chunks
             foreach (ObstacleShape shape in shapeList)
             {
                 var lossyScale = shape.transform.lossyScale;
-                float scaleXZ = new Vector2(lossyScale.x, lossyScale.z).magnitude/2;
+                var scaleXZ = new Vector2(lossyScale.x, lossyScale.z).magnitude/2;
                 //Debug.DrawLine(position + Vector3.up, position + Vector3.up + new Vector3(0, 0, scaleXZ), Color.cyan, 30);
-                float length = chunkHalfLength - scaleXZ;
+                var length = chunkHalfLength - scaleXZ;
 
                 if(position.x < chunkPosition.x - length || position.x > chunkPosition.x + length)
                 {
