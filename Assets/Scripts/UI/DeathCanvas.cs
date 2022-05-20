@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
-using Core;
 using Enemy;
 using Enemy.Management;
+using Experience;
 using Player;
 using TMPro;
 using UnityEngine;
@@ -14,6 +14,7 @@ namespace UI
         [SerializeField] private TextMeshProUGUI killsLabel;
         [SerializeField] private TextMeshProUGUI timeLabel;
         [SerializeField] private TextMeshProUGUI wavesLabel;
+        [SerializeField] private TextMeshProUGUI experienceLabel;
         [SerializeField] private List<GameObject> canvasesToHide;
         private int _kills = 0;
         private int _wave = 0;
@@ -41,6 +42,11 @@ namespace UI
             wavesLabel.text = _wave.ToString();
             timeLabel.text = TimeToString();
             
+            var exp = ExperienceCalculator.Inst.CalculateExperience(_kills, _wave, _time);
+            experienceLabel.text = exp.ToString();
+            
+            SaveProgress(exp);
+            
             foreach (var canvas in canvasesToHide)
             {
                 canvas.SetActive(false);
@@ -54,6 +60,14 @@ namespace UI
         {
             if (Time.timeScale == 0f) return;
             _time++;
+        }
+
+        private void SaveProgress(int exp)
+        {
+            var userData = SaveSystem.Load();
+            userData.GrenadeCount = FindObjectOfType<GrenadeThrower>().Count;
+            userData.ExpCount += exp;
+            SaveSystem.Save(userData);
         }
 
         private string TimeToString()

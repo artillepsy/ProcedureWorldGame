@@ -198,6 +198,11 @@
               <e p="SpawnUtils.cs" t="Include" />
             </e>
           </e>
+          <e p="Experience" t="Include">
+            <e p="ExperienceCalculator.cs" t="Include" />
+            <e p="SaveSystem.cs" t="Include" />
+            <e p="UserData.cs" t="Include" />
+          </e>
           <e p="Items" t="Include">
             <e p="Ammo.cs" t="Include" />
             <e p="GrenadeItem.cs" t="Include" />
@@ -217,6 +222,9 @@
           </e>
           <e p="Todo.txt" t="Include" />
           <e p="UI" t="Include">
+            <e p="Craft" t="Include">
+              <e p="CraftCanvas.cs" t="Include" />
+            </e>
             <e p="CrossRaycast.cs" t="Include" />
             <e p="DeathCanvas.cs" t="Include" />
             <e p="DeathCanvasInput.cs" t="Include" />

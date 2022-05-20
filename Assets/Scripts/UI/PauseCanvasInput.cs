@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -20,7 +19,7 @@ namespace UI
 
         public void OnClickResume()
         {
-            Time.timeScale = 1f;
+            Time.timeScale = 1;
             SetPauseStatus(false);
         }
 

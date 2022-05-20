@@ -81,6 +81,7 @@
      <Compile Include="Assets\Scripts\Core\BasePrefabInfo.cs" />
      <Compile Include="Assets\Scripts\Core\ExtractFalloff.cs" />
      <Compile Include="Assets\Scripts\Player\GrenadeThrower.cs" />
+     <Compile Include="Assets\Scripts\Experience\ExperienceCalculator.cs" />
      <Compile Include="Assets\Scripts\UI\CrossRaycast.cs" />
      <Compile Include="Assets\Scripts\UI\Input.cs" />
      <Compile Include="Assets\Scripts\Core\Old_LookAtCamera.cs" />
@@ -140,11 +141,14 @@
      <Compile Include="Assets\Scripts\Enemy\EnemyMovement.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextSelector_B.cs" />
      <Compile Include="Assets\Scripts\AI\GridMover.cs" />
+     <Compile Include="Assets\Scripts\UI\EnemyNameRandomizer.cs" />
      <Compile Include="Assets\Scripts\Chunks\ChunkPlacer.cs" />
      <Compile Include="Assets\Scripts\Core\CachedTransformInfo.cs" />
      <Compile Include="Assets\Scripts\Core\CameraShake.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexZoom.cs" />
-     <Compile Include="Assets\Scripts\UI\EnemyNameRandomizer.cs" />
+     <Compile Include="Assets\Scripts\Experience\SaveSystem.cs" />
+     <Compile Include="Assets\Scripts\Experience\UserData.cs" />
+     <Compile Include="Assets\Scripts\UI\Craft\CraftCanvas.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\Scripts\Todo.txt" />

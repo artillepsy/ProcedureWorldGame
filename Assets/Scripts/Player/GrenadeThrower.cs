@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using Experience;
+using UnityEngine;
 using UnityEngine.Events;
 
 namespace Player
@@ -8,35 +9,37 @@ namespace Player
         [SerializeField] private Transform hand;
         [SerializeField] private float grenadeReload = 3f;
         [SerializeField] private Transform grenadePrefab;
-        [SerializeField] private int count = 0;
+        private int _count = 0;
         private bool _grenadePrepared = true;
         public float GrenadeReloadTime => grenadeReload;
+        public int Count => _count;
         public readonly UnityEvent<int> OnGrenadeCountChange = new UnityEvent<int>();
 
         public void AddGrenade(int countToAdd)
         {
-            count += countToAdd;
-            OnGrenadeCountChange?.Invoke(count);
+            _count += countToAdd;
+            OnGrenadeCountChange?.Invoke(_count);
         }
 
         public bool SpawnGrenade()
         {
             if (!_grenadePrepared) return false;
-            if (count <= 0) return false;
+            if (_count <= 0) return false;
             
             Instantiate(grenadePrefab, hand.position, transform.rotation);
             _grenadePrepared = false;
             Invoke(nameof(PrepareGrenade), grenadeReload);
             
-            count--;
-            OnGrenadeCountChange?.Invoke(count);
+            _count--;
+            OnGrenadeCountChange?.Invoke(_count);
             
             return true;
         }
 
         private void Start()
         {
-            OnGrenadeCountChange?.Invoke(count);
+            _count = SaveSystem.Load().GrenadeCount;
+            OnGrenadeCountChange?.Invoke(_count);
         }
 
         private void PrepareGrenade() => _grenadePrepared = true;
