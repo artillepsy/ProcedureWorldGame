@@ -114,7 +114,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dmgText: {fileID: 2845982481790287096, guid: 7910dad816511264f80ab76af0609e5e, type: 3}
-  maxHealth: 400
+  maxHealth: 600
   deadAudio: {fileID: 8300000, guid: 4ffe299c0ee9eca46bad463c01811040, type: 3}
   damagedAudio: {fileID: 8300000, guid: ef3f4395eaa152d4a8de2e161d4a0680, type: 3}
   volume: 0.6
@@ -509,16 +509,20 @@ PrefabInstance:
       value: ZombieInfo
       objectReference: {fileID: 0}
     - target: {fileID: 7456636078407606477, guid: 68b0dca7829e79a4ba2a217539c5a177, type: 3}
+      propertyPath: enemyNames.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7456636078407606477, guid: 68b0dca7829e79a4ba2a217539c5a177, type: 3}
       propertyPath: enemyNames.Array.data[0]
-      value: SAMOSVAL
+      value: Samosval
       objectReference: {fileID: 0}
     - target: {fileID: 7456636078407606477, guid: 68b0dca7829e79a4ba2a217539c5a177, type: 3}
       propertyPath: enemyNames.Array.data[1]
-      value: GABEN
+      value: Gaben
       objectReference: {fileID: 0}
     - target: {fileID: 7456636078407606477, guid: 68b0dca7829e79a4ba2a217539c5a177, type: 3}
       propertyPath: enemyNames.Array.data[2]
-      value: PINGVI
+      value: Pingvi
       objectReference: {fileID: 0}
     - target: {fileID: 8961810662492757934, guid: 68b0dca7829e79a4ba2a217539c5a177, type: 3}
       propertyPath: target

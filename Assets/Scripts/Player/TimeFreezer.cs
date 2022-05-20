@@ -12,6 +12,7 @@ namespace Player
 
         private bool _ready = true;
         private int _count = 0;
+        
 
         public int Count => _count;
         public float ReloadTime => reloadTime;
@@ -29,8 +30,15 @@ namespace Player
             return true;
         }
         
+        public void AddTimeFreezer(int countToAdd)
+        {
+            _count += countToAdd;
+            OnFreezersCountChange?.Invoke(_count);
+        }
+        
         private void Start()
         {
+            
             _count = SaveSystem.Load().FreezersCount;
             OnFreezersCountChange?.Invoke(_count);
         }

@@ -1,7 +1,8 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
+using Cinemachine;
 using UI;
 using UnityEngine;
+using UnityEngine.UI;
 using Input = UnityEngine.Input;
 
 namespace TimeManagement
@@ -9,12 +10,15 @@ namespace TimeManagement
     public class TimeManager : MonoBehaviour
     {
         [SerializeField] private float freezedTimeScale = 0.3f;
-        
+        [SerializeField] private Image shadow;
         [SerializeField] private AnimationCurve freezeAnimCurve;
         [SerializeField] private float animTime = 3f;
-        
+        [SerializeField] private float camStartDistance = 10f;
+        [SerializeField] private float cameraMinDistance = 5f;
+
         private float _timeScale = 1f;
         private bool _paused = false;
+        private CinemachineFramingTransposer _camTransposer;
         
         public float TimeScale => _timeScale;
 
@@ -26,6 +30,13 @@ namespace TimeManagement
         {
             PauseCanvasInput.OnGamePaused.AddListener(OnGamePaused);
             Inst = this;
+        }
+
+        private void Start()
+        {
+            _camTransposer = FindObjectOfType<CinemachineVirtualCamera>().
+                GetCinemachineComponent<CinemachineFramingTransposer>();
+            _camTransposer.m_CameraDistance = camStartDistance;
         }
 
         private void Update()
@@ -50,9 +61,12 @@ namespace TimeManagement
                     yield return null;
                     continue;
                 }
-                
                 var evaluate = !start ? (time / animTime) : (1f - time / animTime);
-                _timeScale = Mathf.Clamp(freezeAnimCurve.Evaluate(evaluate), freezedTimeScale, 1f);
+                var curveValue = freezeAnimCurve.Evaluate(evaluate);
+                
+                _timeScale = Mathf.Lerp(freezedTimeScale, 1f, curveValue);
+                _camTransposer.m_CameraDistance = Mathf.Lerp(cameraMinDistance, camStartDistance, curveValue);
+                shadow.color = new Color(shadow.color.r, shadow.color.g, shadow.color.b, 1 - curveValue);
                 
                 Time.timeScale = _timeScale;
                 time += Time.unscaledDeltaTime;
@@ -61,6 +75,8 @@ namespace TimeManagement
             }
             if (!start)
             {
+                shadow.color = new Color(shadow.color.r, shadow.color.g, shadow.color.b, 0);
+                _camTransposer.m_CameraDistance = camStartDistance;
                 Time.timeScale = 1f;
                 yield break;
             }

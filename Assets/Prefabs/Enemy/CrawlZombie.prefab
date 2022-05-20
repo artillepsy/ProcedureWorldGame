@@ -1054,91 +1054,91 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7456636078407606477, guid: 68b0dca7829e79a4ba2a217539c5a177, type: 3}
       propertyPath: enemyNames.Array.data[0]
-      value: VOVA CORESUCK
+      value: 'Vovan '
       objectReference: {fileID: 0}
     - target: {fileID: 7456636078407606477, guid: 68b0dca7829e79a4ba2a217539c5a177, type: 3}
       propertyPath: enemyNames.Array.data[1]
-      value: PAHANOID
+      value: Pahanoid
       objectReference: {fileID: 0}
     - target: {fileID: 7456636078407606477, guid: 68b0dca7829e79a4ba2a217539c5a177, type: 3}
       propertyPath: enemyNames.Array.data[2]
-      value: DRIVER VRUM-VRUM
+      value: Driver
       objectReference: {fileID: 0}
     - target: {fileID: 7456636078407606477, guid: 68b0dca7829e79a4ba2a217539c5a177, type: 3}
       propertyPath: enemyNames.Array.data[3]
-      value: SHKUROED
+      value: Shkuroed
       objectReference: {fileID: 0}
     - target: {fileID: 7456636078407606477, guid: 68b0dca7829e79a4ba2a217539c5a177, type: 3}
       propertyPath: enemyNames.Array.data[4]
-      value: SHKUROEDICK
+      value: Shkuroedick
       objectReference: {fileID: 0}
     - target: {fileID: 7456636078407606477, guid: 68b0dca7829e79a4ba2a217539c5a177, type: 3}
       propertyPath: enemyNames.Array.data[5]
-      value: KLU4
+      value: Kluch
       objectReference: {fileID: 0}
     - target: {fileID: 7456636078407606477, guid: 68b0dca7829e79a4ba2a217539c5a177, type: 3}
       propertyPath: enemyNames.Array.data[6]
-      value: LU4EZAR
+      value: Luchezar
       objectReference: {fileID: 0}
     - target: {fileID: 7456636078407606477, guid: 68b0dca7829e79a4ba2a217539c5a177, type: 3}
       propertyPath: enemyNames.Array.data[7]
-      value: BUTER
+      value: Buter
       objectReference: {fileID: 0}
     - target: {fileID: 7456636078407606477, guid: 68b0dca7829e79a4ba2a217539c5a177, type: 3}
       propertyPath: enemyNames.Array.data[8]
-      value: TIPUT '
+      value: Tiput'
       objectReference: {fileID: 0}
     - target: {fileID: 7456636078407606477, guid: 68b0dca7829e79a4ba2a217539c5a177, type: 3}
       propertyPath: enemyNames.Array.data[9]
-      value: SCULPTOR
+      value: Sculptor
       objectReference: {fileID: 0}
     - target: {fileID: 7456636078407606477, guid: 68b0dca7829e79a4ba2a217539c5a177, type: 3}
       propertyPath: enemyNames.Array.data[10]
-      value: MIKUTO
+      value: Mikuto
       objectReference: {fileID: 0}
     - target: {fileID: 7456636078407606477, guid: 68b0dca7829e79a4ba2a217539c5a177, type: 3}
       propertyPath: enemyNames.Array.data[11]
-      value: SHIRINKA
+      value: Shirin
       objectReference: {fileID: 0}
     - target: {fileID: 7456636078407606477, guid: 68b0dca7829e79a4ba2a217539c5a177, type: 3}
       propertyPath: enemyNames.Array.data[12]
-      value: HO-HO-HO
+      value: Ho-Ho-Ho
       objectReference: {fileID: 0}
     - target: {fileID: 7456636078407606477, guid: 68b0dca7829e79a4ba2a217539c5a177, type: 3}
       propertyPath: enemyNames.Array.data[13]
-      value: LESLI
+      value: Lesli
       objectReference: {fileID: 0}
     - target: {fileID: 7456636078407606477, guid: 68b0dca7829e79a4ba2a217539c5a177, type: 3}
       propertyPath: enemyNames.Array.data[14]
-      value: G-MAN
+      value: G-Man
       objectReference: {fileID: 0}
     - target: {fileID: 7456636078407606477, guid: 68b0dca7829e79a4ba2a217539c5a177, type: 3}
       propertyPath: enemyNames.Array.data[15]
-      value: CLOWN
+      value: Clown
       objectReference: {fileID: 0}
     - target: {fileID: 7456636078407606477, guid: 68b0dca7829e79a4ba2a217539c5a177, type: 3}
       propertyPath: enemyNames.Array.data[16]
-      value: POET
+      value: Poet
       objectReference: {fileID: 0}
     - target: {fileID: 7456636078407606477, guid: 68b0dca7829e79a4ba2a217539c5a177, type: 3}
       propertyPath: enemyNames.Array.data[17]
-      value: ARMBRAKER
+      value: Armbreaker
       objectReference: {fileID: 0}
     - target: {fileID: 7456636078407606477, guid: 68b0dca7829e79a4ba2a217539c5a177, type: 3}
       propertyPath: enemyNames.Array.data[18]
-      value: SHAMIL '
+      value: Shamil '
       objectReference: {fileID: 0}
     - target: {fileID: 7456636078407606477, guid: 68b0dca7829e79a4ba2a217539c5a177, type: 3}
       propertyPath: enemyNames.Array.data[19]
-      value: SOBIANIN
+      value: Sobianin
       objectReference: {fileID: 0}
     - target: {fileID: 7456636078407606477, guid: 68b0dca7829e79a4ba2a217539c5a177, type: 3}
       propertyPath: enemyNames.Array.data[20]
-      value: NOGOT '
+      value: Nogot '
       objectReference: {fileID: 0}
     - target: {fileID: 7456636078407606477, guid: 68b0dca7829e79a4ba2a217539c5a177, type: 3}
       propertyPath: enemyNames.Array.data[21]
-      value: GRIB
+      value: Grib
       objectReference: {fileID: 0}
     - target: {fileID: 8961810662492757934, guid: 68b0dca7829e79a4ba2a217539c5a177, type: 3}
       propertyPath: target

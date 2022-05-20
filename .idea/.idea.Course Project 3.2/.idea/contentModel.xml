@@ -209,6 +209,7 @@
             <e p="Heal.cs" t="Include" />
             <e p="Item.cs" t="Include" />
             <e p="ItemPlacer.cs" t="Include" />
+            <e p="TimeFreezerItem.cs" t="Include" />
             <e p="WeaponItem.cs" t="Include" />
           </e>
           <e p="Player" t="Include">

@@ -1,5 +1,4 @@
 ﻿using Player;
-using TMPro;
 using UnityEngine;
 
 namespace Items
