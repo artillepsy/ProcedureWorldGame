@@ -127,8 +127,8 @@ MonoBehaviour:
   timeToDestroyInSeconds: 50
   label: {fileID: 6194859069738533229}
   itemName: Grenades
-  minCount: 2
-  maxCount: 5
+  minCount: 1
+  maxCount: 2
 --- !u!114 &-4191104985518075456
 MonoBehaviour:
   m_ObjectHideFlags: 0

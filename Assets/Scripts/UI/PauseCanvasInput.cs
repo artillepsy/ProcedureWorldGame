@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.SceneManagement;
 
 namespace UI
@@ -8,19 +9,20 @@ namespace UI
     {
         [SerializeField] private GameObject pauseCanvas;
         [SerializeField] private List<GameObject> canvasesToHide;
+        public static UnityEvent<bool> OnGamePaused = new UnityEvent<bool>();
 
         private void Awake() => pauseCanvas.SetActive(false);
 
         public void OnClickPause()
         {
-            Time.timeScale = 0f;
             SetPauseStatus(true);
+            OnGamePaused?.Invoke(true);
         }
 
         public void OnClickResume()
         {
-            Time.timeScale = 1;
             SetPauseStatus(false);
+            OnGamePaused?.Invoke(false);
         }
 
         public void OnClickMenu()

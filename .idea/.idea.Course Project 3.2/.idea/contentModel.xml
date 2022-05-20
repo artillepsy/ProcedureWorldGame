@@ -219,6 +219,10 @@
             <e p="PlayerHealth.cs" t="Include" />
             <e p="PlayerMovement.cs" t="Include" />
             <e p="PlayerShooting.cs" t="Include" />
+            <e p="TimeFreezer.cs" t="Include" />
+          </e>
+          <e p="TimeManagement" t="Include">
+            <e p="TimeManager.cs" t="Include" />
           </e>
           <e p="Todo.txt" t="Include" />
           <e p="UI" t="Include">

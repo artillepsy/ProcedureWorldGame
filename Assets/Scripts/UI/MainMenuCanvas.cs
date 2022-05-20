@@ -21,10 +21,15 @@ namespace UI
             if (userData == null)
             {
                 Debug.Log(userData);
-                userData = new UserData(0, 0);
+                userData = new UserData(0, 0,0);
                 SaveSystem.Save(userData);
             }
-            
+        }
+
+        private void Update()
+        {
+            if (!UnityEngine.Input.GetKeyDown(KeyCode.C)) return;
+            var userData = new UserData(1,1,0);
         }
 
         public void OnClickCraft() => ShowCraftCanvas(true);

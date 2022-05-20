@@ -49,12 +49,15 @@
      <Compile Include="Assets\Scripts\Enemy\Management\SpawnUtils.cs" />
      <Compile Include="Assets\Scripts\UI\PlayerDamaged.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextSelector_A.cs" />
+     <Compile Include="Assets\Scripts\UI\Craft\CraftCanvas.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexShakeA.cs" />
      <Compile Include="Assets\Scripts\Items\GrenadeItem.cs" />
      <Compile Include="Assets\Scripts\Chunks\ObstacleShape.cs" />
      <Compile Include="Assets\Scripts\UI\WaveLabel.cs" />
+     <Compile Include="Assets\Scripts\Experience\UserData.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TextMeshProFloatingText.cs" />
      <Compile Include="Assets\Scripts\Player\PlayerShooting.cs" />
+     <Compile Include="Assets\Scripts\TimeManagement\TimeManager.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexShakeB.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\EnvMapAnimator.cs" />
      <Compile Include="Assets\Scripts\UI\PauseCanvasInput.cs" />
@@ -67,6 +70,7 @@
      <Compile Include="Assets\Scripts\Enemy\EnemyHealth.cs" />
      <Compile Include="Assets\Scripts\UI\InfoCanvas.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextInfoDebugTool.cs" />
+     <Compile Include="Assets\Scripts\Player\TimeFreezer.cs" />
      <Compile Include="Assets\Scripts\Player\PlayerHealth.cs" />
      <Compile Include="Assets\Joystick Pack\Scripts\Joysticks\DynamicJoystick.cs" />
      <Compile Include="Assets\Scripts\Items\WeaponItem.cs" />
@@ -117,6 +121,7 @@
      <Compile Include="Assets\Scripts\Player\ItemPicker.cs" />
      <Compile Include="Assets\Scripts\Core\VisibilityChange.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_UiFrameRateCounter.cs" />
+     <Compile Include="Assets\Scripts\Experience\SaveSystem.cs" />
      <Compile Include="Assets\Scripts\Enemy\Management\EnemySpawner.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\ObjectSpin.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextEventCheck.cs" />
@@ -146,9 +151,6 @@
      <Compile Include="Assets\Scripts\Core\CachedTransformInfo.cs" />
      <Compile Include="Assets\Scripts\Core\CameraShake.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexZoom.cs" />
-     <Compile Include="Assets\Scripts\Experience\SaveSystem.cs" />
-     <Compile Include="Assets\Scripts\Experience\UserData.cs" />
-     <Compile Include="Assets\Scripts\UI\Craft\CraftCanvas.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\Scripts\Todo.txt" />

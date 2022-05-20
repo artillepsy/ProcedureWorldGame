@@ -20,31 +20,41 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7e6f0f42-dd2d-4b10-9b37-f77c36952f81" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Experience.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Experience/ExperienceCalculator.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Experience/ExperienceCalculator.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Experience/SaveSystem.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Experience/SaveSystem.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Experience/UserData.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Experience/UserData.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Craft.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Craft/CraftCanvas.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Craft/CraftCanvas.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Player/TimeFreezer.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Player/TimeFreezer.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/TimeManagement.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/TimeManagement/TimeManager.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/TimeManagement/TimeManager.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Course Project 3.2/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Course Project 3.2/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Course Project 3.2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Course Project 3.2/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assembly-CSharp.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Assembly-CSharp.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/DeathCanvas/Appear.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/DeathCanvas/Appear.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Meshes/PolygonBattleRoyale/Prefabs/Props/SM_Prop_Crate_Small_01.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Meshes/PolygonBattleRoyale/Prefabs/Props/SM_Prop_Crate_Small_01.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Materials/CubeMaterial.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Materials/CubeMaterial.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/TextMainMenu.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/TextMainMenu.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Fonts/Gladius SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Fonts/Gladius SDF.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Fonts/ThePhantom SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Fonts/ThePhantom SDF.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemy/BigZombie.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemy/BigZombie.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemy/CrawlZombie.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemy/CrawlZombie.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemy/DamageText.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemy/DamageText.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemy/FastZombie.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemy/FastZombie.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemy/ZombieInfo.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemy/ZombieInfo.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Items/Ammo.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Items/Ammo.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Items/Grenade.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Items/Grenade.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Items/ItemInfo.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Items/ItemInfo.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Materials/GrenadeTrail.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Materials/GrenadeTrail.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Player/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Player/Player.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Game.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Game.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainMenu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainMenu.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Test.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Test.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/GrenadeThrower.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/GrenadeThrower.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Experience/UserData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Experience/UserData.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Craft/CraftCanvas.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Craft/CraftCanvas.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/DeathCanvas.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/DeathCanvas.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Hud.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Hud.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Input.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Input.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/MainMenuCanvas.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/MainMenuCanvas.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/PauseCanvasInput.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/PauseCanvasInput.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Oswald Bold SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Oswald Bold SDF.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Roboto-Bold SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Roboto-Bold SDF.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe0.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe0.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/RiderScriptEditorPersistedState.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/RiderScriptEditorPersistedState.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/CurrentMaximizeLayout.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/CurrentMaximizeLayout.dwlt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" afterDir="false" />
     </list>
@@ -63,10 +73,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/Management/ItemSpawner.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Core/SpawnUtils.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/Management/Spawn.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/Management/SpawnUtils.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Core/Constants.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Core/ItemSpawner.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/ItemPicker.cs" />
@@ -93,12 +99,10 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/UIFollow.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerShooting.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Items/GrenadeItem.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/UI/Hud.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Core/VisibilityChange.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Weapons/Grenade.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerHealth.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/DeadCanvas.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/UI/Input.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerMovement.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/CanvasesInputs.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/DeathCanvasInput.cs" />
@@ -108,12 +112,18 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Core/TimeManagement.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Experience/SaveSystem.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Experience/ExperienceCalculator.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Experience/UserData.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/UI/DeathCanvas.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/GrenadeThrower.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/TimeManagement.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/PauseCanvasInput.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerTimeFreezer.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Experience/UserData.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/Craft/CraftCanvas.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/Hud.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/Input.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/MainMenuCanvas.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Player/TimeFreezer.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/TimeManagement/TimeManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/DeathCanvas.cs" />
       </list>
     </option>
   </component>
@@ -256,7 +266,8 @@
       <workItem from="1652814673616" duration="1906000" />
       <workItem from="1652877029311" duration="2480000" />
       <workItem from="1652981062316" duration="1844000" />
-      <workItem from="1653029785913" duration="8395000" />
+      <workItem from="1653029785913" duration="9442000" />
+      <workItem from="1653076009193" duration="7234000" />
     </task>
     <servers />
   </component>

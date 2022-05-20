@@ -191,6 +191,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: DamageInfo
       objectReference: {fileID: 0}
+    - target: {fileID: 5891963030148541241, guid: e552be65b2255c64da9c9a26d20cab2f, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 0161d805a3764c089bef00bfe00793f5, type: 2}
+    - target: {fileID: 5891963030148541241, guid: e552be65b2255c64da9c9a26d20cab2f, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 2147374, guid: 0161d805a3764c089bef00bfe00793f5, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e552be65b2255c64da9c9a26d20cab2f, type: 3}
 --- !u!224 &617446669332905396 stripped

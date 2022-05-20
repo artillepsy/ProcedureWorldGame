@@ -695,6 +695,7 @@ GameObject:
   - component: {fileID: 8821846654943259331}
   - component: {fileID: 7446907298746082054}
   - component: {fileID: 2887362200805070578}
+  - component: {fileID: 1047819926}
   m_Layer: 10
   m_Name: Player
   m_TagString: Player
@@ -914,7 +915,6 @@ MonoBehaviour:
   hand: {fileID: 8241827845114189075}
   grenadeReload: 3
   grenadePrefab: {fileID: 3600899969989374373, guid: 827563ca7a9517b44a2c3fff7cac6a27, type: 3}
-  count: 3
 --- !u!114 &6231645988411521976
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -992,6 +992,20 @@ MonoBehaviour:
   playRate: 0.2
   volume: 1
   playWhenWalk: 1
+--- !u!114 &1047819926
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 150519998821848632}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60c22778df5a441c8ce472aebcbd7c55, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  freezeTime: 5
+  reloadTime: 1
 --- !u!1 &1212098120675639059
 GameObject:
   m_ObjectHideFlags: 0

@@ -114,7 +114,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dmgText: {fileID: 2845982481790287096, guid: 7910dad816511264f80ab76af0609e5e, type: 3}
-  maxHealth: 100
+  maxHealth: 110
   deadAudio: {fileID: 8300000, guid: 4ffe299c0ee9eca46bad463c01811040, type: 3}
   damagedAudio: {fileID: 8300000, guid: ef3f4395eaa152d4a8de2e161d4a0680, type: 3}
   volume: 0.6
@@ -1143,7 +1143,7 @@ PrefabInstance:
     - target: {fileID: 8961810662492757934, guid: 68b0dca7829e79a4ba2a217539c5a177, type: 3}
       propertyPath: target
       value: 
-      objectReference: {fileID: 1257003716816570509}
+      objectReference: {fileID: 1954165252060711942}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 68b0dca7829e79a4ba2a217539c5a177, type: 3}
 --- !u!114 &1890191036398833325 stripped

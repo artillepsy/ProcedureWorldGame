@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using Player;
 using UnityEngine;
 using UnityEngine.UI;
@@ -17,26 +16,34 @@ namespace UI
         [Range(0, 1)]
         [SerializeField] private float movementStartValue = 0.2f;
         [SerializeField] private Image grenadeBtnImg;
-        [SerializeField] private float imgAlphaEmpty = 0.2f;
-        private float _imgAlphaFull;
+        [SerializeField] private Image timeFreezerBtnImg;
+        [SerializeField] private float emptyImageAlpha = 0.2f;
         private bool _inputEnapled = true;
         private PlayerMovement _playerMovement;
         private PlayerShooting _playerShooting;
+        private TimeFreezer _timeFreezer;
         private GrenadeThrower _grenadeThrower;
 
         public void OnClickReload() => _playerShooting.Reload();
+
+        public void OnClickFreezeTime()
+        {
+            if(!_timeFreezer.FreezeTime()) return;
+            StartCoroutine(FullImageCO(timeFreezerBtnImg, _timeFreezer.ReloadTime));
+        }
+
         public void OnClickThrowGrenade()
         {
            if(!_grenadeThrower.SpawnGrenade()) return;
-           StartCoroutine(FullGrenadeImgCO());
+           StartCoroutine(FullImageCO(grenadeBtnImg, _grenadeThrower.GrenadeReloadTime));
         }
 
         private void Start()
         {
-            _imgAlphaFull = grenadeBtnImg.color.a;
             _playerMovement = FindObjectOfType<PlayerMovement>();
-            _playerShooting = FindObjectOfType<PlayerShooting>();
-            _grenadeThrower = FindObjectOfType<GrenadeThrower>();
+            _playerShooting = _playerMovement.GetComponent<PlayerShooting>();
+            _grenadeThrower = _playerMovement.GetComponent<GrenadeThrower>();
+            _timeFreezer = _playerMovement.GetComponent<TimeFreezer>();
         }
 
         private void Update()
@@ -51,26 +58,26 @@ namespace UI
             MovementInput();
         }
 
-        private IEnumerator FullGrenadeImgCO()
+        private IEnumerator FullImageCO(Image image, float reloadTime)
         {
-            var reloadTime = _grenadeThrower.GrenadeReloadTime;
-            grenadeBtnImg.fillAmount = 0f;
-            grenadeBtnImg.color = new Color(
-                grenadeBtnImg.color.r,
-                grenadeBtnImg.color.g,
-                grenadeBtnImg.color.b,
-                imgAlphaEmpty);
-            while (grenadeBtnImg.fillAmount < 1f)
+            var alpha = image.color.a;
+            image.fillAmount = 0f;
+            image.color = new Color(
+                image.color.r,
+                image.color.g,
+                image.color.b,
+                emptyImageAlpha);
+            while (image.fillAmount < 1f)
             {
-                grenadeBtnImg.fillAmount += Time.deltaTime / reloadTime;
+                image.fillAmount += Time.deltaTime / reloadTime;
                 yield return null;
             }
 
-            grenadeBtnImg.color = new Color(
-                grenadeBtnImg.color.r,
-                grenadeBtnImg.color.g,
-                grenadeBtnImg.color.b,
-                _imgAlphaFull);
+            image.color = new Color(
+                image.color.r,
+                image.color.g,
+                image.color.b,
+                alpha);
         }
         
         private void MovementInput()

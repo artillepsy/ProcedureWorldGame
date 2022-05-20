@@ -66,6 +66,7 @@ namespace UI
         {
             var userData = SaveSystem.Load();
             userData.GrenadeCount = FindObjectOfType<GrenadeThrower>().Count;
+            userData.FreezersCount = FindObjectOfType<TimeFreezer>().Count;
             userData.ExpCount += exp;
             SaveSystem.Save(userData);
         }
@@ -74,18 +75,12 @@ namespace UI
         {
             var s = "";
             var hours = _time / 3600;
-            if (hours > 0)
-            {
-                s = hours + ":";
-                _time %= 3600;
-            }
+            s = hours + ":";
+            if (hours > 0) _time %= 3600;
             var minutes = _time / 60;
-            if (minutes > 0)
-            {
-                s += minutes + ":";
-                _time %= 60;
-            }
-            s += _time.ToString();
+            s += minutes + ":";
+            if (minutes > 0) _time %= 60;
+            s += _time;
             return s;
         }
     }

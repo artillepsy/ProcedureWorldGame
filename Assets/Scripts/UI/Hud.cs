@@ -10,6 +10,7 @@ namespace UI
     {
         [SerializeField] private TextMeshProUGUI ammoInClipText;
         [SerializeField] private TextMeshProUGUI grenadeCountText;
+        [SerializeField] private TextMeshProUGUI freezersCountText;
         [SerializeField] private TextMeshProUGUI totalAmmoCountText;
         [SerializeField] private Slider healthBar;
 
@@ -22,6 +23,7 @@ namespace UI
             Weapon.OnShoot.AddListener(DecrementClipSize);
             FindObjectOfType<PlayerHealth>().OnHealthChanged.AddListener(UpdateHealthStats);
             FindObjectOfType<GrenadeThrower>().OnGrenadeCountChange.AddListener(UpdateGrenadeCount);
+            FindObjectOfType<TimeFreezer>().OnFreezersCountChange.AddListener(UpdateFreezersCount);
         }
 
         private void Start()
@@ -30,6 +32,7 @@ namespace UI
         }
 
         private void UpdateGrenadeCount(int count) => grenadeCountText.text = count.ToString();
+        private void UpdateFreezersCount(int count) => freezersCountText.text = count.ToString();
 
         private void DecrementClipSize(int ammoInClip)
         {

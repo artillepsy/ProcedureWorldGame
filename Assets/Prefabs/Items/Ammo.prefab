@@ -127,8 +127,8 @@ MonoBehaviour:
   timeToDestroyInSeconds: 40
   label: {fileID: 6194859069738533229}
   itemName: Ammo
-  minAmmoPercent: 0.1
-  maxAmmoPercent: 0.2
+  minAmmoPercent: 0.053
+  maxAmmoPercent: 0.142
 --- !u!114 &-4191104985518075456
 MonoBehaviour:
   m_ObjectHideFlags: 0
